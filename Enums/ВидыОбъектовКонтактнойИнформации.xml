@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Enum uuid="67ab3392-27b6-452a-a9ec-4d3a1fe4f338">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ВидыОбъектовКонтактнойИнформации" category="Ref">
+				<xr:TypeId>a858c735-b09f-4f03-9e8b-870cbf8c5987</xr:TypeId>
+				<xr:ValueId>f6f5015f-1504-4c1d-9a8b-f301136ce487</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ВидыОбъектовКонтактнойИнформации" category="Manager">
+				<xr:TypeId>6c046020-0c83-4a29-8a40-2295a4dd8c3a</xr:TypeId>
+				<xr:ValueId>d3df7f32-6332-40a6-8945-7a3a9f187555</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ВидыОбъектовКонтактнойИнформации" category="List">
+				<xr:TypeId>67ab3392-27b6-452a-a9ec-4d3a1fe4f338</xr:TypeId>
+				<xr:ValueId>67ab3392-27b6-f52a-a9ec-4d3a1fe4f338</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВидыОбъектовКонтактнойИнформации</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды объектов контактной информации</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(Упр) Виды объектов контактной информации</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="d5b4f4df-9909-4b6d-ae57-85261a88cdf3">
+				<Properties>
+					<Name>ФизическиеЛица</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочник "Физические лица"</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Справочник "Физические лица", контактные лица контрагентов, менеджеры</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="114e85f9-061b-4eb8-9f1a-24ae43f74188">
+				<Properties>
+					<Name>Организации</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочник "Организации"</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="fe0d72e3-84e7-4217-bd30-b619623d00c2">
+				<Properties>
+					<Name>Пользователи</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочник "Пользователи"</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b014e2bd-b451-4715-a39f-16adf6d1b592">
+				<Properties>
+					<Name>Контрагенты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагенты</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="66b32ba4-9237-41df-b3ee-3416b11a6821">
+				<Properties>
+					<Name>СлужбыПредприятия</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочник "Службы предприятия"</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

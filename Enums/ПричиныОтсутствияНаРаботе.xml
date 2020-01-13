@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Enum uuid="212e03ce-c2fa-4d6f-b3ae-a1b622e77af4">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ПричиныОтсутствияНаРаботе" category="Ref">
+				<xr:TypeId>6b63341e-7242-49ae-9206-8a7daea15c9d</xr:TypeId>
+				<xr:ValueId>d7f0e15e-4af8-477d-a311-bbc697beb469</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ПричиныОтсутствияНаРаботе" category="Manager">
+				<xr:TypeId>2c3c45ef-ab4a-471d-92b8-00bf973a3faf</xr:TypeId>
+				<xr:ValueId>a42f858c-5da8-4238-b07b-917ac2f8224a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ПричиныОтсутствияНаРаботе" category="List">
+				<xr:TypeId>212e03ce-c2fa-4d6f-b3ae-a1b622e77af4</xr:TypeId>
+				<xr:ValueId>212e03ce-c2fa-fd6f-b3ae-a1b622e77af4</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ПричиныОтсутствияНаРаботе</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Причины отсутствия на работе</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(Упр)</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="d32f70ba-8a93-4c15-b1f9-39b0d2ab7719">
+				<Properties>
+					<Name>Заболевание</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заболевание</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a4f0f8b4-64e4-482b-856d-0eb392d88c76">
+				<Properties>
+					<Name>Командировка</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командировка</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="2812e670-a6bf-4f0e-a722-73bd7f999906">
+				<Properties>
+					<Name>ОтпускЕжегодный</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отпуск ежегодный</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b94d1048-57ea-4bc0-b261-730dfc8a0a03">
+				<Properties>
+					<Name>ОтгулВСчетЕжегодногоОтпуска</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отгул в счет ежегодного отпуска</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="45176096-bfdf-43f6-abb1-226dc1d8b5d5">
+				<Properties>
+					<Name>ОтпускПрочий</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отпуск прочий</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a893580d-41e1-45b3-9d21-8f5b0c4e2334">
+				<Properties>
+					<Name>ОтсутствуетПоНевыясненнойПричине</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отсутствует по невыясненной причине</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

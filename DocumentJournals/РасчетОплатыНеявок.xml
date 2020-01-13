@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<DocumentJournal uuid="678ec184-22b9-49f7-813f-85b73549e7ee">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentJournalSelection.РасчетОплатыНеявок" category="Selection">
+				<xr:TypeId>8b584dcd-72ba-49cc-98f9-c28c2f90baf2</xr:TypeId>
+				<xr:ValueId>1a61e8dd-c35d-4c0a-beec-c5ee01bc6939</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalList.РасчетОплатыНеявок" category="List">
+				<xr:TypeId>28e60142-1b35-4e31-ac90-97af3f4b0537</xr:TypeId>
+				<xr:ValueId>1e69abb5-2ae8-4344-b3b3-e993a50e0e01</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalManager.РасчетОплатыНеявок" category="Manager">
+				<xr:TypeId>bf84193a-2215-4c5f-9aa9-f317c227fa8f</xr:TypeId>
+				<xr:ValueId>231ae608-1296-4b0e-84cd-10eee02411dc</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>РасчетОплатыНеявок</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчет оплаты неявок</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<DefaultForm>DocumentJournal.РасчетОплатыНеявок.Form.ФормаСписка</DefaultForm>
+			<AuxiliaryForm/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<RegisteredDocuments>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеОтпускаРаботникамОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПоСреднемуЗаработку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НевыходыВОрганизациях</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеПоБольничномуЛисту</xr:Item>
+			</RegisteredDocuments>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Column uuid="e50e9f14-d7e5-482d-8648-c857fd945435">
+				<Properties>
+					<Name>Организация</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НевыходыВОрганизациях.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеПоБольничномуЛисту.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПоСреднемуЗаработку.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеОтпускаРаботникамОрганизаций.Attribute.Организация</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="a2d399f7-9e8e-45c6-bf17-2cf9230bbfe5">
+				<Properties>
+					<Name>ПериодРегистрации</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период регистрации</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НевыходыВОрганизациях.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеПоБольничномуЛисту.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПоСреднемуЗаработку.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеОтпускаРаботникамОрганизаций.Attribute.ПериодРегистрации</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="7e29765a-8a97-4e78-a096-5a861435bf9b">
+				<Properties>
+					<Name>Работники</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Работники</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НевыходыВОрганизациях.Attribute.КраткийСоставДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПоСреднемуЗаработку.Attribute.Сотрудник</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеОтпускаРаботникамОрганизаций.Attribute.Сотрудник</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеПоБольничномуЛисту.Attribute.Сотрудник</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="53447415-68dc-44bf-8040-b9d9e994c835">
+				<Properties>
+					<Name>Ответственный</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответственный</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеПоБольничномуЛисту.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПоСреднемуЗаработку.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеОтпускаРаботникамОрганизаций.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НевыходыВОрганизациях.Attribute.Ответственный</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="90e0d1ef-8c74-411c-af1d-c37cba52c914">
+				<Properties>
+					<Name>Комментарий</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеПоБольничномуЛисту.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПоСреднемуЗаработку.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеОтпускаРаботникамОрганизаций.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НевыходыВОрганизациях.Attribute.Комментарий</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Form>ФормаСписка</Form>
+		</ChildObjects>
+	</DocumentJournal>
+</MetaDataObject>

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<ExchangePlan uuid="86090966-b6ec-40c8-8389-f2486e3effad">
+		<InternalInfo>
+			<xr:ThisNode>92649591-075d-4423-9dea-5f67271813a9</xr:ThisNode>
+			<xr:GeneratedType name="ExchangePlanObject.ПоОрганизации" category="Object">
+				<xr:TypeId>af75c2d1-da59-4573-9581-d02a247bc667</xr:TypeId>
+				<xr:ValueId>9dd251d1-7fef-45b8-aaaa-bc96d4b851f6</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ExchangePlanRef.ПоОрганизации" category="Ref">
+				<xr:TypeId>95542a5c-918b-4667-abad-a3031103575f</xr:TypeId>
+				<xr:ValueId>2613a272-421a-4ea3-a79a-ddaa0647d587</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ExchangePlanSelection.ПоОрганизации" category="Selection">
+				<xr:TypeId>c322fb1c-44a4-4878-acc6-0f99e2c20b93</xr:TypeId>
+				<xr:ValueId>3c773392-06c7-427e-b423-b19bae389582</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ExchangePlanList.ПоОрганизации" category="List">
+				<xr:TypeId>c06a771b-99a0-4d96-960a-e994e32304b2</xr:TypeId>
+				<xr:ValueId>f5ef215b-aaf3-4e3e-94de-ce2672166ce3</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ExchangePlanManager.ПоОрганизации" category="Manager">
+				<xr:TypeId>b4412cc9-a39d-4b24-b9e3-85b50bd11c4a</xr:TypeId>
+				<xr:ValueId>2eefab67-1eac-4bc3-8ca9-54e758f98138</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ПоОрганизации</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По организации</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<CodeLength>3</CodeLength>
+			<CodeAllowedLength>Fixed</CodeAllowedLength>
+			<DescriptionLength>100</DescriptionLength>
+			<DefaultPresentation>AsDescription</DefaultPresentation>
+			<EditType>BothWays</EditType>
+			<QuickChoice>false</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<InputByString>
+				<xr:Field>ExchangePlan.ПоОрганизации.StandardAttribute.Description</xr:Field>
+				<xr:Field>ExchangePlan.ПоОрганизации.StandardAttribute.Code</xr:Field>
+			</InputByString>
+			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
+			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
+			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
+			<DefaultObjectForm>ExchangePlan.ПоОрганизации.Form.ФормаУзла</DefaultObjectForm>
+			<DefaultListForm>ExchangePlan.ПоОрганизации.Form.ФормаСписка</DefaultListForm>
+			<DefaultChoiceForm/>
+			<AuxiliaryObjectForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<Characteristics/>
+			<BasedOn/>
+			<DistributedInfoBase>true</DistributedInfoBase>
+			<IncludeConfigurationExtensions>false</IncludeConfigurationExtensions>
+			<CreateOnInput>DontUse</CreateOnInput>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<DataLockFields/>
+			<DataLockControlMode>Automatic</DataLockControlMode>
+			<FullTextSearch>Use</FullTextSearch>
+			<ObjectPresentation/>
+			<ExtendedObjectPresentation/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<TabularSection uuid="a6d6d395-aabb-4b21-9d1d-7a17a3069e4b">
+				<InternalInfo>
+					<xr:GeneratedType name="ExchangePlanTabularSection.ПоОрганизации.Организации" category="TabularSection">
+						<xr:TypeId>9a2f7056-92c5-49e0-9c48-939b538fe9a4</xr:TypeId>
+						<xr:ValueId>827a7606-1065-487e-8095-f9b7537fb573</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="ExchangePlanTabularSectionRow.ПоОрганизации.Организации" category="TabularSectionRow">
+						<xr:TypeId>e86f8055-fc2a-4ed6-a175-098a925c2058</xr:TypeId>
+						<xr:ValueId>81f1ff82-af7b-4167-b782-e07ba8330e06</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>Организации</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организации</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<ToolTip/>
+					<FillChecking>DontCheck</FillChecking>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="43ba45da-976c-44b1-87d9-4623d8083147">
+						<Properties>
+							<Name>Организация</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Организация</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+							<Indexing>Index</Indexing>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<Form>ФормаСписка</Form>
+			<Form>ФормаУзла</Form>
+		</ChildObjects>
+	</ExchangePlan>
+</MetaDataObject>

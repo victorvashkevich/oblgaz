@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИнформационнаяБаза</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Начисления</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Результат</dataPath>
+			<field>Результат</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипСотрудника</dataPath>
+			<field>ТипСотрудника</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<dataSource>ИнформационнаяБаза</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СостояниеРаботниковОрганизаций.Сотрудник КАК Сотрудник
+ПОМЕСТИТЬ ВТНеВключатьВОтчет
+ИЗ
+	РегистрСведений.СостояниеРаботниковОрганизаций КАК СостояниеРаботниковОрганизаций
+ГДЕ
+	СостояниеРаботниковОрганизаций.Состояние В(&amp;СостояниеНеВключать)
+	И СостояниеРаботниковОрганизаций.Период МЕЖДУ НАЧАЛОПЕРИОДА(&amp;Период, МЕСЯЦ) И КОНЕЦПЕРИОДА(&amp;Период, МЕСЯЦ)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	СостояниеРаботниковОрганизаций.Сотрудник
+ИЗ
+	РегистрСведений.СостояниеРаботниковОрганизаций КАК СостояниеРаботниковОрганизаций
+ГДЕ
+	СостояниеРаботниковОрганизаций.СостояниеЗавершения В(&amp;СостояниеНеВключать)
+	И ДОБАВИТЬКДАТЕ(СостояниеРаботниковОрганизаций.ПериодЗавершения, ДЕНЬ, -1) МЕЖДУ НАЧАЛОПЕРИОДА(&amp;Период, МЕСЯЦ) И КОНЕЦПЕРИОДА(&amp;Период, МЕСЯЦ)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	СостояниеРаботниковОрганизаций.Сотрудник
+ИЗ
+	РегистрСведений.СостояниеРаботниковОрганизаций КАК СостояниеРаботниковОрганизаций
+ГДЕ
+	СостояниеРаботниковОрганизаций.Состояние В(&amp;СостояниеНеВключать)
+	И ДОБАВИТЬКДАТЕ(СостояниеРаботниковОрганизаций.ПериодЗавершения, ДЕНЬ, -1) МЕЖДУ НАЧАЛОПЕРИОДА(&amp;Период, МЕСЯЦ) И КОНЕЦПЕРИОДА(&amp;Период, МЕСЯЦ)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	СотрудникиОрганизаций.Ссылка
+ИЗ
+	Справочник.СотрудникиОрганизаций КАК СотрудникиОрганизаций
+ГДЕ
+	(СотрудникиОрганизаций.ДатаПриемаНаРаботу МЕЖДУ НАЧАЛОПЕРИОДА(&amp;Период, МЕСЯЦ) И КОНЕЦПЕРИОДА(&amp;Период, МЕСЯЦ)
+			ИЛИ СотрудникиОрганизаций.ДатаУвольнения &lt;= КОНЕЦПЕРИОДА(&amp;Период, МЕСЯЦ)
+				И СотрудникиОрганизаций.ДатаУвольнения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0))
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Начисления.Организация,
+	Начисления.Сотрудник,
+	СУММА(Начисления.Результат) КАК Результат
+ПОМЕСТИТЬ ВТНачисленияПоОсновномуМесту
+ИЗ
+	(ВЫБРАТЬ
+		ОсновныеНачисленияРаботниковОрганизаций.ОбособленноеПодразделение КАК Организация,
+		ОсновныеНачисленияРаботниковОрганизаций.Сотрудник КАК Сотрудник,
+		ОсновныеНачисленияРаботниковОрганизаций.ВидРасчета КАК ВидРасчета,
+		ОсновныеНачисленияРаботниковОрганизаций.Результат КАК Результат,
+		ОсновныеНачисленияРаботниковОрганизаций.ПериодДействия КАК ПериодДействия
+	ИЗ
+		РегистрРасчета.ОсновныеНачисленияРаботниковОрганизаций КАК ОсновныеНачисленияРаботниковОрганизаций
+	ГДЕ
+		ОсновныеНачисленияРаботниковОрганизаций.Результат &lt;&gt; 0
+		И ОсновныеНачисленияРаботниковОрганизаций.Сотрудник.ВидЗанятости = ЗНАЧЕНИЕ(Перечисление.ВидыЗанятостиВОрганизации.ОсновноеМестоРаботы)
+		И (НАЧАЛОПЕРИОДА(ОсновныеНачисленияРаботниковОрганизаций.ПериодДействия, МЕСЯЦ) &lt;= &amp;Период
+					И НАЧАЛОПЕРИОДА(ОсновныеНачисленияРаботниковОрганизаций.ПериодРегистрации, МЕСЯЦ) = &amp;Период
+				ИЛИ НАЧАЛОПЕРИОДА(ОсновныеНачисленияРаботниковОрганизаций.ПериодДействия, МЕСЯЦ) = &amp;Период
+					И ОсновныеНачисленияРаботниковОрганизаций.ПериодРегистрации &lt; &amp;Период)
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ДополнительныеНачисленияРаботниковОрганизаций.ОбособленноеПодразделение,
+		ДополнительныеНачисленияРаботниковОрганизаций.Сотрудник,
+		ДополнительныеНачисленияРаботниковОрганизаций.ВидРасчета,
+		ДополнительныеНачисленияРаботниковОрганизаций.Результат,
+		ВЫБОР КОГДА ДополнительныеНачисленияРаботниковОрганизаций.БазовыйПериодНачало=ДАТАВРЕМЯ(1,1,1,0,0,0) ТОГДА 
+			НАЧАЛОПЕРИОДА(ДополнительныеНачисленияРаботниковОрганизаций.ПериодРегистрации, МЕСЯЦ) 
+		ИНАЧЕ
+			НАЧАЛОПЕРИОДА(ДополнительныеНачисленияРаботниковОрганизаций.БазовыйПериодНачало, МЕСЯЦ) 
+		КОНЕЦ
+	ИЗ
+		РегистрРасчета.ДополнительныеНачисленияРаботниковОрганизаций КАК ДополнительныеНачисленияРаботниковОрганизаций
+	ГДЕ
+		ДополнительныеНачисленияРаботниковОрганизаций.Результат &lt;&gt; 0
+		И ДополнительныеНачисленияРаботниковОрганизаций.Сотрудник.ВидЗанятости = ЗНАЧЕНИЕ(Перечисление.ВидыЗанятостиВОрганизации.ОсновноеМестоРаботы)
+		И (НАЧАЛОПЕРИОДА(ДополнительныеНачисленияРаботниковОрганизаций.БазовыйПериодНачало, МЕСЯЦ) &lt;= &amp;Период
+					И НАЧАЛОПЕРИОДА(ДополнительныеНачисленияРаботниковОрганизаций.ПериодРегистрации, МЕСЯЦ) = &amp;Период
+				ИЛИ НАЧАЛОПЕРИОДА(ДополнительныеНачисленияРаботниковОрганизаций.БазовыйПериодНачало, МЕСЯЦ) = &amp;Период
+					И НАЧАЛОПЕРИОДА(ДополнительныеНачисленияРаботниковОрганизаций.ПериодРегистрации, МЕСЯЦ) &lt; &amp;Период)) КАК Начисления
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НастройкиВидовРасчета КАК НастройкиВидовРасчета
+		ПО Начисления.ПериодДействия &gt;= НастройкиВидовРасчета.Период
+			И Начисления.ВидРасчета = НастройкиВидовРасчета.ВидРасчета
+ГДЕ
+	(НЕ НастройкиВидовРасчета.НеУчитыватьДляОтчета3Труд
+			ИЛИ НастройкиВидовРасчета.НеУчитыватьДляОтчета3Труд ЕСТЬ NULL )
+
+СГРУППИРОВАТЬ ПО
+	Начисления.Организация,
+	Начисления.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Начисления.Организация,
+	Начисления.Сотрудник,
+	СУММА(Начисления.Результат) КАК Результат
+ПОМЕСТИТЬ ВТНачисленияПоВнутреннемуСовместительству
+ИЗ
+	(ВЫБРАТЬ
+		ОсновныеНачисленияРаботниковОрганизаций.ОбособленноеПодразделение КАК Организация,
+		ОсновныеНачисленияРаботниковОрганизаций.Сотрудник КАК Сотрудник,
+		ОсновныеНачисленияРаботниковОрганизаций.ВидРасчета КАК ВидРасчета,
+		ОсновныеНачисленияРаботниковОрганизаций.Результат КАК Результат,
+		ОсновныеНачисленияРаботниковОрганизаций.ПериодДействия КАК ПериодДействия
+	ИЗ
+		РегистрРасчета.ОсновныеНачисленияРаботниковОрганизаций КАК ОсновныеНачисленияРаботниковОрганизаций
+	ГДЕ
+		ОсновныеНачисленияРаботниковОрганизаций.Результат &lt;&gt; 0
+		И ОсновныеНачисленияРаботниковОрганизаций.Сотрудник.ВидЗанятости = ЗНАЧЕНИЕ(Перечисление.ВидыЗанятостиВОрганизации.ВнутреннееСовместительство)
+		И (НАЧАЛОПЕРИОДА(ОсновныеНачисленияРаботниковОрганизаций.ПериодДействия, МЕСЯЦ) &lt;= &amp;Период
+					И НАЧАЛОПЕРИОДА(ОсновныеНачисленияРаботниковОрганизаций.ПериодРегистрации, МЕСЯЦ) = &amp;Период
+				ИЛИ НАЧАЛОПЕРИОДА(ОсновныеНачисленияРаботниковОрганизаций.ПериодДействия, МЕСЯЦ) = &amp;Период
+					И ОсновныеНачисленияРаботниковОрганизаций.ПериодРегистрации &lt; &amp;Период)
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ДополнительныеНачисленияРаботниковОрганизаций.ОбособленноеПодразделение,
+		ДополнительныеНачисленияРаботниковОрганизаций.Сотрудник,
+		ДополнительныеНачисленияРаботниковОрганизаций.ВидРасчета,
+		ДополнительныеНачисленияРаботниковОрганизаций.Результат,
+		НАЧАЛОПЕРИОДА(ДополнительныеНачисленияРаботниковОрганизаций.БазовыйПериодНачало, МЕСЯЦ)
+	ИЗ
+		РегистрРасчета.ДополнительныеНачисленияРаботниковОрганизаций КАК ДополнительныеНачисленияРаботниковОрганизаций
+	ГДЕ
+		ДополнительныеНачисленияРаботниковОрганизаций.Результат &lt;&gt; 0
+		И ДополнительныеНачисленияРаботниковОрганизаций.Сотрудник.ВидЗанятости = ЗНАЧЕНИЕ(Перечисление.ВидыЗанятостиВОрганизации.ВнутреннееСовместительство)
+		И (НАЧАЛОПЕРИОДА(ДополнительныеНачисленияРаботниковОрганизаций.БазовыйПериодНачало, МЕСЯЦ) &lt;= &amp;Период
+					И НАЧАЛОПЕРИОДА(ДополнительныеНачисленияРаботниковОрганизаций.ПериодРегистрации, МЕСЯЦ) = &amp;Период
+				ИЛИ НАЧАЛОПЕРИОДА(ДополнительныеНачисленияРаботниковОрганизаций.БазовыйПериодНачало, МЕСЯЦ) = &amp;Период
+					И НАЧАЛОПЕРИОДА(ДополнительныеНачисленияРаботниковОрганизаций.ПериодРегистрации, МЕСЯЦ) &lt; &amp;Период)) КАК Начисления
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НастройкиВидовРасчета КАК НастройкиВидовРасчета
+		ПО Начисления.ПериодДействия &gt;= НастройкиВидовРасчета.Период
+			И Начисления.ВидРасчета = НастройкиВидовРасчета.ВидРасчета
+ГДЕ
+	(НЕ НастройкиВидовРасчета.НеУчитыватьДляОтчета3Труд
+			ИЛИ НастройкиВидовРасчета.НеУчитыватьДляОтчета3Труд ЕСТЬ NULL )
+
+СГРУППИРОВАТЬ ПО
+	Начисления.Организация,
+	Начисления.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Начисления.ТипСотрудника,
+	Начисления.Организация КАК Организация,
+	РаботникиОрганизацийСрезПоследних.ПодразделениеОрганизации КАК Подразделение,
+	Начисления.Сотрудник КАК Сотрудник,
+	ЕСТЬNULL(Начисления.Результат,0) + ЕСТЬNULL(НачисленияПоВнутреннемуСовместительству.Результат,0) КАК Результат
+ИЗ
+	(ВЫБРАТЬ
+		"Включаемые в отчет" КАК ТипСотрудника,
+		Начисления.Организация КАК Организация,
+		Начисления.Сотрудник КАК Сотрудник,
+		Начисления.Результат КАК Результат
+	ИЗ
+		ВТНачисленияПоОсновномуМесту КАК Начисления
+	ГДЕ
+		НЕ Начисления.Сотрудник В
+					(ВЫБРАТЬ
+						НеВключатьВОтчет.Сотрудник
+					ИЗ
+						ВТНеВключатьВОтчет КАК НеВключатьВОтчет)
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		"Не включаемые в отчет",
+		Начисления.Организация,
+		Начисления.Сотрудник,
+		Начисления.Результат
+	ИЗ
+		ВТНачисленияПоОсновномуМесту КАК Начисления
+	ГДЕ
+		Начисления.Сотрудник В
+				(ВЫБРАТЬ
+					НеВключатьВОтчет.Сотрудник
+				ИЗ
+					ВТНеВключатьВОтчет КАК НеВключатьВОтчет)) КАК Начисления
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			"Включаемые в отчет" КАК ТипСотрудника,
+			Начисления.Организация КАК Организация,
+			Начисления.Сотрудник КАК Сотрудник,
+			Начисления.Результат КАК Результат
+		ИЗ
+			ВТНачисленияПоВнутреннемуСовместительству КАК Начисления
+		ГДЕ
+			НЕ Начисления.Сотрудник В
+						(ВЫБРАТЬ
+							НеВключатьВОтчет.Сотрудник
+						ИЗ
+							ВТНеВключатьВОтчет КАК НеВключатьВОтчет)
+		
+		ОБЪЕДИНИТЬ ВСЕ
+		
+		ВЫБРАТЬ
+			"Не включаемые в отчет",
+			Начисления.Организация,
+			Начисления.Сотрудник,
+			Начисления.Результат
+		ИЗ
+			ВТНачисленияПоВнутреннемуСовместительству КАК Начисления
+		ГДЕ
+			Начисления.Сотрудник В
+					(ВЫБРАТЬ
+						НеВключатьВОтчет.Сотрудник
+					ИЗ
+						ВТНеВключатьВОтчет КАК НеВключатьВОтчет)) КАК НачисленияПоВнутреннемуСовместительству
+		ПО Начисления.Сотрудник.Физлицо = НачисленияПоВнутреннемуСовместительству.Сотрудник.Физлицо
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций.СрезПоследних(КОНЕЦПЕРИОДА(&amp;Период, МЕСЯЦ), ) КАК РаботникиОрганизацийСрезПоследних
+		ПО Начисления.Сотрудник = РаботникиОрганизацийСрезПоследних.Сотрудник</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Результат</dataPath>
+		<expression>Сумма(Результат)</expression>
+		<group>Организация</group>
+		<group>Сотрудник</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СостояниеНеВключать</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Состояние не включать</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СостоянияРаботникаОрганизации</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияРаботникаОрганизации.НеРаботает</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияРаботникаОрганизации.Заболевание</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияРаботникаОрганизации.ОтпускПоБеременностиИРодам</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияРаботникаОрганизации.ОтпускПоУходуЗаРебенком</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияРаботникаОрганизации.ПоУходуЗаРебенком</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияРаботникаОрганизации.ТравмаНаПроизводстве</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияРаботникаОрганизации.ПоУходуЗаВзрослым</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сотрудник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Подразделение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Результат</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Подразделение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ПодразделенияОрганизаций.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Сотрудник</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.СотрудникиОрганизаций.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сведения для отчета 3-труд</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ТипСотрудника</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">Сотрудник</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.СотрудникиОрганизаций.ПустаяСсылка</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Сотрудник</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:use>false</dcsset:use>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

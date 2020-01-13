@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PlanOfCharacteristicKindPredefinedItems" version="2.6">
+	<Item id="4a3b76eb-1be7-4267-9be6-440ffef934ca">
+		<Name>КалендарьПользователяСобытияНапоминания</Name>
+		<Code>00002</Code>
+		<Description>Календарь пользователя</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="648ca051-a41b-43ca-80f8-cefce02bf735">
+				<Name>ИзменениеПользователяВКалендареПользователя</Name>
+				<Code>00003</Code>
+				<Description>Возможность просмотра календарей других пользователей</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="2ed9f4c0-0715-4d80-9d4a-85d18c235d54">
+		<Name>Справочники</Name>
+		<Code>00004</Code>
+		<Description>Справочники</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="24b19dc9-a405-4761-b54d-ecc7ffb4f5be">
+				<Name>РазрешитьРедактированиеКИвСписке</Name>
+				<Code>00005</Code>
+				<Description>Разрешить редактирование КИ в списке</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="d2bf43e9-ed5e-4e07-b291-7a8230a63b7e">
+		<Name>ПечатьНепроведенныхДокументов</Name>
+		<Code>00000</Code>
+		<Description>Печать непроведенных документов</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="9d1247c9-2e6d-4dc6-8f2b-76df900551f2">
+		<Name>РедактированиеТаблиц</Name>
+		<Code>00001</Code>
+		<Description>Редактирование таблиц</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

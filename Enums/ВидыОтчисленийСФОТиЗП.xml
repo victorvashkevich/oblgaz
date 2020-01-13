@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Enum uuid="29c4504a-844f-4d61-bffb-f3edf5f8951d">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ВидыОтчисленийСФОТиЗП" category="Ref">
+				<xr:TypeId>342d7a57-fd67-40e3-9640-288f0403bb02</xr:TypeId>
+				<xr:ValueId>cd9768ce-a2d0-4264-8190-656b65fcc1b2</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ВидыОтчисленийСФОТиЗП" category="Manager">
+				<xr:TypeId>77e5d334-6f93-46a5-b1f3-ffa6863efb59</xr:TypeId>
+				<xr:ValueId>d83aa351-a89a-401e-b694-828953abf2dc</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ВидыОтчисленийСФОТиЗП" category="List">
+				<xr:TypeId>a0f4727f-72e2-4d01-9b2d-d3bfe7a05462</xr:TypeId>
+				<xr:ValueId>7e3c2ea3-5a22-45fb-8f48-498d3334ffa7</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВидыОтчисленийСФОТиЗП</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды отчислений с ФОТи ЗП</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="98e9e7be-e1ab-4275-96b9-17825d719a39">
+				<Properties>
+					<Name>ПенсионныйФонд</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пенсионный фонд</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="32fad412-78c9-4a4a-bbc6-7bbb1532039e">
+				<Properties>
+					<Name>ФСЗН</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фонд социальной защиты населения</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="5571f190-befd-4c0f-8cdc-f6921afa9d16">
+				<Properties>
+					<Name>ЕдиныйПлатеж</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Единый платеж</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Отчисления чрезвычайного налога и фонда занятости единым платежом</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c6886c74-7ed2-4dea-ab72-a5b2e0ae56b8">
+				<Properties>
+					<Name>ФСЗНИнвалиды</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФСЗН (Инвалиды I и II группы)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="969f0e7d-e4af-4996-bdfc-f1638b7ad604">
+				<Properties>
+					<Name>ФСЗНИнГрЕАЭС</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФСЗН иностранных граждан стран ЕАЭС</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

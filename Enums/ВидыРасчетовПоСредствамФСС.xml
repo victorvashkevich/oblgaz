@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Enum uuid="c843a3be-9aae-4856-88d2-3649b6e9a55a">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ВидыРасчетовПоСредствамФСС" category="Ref">
+				<xr:TypeId>358ff58a-e104-4135-b34c-86dc5830549c</xr:TypeId>
+				<xr:ValueId>93f4ccda-515a-484d-86f0-8142ccc440a5</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ВидыРасчетовПоСредствамФСС" category="Manager">
+				<xr:TypeId>ddc4e08f-327d-4da7-97eb-5e64b0e4c410</xr:TypeId>
+				<xr:ValueId>249710ee-fdfc-4550-a2ec-9902e77f324d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ВидыРасчетовПоСредствамФСС" category="List">
+				<xr:TypeId>6a95d1b8-7015-4a3e-af9b-ed02353d3234</xr:TypeId>
+				<xr:ValueId>e23bc1ab-9778-4763-bec3-cea6fc6ac418</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВидыРасчетовПоСредствамФСС</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды расчетов по средствам ФСС</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="9ff6a3f4-8028-4e8f-9202-81f0a03c00c0">
+				<Properties>
+					<Name>РасходыПоСтрахованию</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расходы по страхованию</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="8cbe7188-3ab4-4b0f-b6d5-7a181a5e917b">
+				<Properties>
+					<Name>ПеречисленоСтрахователем</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перечислено страхователем</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="1ade7ea7-d6c5-4f04-b461-12305e1efbf7">
+				<Properties>
+					<Name>НеПринято</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не принято к зачету</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

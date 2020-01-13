@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Enum uuid="5e153fc4-f590-42ca-b04e-8ec718e6d0cf">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ВидыПремии" category="Ref">
+				<xr:TypeId>a1a44976-dd30-429a-b8c8-1fb0c82916b7</xr:TypeId>
+				<xr:ValueId>776ccc0d-d000-4ba5-a82b-aa7ab792dce8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ВидыПремии" category="Manager">
+				<xr:TypeId>c5e5692d-9299-45b8-96c4-a9b1982815bb</xr:TypeId>
+				<xr:ValueId>ded7f027-32e9-4b9a-abfb-461ff1059470</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ВидыПремии" category="List">
+				<xr:TypeId>5956592b-408c-4702-a8ad-7314ce1e2076</xr:TypeId>
+				<xr:ValueId>70230d45-2bbc-4bbc-b5a6-810ba7523500</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВидыПремии</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды премии</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(Регл)</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="68feaa83-5b35-4c42-93ce-5fd31a31e30a">
+				<Properties>
+					<Name>НеПремия</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не является премией</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="19ae4bb0-5453-44df-ad7e-c4ae47e5ba57">
+				<Properties>
+					<Name>Премия</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Является премией</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="df222219-5249-4ff3-9687-e6dc016e12bc">
+				<Properties>
+					<Name>ГодоваяПремия</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Является годовой премией</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="fa6b504f-e6fb-4ea2-bbb7-41145e719db8">
+				<Properties>
+					<Name>ПолугодоваяПремия</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полугодовая премия</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="60633e85-3fff-46d1-ac68-7d6b2141f664">
+				<Properties>
+					<Name>КвартальнаяПремия</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Квартальная премия</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="295e2205-e0b9-415e-81f5-7e6d0c85ab75">
+				<Properties>
+					<Name>ПремияВРезерв</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Премия резервируется</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Премия подлежащая резервированию</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="04c882a7-9b78-428e-9575-8832eff69c13">
+				<Properties>
+					<Name>ПремияИзРезерва</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Премия выплата из резерва</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Выплата зарезервированной премии</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<EventSubscription uuid="6bbfeb2c-214a-4508-b438-013ff040cef3">
+		<Properties>
+			<Name>ПередЗаписьюРегистраСведенийДатаЗапретаРедактирования</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перед записью регистра сведений (дата запрета редактирования)</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Проверка даты запреты редактирования перед записью регистров сведений</Comment>
+			<Source>
+				<v8:Type>cfg:InformationRegisterRecordSet.ПаспортныеДанныеФизЛиц</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.УчетнаяПолитикаПоНДФЛ</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.СчетчикиВыгрузок</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.КоэффициентИндексацииЗаработка</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ВоинскийУчет</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.КадровыйПлан</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.СобытийныйПланЗанятостиФизлиц</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.СтавкаРефинансированияЦБ</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.НДФЛСтандартныеВычетыФизлиц</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.КурсыВалютДляРасчетовСПерсоналом</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ПлановыеНачисленияРаботниковОрганизаций</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.СведенияОбИнвалидностиФизлиц</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ПравоПримененияРегрессивнойШкалыНалоговСФОТ</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.РасчетчикиЗарплатыОрганизаций</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ГрафикОтпусковОрганизаций</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.СостояниеРаботниковОрганизаций</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ПлановыеУдержанияРаботниковОрганизаций</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.РазмерыОтчисленийВРезервы</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.МинимальнаяОплатаТрудаРФ</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.НДФЛПрименениеВычетов</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.РасчетчикиЗарплаты</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ОтветственныеЛица</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.РазмерТарифныхСтавок</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.СборДанныхДляПланированияЗанятостиФизлиц</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ГражданствоФизЛиц</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.УчетнаяПолитикаНалоговыйУчет</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ПлановыеУдержанияРаботников</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ГосударственныеПособия</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ПравоПримененияЛьготПоЕСН</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ПлановыеНачисленияРаботников</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ПройденныеУчебныеКурсы</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.НДФЛРазмерВычетов</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.РеглУчетПлановыхНачисленийРаботниковОрганизаций</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.СемейноеПоложениеФизЛиц</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.РаботникиОрганизаций</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ШтатноеРасписаниеОрганизаций</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ОтветственныеЛицаОрганизаций</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.Работники</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ОценкиКомпетенцийРаботников</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.УчетОсновногоЗаработкаРаботниковОрганизацииВРегламентированномУчете</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ПланируемаяЗанятостьПомещений</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.КурсыВалют</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.НДФЛВычетыПоДоходам</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.НадбавкиПоШтатномуРасписаниюОрганизаций</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.УчетЗаработкаРаботников</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.СтавкаВзносаНаСтрахованиеОтНесчастныхСлучаев</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.РазмерОграниченияПособияПоНетрудоспособности</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.СведенияОСтажеРаботыНаСевере</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.СостояниеРаботников</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ЕСНСкидкиКДоходам</v8:Type>
+			</Source>
+			<Event>BeforeWrite</Event>
+			<Handler>CommonModule.НастройкаПравДоступа.ПередЗаписьюРегистраСведенийПроверкаДоступностиПериода</Handler>
+		</Properties>
+	</EventSubscription>
+</MetaDataObject>

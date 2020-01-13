@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<FilterCriterion uuid="8ffe4f67-218a-485e-a6fc-e0c23c09c96d">
+		<InternalInfo>
+			<xr:GeneratedType name="FilterCriterionManager.ДокументыПоРаботнику" category="Manager">
+				<xr:TypeId>a210688d-55bd-448e-a436-3b1e7dda6822</xr:TypeId>
+				<xr:ValueId>3e03cf5a-930a-412f-a42d-dfddd05d56e4</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="FilterCriterionList.ДокументыПоРаботнику" category="List">
+				<xr:TypeId>8953a4f1-4b31-48c8-b752-87215b706a94</xr:TypeId>
+				<xr:ValueId>adb280ee-06d9-4c4f-b00b-1c839e7956e1</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ДокументыПоРаботнику</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы по работнику</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+			</Type>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АнкетаЗастрахованногоЛица.Attribute.Исполнитель</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АнкетаЗастрахованногоЛица.TabularSection.РаботникиОрганизации.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АттестацияРаботника.Attribute.Физлицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВводСведенийОПлановыхНачисленияхУдержанияхРаботников.TabularSection.Начисления.Attribute.Физлицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВводСведенийОПлановыхНачисленияхУдержанияхРаботников.TabularSection.Удержания.Attribute.Физлицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ДоговорЗаймаСРаботником.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗарплатаКВыплате.TabularSection.Зарплата.Attribute.Физлицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаявкаНаОбучение.TabularSection.ОбучающиесяРаботники.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КадровоеПеремещение.TabularSection.Работники.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КадровоеПеремещение.TabularSection.Начисления.Attribute.Физлицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КадровоеПеремещение.TabularSection.Взыскания.Attribute.Физлицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеЗарплатыРаботникам.TabularSection.Начисления.Attribute.Физлицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеЗарплатыРаботникам.TabularSection.Удержания.Attribute.Физлицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеЗарплатыРаботникам.TabularSection.ПогашениеЗаймов.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Опрос.Attribute.ОпрашиваемоеЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПланированиеОтпуска.TabularSection.Работники.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриемНаРаботу.TabularSection.Работники.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриемНаРаботу.TabularSection.Начисления.Attribute.Физлицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриемНаРаботу.TabularSection.Взыскания.Attribute.Физлицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПрохождениеКурсаОбучения.TabularSection.ОбучающиесяРаботники.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РассылкаАнкет.TabularSection.Получатели.Attribute.Объект</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СдельныйНаряд.TabularSection.Исполнители.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ТабельУчетаРабочегоВремениОрганизации.TabularSection.ОтработанноеВремя.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ТабельУчетаРабочегоВремениОрганизации.TabularSection.ОтработанноеВремяВЦеломЗаПериод.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Увольнение.TabularSection.Работники.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УчастиеВМероприятиях.TabularSection.Работники.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УчетЗаработкаРаботников.TabularSection.Работники.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратНаРаботу.TabularSection.Работники.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтсутствиеНаРаботе.TabularSection.Работники.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Событие.Attribute.КонтактноеЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Событие.TabularSection.РаботникиОрганизации.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Событие.TabularSection.СторонниеЛица.Attribute.Лицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаДСВвПФР.TabularSection.РаботникиОрганизации.Attribute.ФизЛицо</xr:Item>
+			</Content>
+			<DefaultForm/>
+			<AuxiliaryForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects/>
+	</FilterCriterion>
+</MetaDataObject>

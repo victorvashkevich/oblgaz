@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="22"/>
+		</InputField>
+		<InputField name="Описание" id="3">
+			<DataPath>Объект.Описание</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОписаниеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="23"/>
+		</InputField>
+		<UsualGroup name="ГруппаСрокДействияДопуска" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Периодичность прохождения медосмотра</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа срок действия допуска</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаСрокДействияДопускаРасширеннаяПодсказка" id="24"/>
+			<ChildItems>
+				<InputField name="СрокДействия" id="18">
+					<DataPath>Объект.СрокДействия</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Очередной осмотр через</v8:content>
+						</v8:item>
+					</Title>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="СрокДействияКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="СрокДействияРасширеннаяПодсказка" id="25"/>
+					<Events>
+						<Event name="OnChange">СрокДействияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Периодичность" id="20">
+					<DataPath>Объект.Периодичность</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ПериодичностьКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПериодичностьРасширеннаяПодсказка" id="26"/>
+					<Events>
+						<Event name="Clearing">ПериодичностьОчистка</Event>
+						<Event name="TextEditEnd">ПериодичностьОкончаниеВводаТекста</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРасходыНаПолучениеДопуска" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расходы на прохождение медосмотра</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расходы на получение допуска</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаРасходыНаПолучениеДопускаРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<InputField name="СуммаРасходов" id="15">
+					<DataPath>Объект.СуммаРасходов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма расходов организации (руб)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СуммаРасходовКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="СуммаРасходовРасширеннаяПодсказка" id="28"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКонтролируемыеДолжности" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Осмотр обязателен для должностей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа контролируемые должности</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаКонтролируемыеДолжностиРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Table name="КонтролируемыеДолжности" id="5">
+					<Representation>List</Representation>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.КонтролируемыеДолжности</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="КонтролируемыеДолжностиКонтекстноеМеню" id="6"/>
+					<AutoCommandBar name="КонтролируемыеДолжностиКоманднаяПанель" id="7">
+						<ChildItems>
+							<Button name="ФормаПодборДолжностей" id="12">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПодборДолжностей</CommandName>
+								<ExtendedTooltip name="ФормаПодборДолжностейРасширеннаяПодсказка" id="30"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="КонтролируемыеДолжностиРасширеннаяПодсказка" id="31"/>
+					<SearchStringAddition name="КонтролируемыеДолжностиСтрокаПоиска" id="32">
+						<AdditionSource>
+							<Item>КонтролируемыеДолжности</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="КонтролируемыеДолжностиСтрокаПоискаКонтекстноеМеню" id="33"/>
+						<ExtendedTooltip name="КонтролируемыеДолжностиСтрокаПоискаРасширеннаяПодсказка" id="34"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="КонтролируемыеДолжностиСостояниеПросмотра" id="35">
+						<AdditionSource>
+							<Item>КонтролируемыеДолжности</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="КонтролируемыеДолжностиСостояниеПросмотраКонтекстноеМеню" id="36"/>
+						<ExtendedTooltip name="КонтролируемыеДолжностиСостояниеПросмотраРасширеннаяПодсказка" id="37"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="КонтролируемыеДолжностиУправлениеПоиском" id="38">
+						<AdditionSource>
+							<Item>КонтролируемыеДолжности</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="КонтролируемыеДолжностиУправлениеПоискомКонтекстноеМеню" id="39"/>
+						<ExtendedTooltip name="КонтролируемыеДолжностиУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="ChoiceProcessing">КонтролируемыеДолжностиОбработкаВыбора</Event>
+						<Event name="OnStartEdit">КонтролируемыеДолжностиПриНачалеРедактирования</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="КонтролируемыеДолжностиНомерСтроки" id="8">
+							<DataPath>Объект.КонтролируемыеДолжности.LineNumber</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>№</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КонтролируемыеДолжностиНомерСтрокиКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="КонтролируемыеДолжностиНомерСтрокиРасширеннаяПодсказка" id="41"/>
+						</LabelField>
+						<InputField name="КонтролируемыеДолжностиДолжность" id="10">
+							<DataPath>Объект.КонтролируемыеДолжности.Должность</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КонтролируемыеДолжностиДолжностьКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="КонтролируемыеДолжностиДолжностьРасширеннаяПодсказка" id="42"/>
+							<Events>
+								<Event name="ChoiceProcessing">КонтролируемыеДолжностиДолжностьОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ВидыМедицинскихОсмотров</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПодборДолжностей" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор должностей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборДолжностей</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

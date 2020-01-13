@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИнформационнаяБаза</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаНачала</dataPath>
+			<field>ДатаНачала</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПричинаОтсутствия</dataPath>
+			<field>ПричинаОтсутствия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОкончания</dataPath>
+			<field>ДатаОкончания</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата по</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Должность</dataPath>
+			<field>Должность</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должность</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеОрганизации</dataPath>
+			<field>ПодразделениеОрганизации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение организации</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТабельУчетаОрганизации</dataPath>
+			<field>ТабельУчетаОрганизации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табель учета организации</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИнформационнаяБаза</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Организации.Ссылка КАК Организация
+ПОМЕСТИТЬ ВТОрганизации
+ИЗ
+	Справочник.Организации КАК Организации
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации.Сотрудник,
+	ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации.ДатаНачала,
+	ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации.ДатаОкончания,
+	ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации.ПричинаОтсутствия,
+	ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации.Ссылка.Организация,
+	ВЫБОР
+		КОГДА ДанныеПоРаботникуДоНазначения.ПериодЗавершения &lt;= ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации.ДатаНачала
+				И ДанныеПоРаботникуДоНазначения.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ТОГДА ДанныеПоРаботникуДоНазначения.ПодразделениеОрганизацииЗавершения
+		ИНАЧЕ ДанныеПоРаботникуДоНазначения.ПодразделениеОрганизации
+	КОНЕЦ КАК ПодразделениеОрганизации,
+	ВЫБОР
+		КОГДА ДанныеПоРаботникуДоНазначения.ПериодЗавершения &lt;= ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации.ДатаНачала
+				И ДанныеПоРаботникуДоНазначения.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ТОГДА ДанныеПоРаботникуДоНазначения.ТабельУчетаОрганизацииЗавершения
+		ИНАЧЕ ДанныеПоРаботникуДоНазначения.ТабельУчетаОрганизации
+	КОНЕЦ КАК ТабельУчетаОрганизации,
+	ВЫБОР
+		КОГДА ДанныеПоРаботникуДоНазначения.ПериодЗавершения &lt;= ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации.ДатаНачала
+				И ДанныеПоРаботникуДоНазначения.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ТОГДА ДанныеПоРаботникуДоНазначения.ДолжностьЗавершения
+		ИНАЧЕ ДанныеПоРаботникуДоНазначения.Должность
+	КОНЕЦ КАК Должность
+ИЗ
+	Документ.ОтсутствиеПериодомНаРаботеОрганизаций.РаботникиОрганизации КАК ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации.Сотрудник КАК Сотрудник,
+			МАКСИМУМ(Работники.Период) КАК Период
+		ИЗ
+			Документ.ОтсутствиеПериодомНаРаботеОрганизаций.РаботникиОрганизации КАК ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций КАК Работники
+				ПО (Работники.Период &lt;= ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации.ДатаНачала)
+					И ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации.Сотрудник = Работники.Сотрудник
+		ГДЕ
+			ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации.ДатаНачала МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		
+		СГРУППИРОВАТЬ ПО
+			ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации.Сотрудник) КАК ДатыПоследнихДвиженийРаботников
+		ПО ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации.Сотрудник = ДатыПоследнихДвиженийРаботников.Сотрудник
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций КАК ДанныеПоРаботникуДоНазначения
+		ПО (ДанныеПоРаботникуДоНазначения.Период = ДатыПоследнихДвиженийРаботников.Период)
+			И ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации.Сотрудник = ДанныеПоРаботникуДоНазначения.Сотрудник
+ГДЕ
+	(ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации.ДатаНачала МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+			ИЛИ ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации.ДатаОкончания МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода)
+	И ОтсутствиеПериодомНаРаботеОрганизацийРаботникиОрганизации.Ссылка.Организация В
+			(ВЫБРАТЬ
+				ВТОрганизации.Организация
+			ИЗ
+				ВТОрганизации)</query>
+	</dataSet>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:userFields>
+				<dcsset:item xsi:type="dcsset:UserFieldCase">
+					<dcsset:dataPath>UserFields.field1</dcsset:dataPath>
+					<dcsset:title>Возраст интервалами</dcsset:title>
+					<dcsset:cases>
+						<dcsset:item>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>AndGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ДанныеФизлица.ФизЛицоВозраст</dcsset:left>
+										<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:decimal">20</dcsset:right>
+									</dcsset:item>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:value xsi:type="xs:string">0ИГ</dcsset:value>
+							<dcsset:presentationValue>до 20</dcsset:presentationValue>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>AndGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ДанныеФизлица.ФизЛицоВозраст</dcsset:left>
+										<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:decimal">20</dcsset:right>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ДанныеФизлица.ФизЛицоВозраст</dcsset:left>
+										<dcsset:comparisonType>Less</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:decimal">30</dcsset:right>
+									</dcsset:item>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:value xsi:type="xs:string">1ИГ</dcsset:value>
+							<dcsset:presentationValue>от 21 до 30</dcsset:presentationValue>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>AndGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ДанныеФизлица.ФизЛицоВозраст</dcsset:left>
+										<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:decimal">30</dcsset:right>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ДанныеФизлица.ФизЛицоВозраст</dcsset:left>
+										<dcsset:comparisonType>Less</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:decimal">40</dcsset:right>
+									</dcsset:item>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:value xsi:type="xs:string">2ИГ</dcsset:value>
+							<dcsset:presentationValue>от 31 до 40</dcsset:presentationValue>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>AndGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ДанныеФизлица.ФизЛицоВозраст</dcsset:left>
+										<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:decimal">40</dcsset:right>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ДанныеФизлица.ФизЛицоВозраст</dcsset:left>
+										<dcsset:comparisonType>Less</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:decimal">50</dcsset:right>
+									</dcsset:item>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:value xsi:type="xs:string">3ИГ</dcsset:value>
+							<dcsset:presentationValue>от 41 до 50</dcsset:presentationValue>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>AndGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ДанныеФизлица.ФизЛицоВозраст</dcsset:left>
+										<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:decimal">50</dcsset:right>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ДанныеФизлица.ФизЛицоВозраст</dcsset:left>
+										<dcsset:comparisonType>Less</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:decimal">60</dcsset:right>
+									</dcsset:item>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:value xsi:type="xs:string">4ИГ</dcsset:value>
+							<dcsset:presentationValue>от 51 до 60</dcsset:presentationValue>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>AndGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ДанныеФизлица.ФизЛицоВозраст</dcsset:left>
+										<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:decimal">60</dcsset:right>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ДанныеФизлица.ФизЛицоВозраст</dcsset:left>
+										<dcsset:comparisonType>Less</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:decimal">100</dcsset:right>
+									</dcsset:item>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:value xsi:type="xs:string">5ИГ</dcsset:value>
+							<dcsset:presentationValue>старше 60</dcsset:presentationValue>
+						</dcsset:item>
+					</dcsset:cases>
+				</dcsset:item>
+			</dcsset:userFields>
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сотрудник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаНачала</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаОкончания</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПричинаОтсутствия</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Сотрудник</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.СотрудникиОрганизаций.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ПричинаОтсутствия</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияРаботникаОрганизации.Заболевание</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ПодразделениеОрганизации</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ПодразделенияОрганизаций.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ТабельУчетаОрганизации</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ТабеляУчетаОрганизаций.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчет по неявкам сотрудников</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Сотрудник</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

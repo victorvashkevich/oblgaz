@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<DocumentJournal uuid="db4298dc-c934-47f5-9e21-d769b299af3e">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentJournalSelection.УчетКадровОрганизаций" category="Selection">
+				<xr:TypeId>519d5af3-fbec-4e1b-b8bc-57b044daf112</xr:TypeId>
+				<xr:ValueId>07206814-0b40-4db5-baad-829dba381543</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalList.УчетКадровОрганизаций" category="List">
+				<xr:TypeId>a8485993-de85-46d1-93a0-7d86f42e0975</xr:TypeId>
+				<xr:ValueId>2e65173e-7fbd-4219-b1c2-2ccb4be89de1</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalManager.УчетКадровОрганизаций" category="Manager">
+				<xr:TypeId>3a91ee6b-b733-4385-93f6-435e0237e845</xr:TypeId>
+				<xr:ValueId>9a25dbf4-f7ae-4670-8ce1-cf1e25e1ed4c</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>УчетКадровОрганизаций</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учет кадров организаций</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<DefaultForm>DocumentJournal.УчетКадровОрганизаций.Form.ФормаСписка</DefaultForm>
+			<AuxiliaryForm/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<RegisteredDocuments>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриемНаРаботуВОрганизацию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КадровоеПеремещениеОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УвольнениеИзОрганизаций</xr:Item>
+			</RegisteredDocuments>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Column uuid="dd432f65-eead-49ca-acf1-548e15e25f6f">
+				<Properties>
+					<Name>Организация</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПриемНаРаботуВОрганизацию.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УвольнениеИзОрганизаций.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.КадровоеПеремещениеОрганизаций.Attribute.Организация</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="ff76a82a-49b6-4ecc-9187-a35bcbfe7acf">
+				<Properties>
+					<Name>Работники</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Работники</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.КадровоеПеремещениеОрганизаций.Attribute.КраткийСоставДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПриемНаРаботуВОрганизацию.Attribute.КраткийСоставДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УвольнениеИзОрганизаций.Attribute.КраткийСоставДокумента</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="914e7166-0542-436f-8206-e7b66a41f90a">
+				<Properties>
+					<Name>Ответственный</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответственный</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.КадровоеПеремещениеОрганизаций.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПриемНаРаботуВОрганизацию.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УвольнениеИзОрганизаций.Attribute.Ответственный</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="745df375-bb97-4e00-ba6f-5e14c5966347">
+				<Properties>
+					<Name>Комментарий</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.КадровоеПеремещениеОрганизаций.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПриемНаРаботуВОрганизацию.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УвольнениеИзОрганизаций.Attribute.Комментарий</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Form>ФормаСписка</Form>
+		</ChildObjects>
+	</DocumentJournal>
+</MetaDataObject>

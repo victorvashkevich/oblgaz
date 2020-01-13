@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<DocumentJournal uuid="466e735d-cf03-43c4-a58c-efebb9574c6f">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentJournalSelection.ДокументыПоНачислениюЗарплатыОрганизаций" category="Selection">
+				<xr:TypeId>62a90d36-1509-4a43-8926-195081d6b766</xr:TypeId>
+				<xr:ValueId>949bb314-5ce8-4625-b513-411f0af3ee10</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalList.ДокументыПоНачислениюЗарплатыОрганизаций" category="List">
+				<xr:TypeId>f0dde4b2-ee45-4eb9-8699-0b95d15dfff4</xr:TypeId>
+				<xr:ValueId>2838042a-eaca-408e-8dac-1a7ef143360a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalManager.ДокументыПоНачислениюЗарплатыОрганизаций" category="Manager">
+				<xr:TypeId>12be79ec-c495-476a-81ec-ec7f3bccd572</xr:TypeId>
+				<xr:ValueId>a1ce095b-a063-4b57-aa2b-3146fd221eca</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ДокументыПоНачислениюЗарплатыОрганизаций</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы по начислению зарплаты организаций</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<DefaultForm>DocumentJournal.ДокументыПоНачислениюЗарплатыОрганизаций.Form.ФормаСписка</DefaultForm>
+			<AuxiliaryForm/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<RegisteredDocuments>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПремииРаботниковОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПраздничныхИВыходныхДнейОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаСверхурочныхЧасов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеДивидендовОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияРазовыхНачисленийРаботниковОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияРазовыхУдержанийРаботниковОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СдельныйНаряд</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияПростоевРаботниковОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетПриУвольненииРаботникаОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеЕдиновременныхПособийЗаСчетФСС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеОтпускаРаботникамОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеПоБольничномуЛисту</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеЗарплатыРаботникамОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НевыходыВОрганизациях</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПоСреднемуЗаработку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаЗамещенияСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаСовмещенияСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВводОтработанногоВремениВоВредныхУсловиях</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетОсновногоЗаработкаРаботниковОрганизации</xr:Item>
+			</RegisteredDocuments>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Column uuid="0272d43c-e98a-4426-8efb-21e1a9d59ca8">
+				<Properties>
+					<Name>Организация</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПремииРаботниковОрганизаций.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеДивидендовОрганизаций.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаСверхурочныхЧасов.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПраздничныхИВыходныхДнейОрганизаций.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияРазовыхУдержанийРаботниковОрганизаций.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияРазовыхНачисленийРаботниковОрганизаций.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.СдельныйНаряд.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетПриУвольненииРаботникаОрганизаций.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеЕдиновременныхПособийЗаСчетФСС.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияПростоевРаботниковОрганизаций.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеПоБольничномуЛисту.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеОтпускаРаботникамОрганизаций.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеЗарплатыРаботникамОрганизаций.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НевыходыВОрганизациях.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПоСреднемуЗаработку.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаЗамещенияСотрудников.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаСовмещенияСотрудников.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВводОтработанногоВремениВоВредныхУсловиях.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетОсновногоЗаработкаРаботниковОрганизации.Attribute.Организация</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="e3060387-243a-4d4c-932f-839dc5dde53e">
+				<Properties>
+					<Name>Месяц</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Месяц</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПремииРаботниковОрганизаций.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПраздничныхИВыходныхДнейОрганизаций.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаСверхурочныхЧасов.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияРазовыхУдержанийРаботниковОрганизаций.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияРазовыхНачисленийРаботниковОрганизаций.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетПриУвольненииРаботникаОрганизаций.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияПростоевРаботниковОрганизаций.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеПоБольничномуЛисту.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеОтпускаРаботникамОрганизаций.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеЗарплатыРаботникамОрганизаций.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НевыходыВОрганизациях.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПоСреднемуЗаработку.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.СдельныйНаряд.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеЕдиновременныхПособийЗаСчетФСС.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеДивидендовОрганизаций.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаЗамещенияСотрудников.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаСовмещенияСотрудников.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВводОтработанногоВремениВоВредныхУсловиях.Attribute.ПериодРегистрации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетОсновногоЗаработкаРаботниковОрганизации.Attribute.Период</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="cd28013a-ab2e-4b27-b9e5-dad5f10e82b1">
+				<Properties>
+					<Name>Работники</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сотрудники</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.СдельныйНаряд.Attribute.КраткийСоставДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеДивидендовОрганизаций.Attribute.КраткийСоставДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПраздничныхИВыходныхДнейОрганизаций.Attribute.КраткийСоставДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаСверхурочныхЧасов.Attribute.КраткийСоставДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияРазовыхНачисленийРаботниковОрганизаций.Attribute.КраткийСоставДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияРазовыхУдержанийРаботниковОрганизаций.Attribute.КраткийСоставДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПремииРаботниковОрганизаций.Attribute.КраткийСоставДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеЕдиновременныхПособийЗаСчетФСС.Attribute.КраткийСоставДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеЗарплатыРаботникамОрганизаций.Attribute.КраткийСоставДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НевыходыВОрганизациях.Attribute.КраткийСоставДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетПриУвольненииРаботникаОрганизаций.Attribute.Сотрудник</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияПростоевРаботниковОрганизаций.Attribute.Сотрудник</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПоСреднемуЗаработку.Attribute.Сотрудник</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеПоБольничномуЛисту.Attribute.Сотрудник</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеОтпускаРаботникамОрганизаций.Attribute.Сотрудник</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаЗамещенияСотрудников.Attribute.КраткийСоставДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаСовмещенияСотрудников.Attribute.КраткийСоставДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВводОтработанногоВремениВоВредныхУсловиях.Attribute.КраткийСоставДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетОсновногоЗаработкаРаботниковОрганизации.Attribute.КраткийСоставДокумента</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="0636c29b-27f3-4adc-8206-749914131461">
+				<Properties>
+					<Name>Ответственный</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответственный</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетПриУвольненииРаботникаОрганизаций.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеЕдиновременныхПособийЗаСчетФСС.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.СдельныйНаряд.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеДивидендовОрганизаций.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПраздничныхИВыходныхДнейОрганизаций.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаСверхурочныхЧасов.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияПростоевРаботниковОрганизаций.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияРазовыхНачисленийРаботниковОрганизаций.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияРазовыхУдержанийРаботниковОрганизаций.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПремииРаботниковОрганизаций.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеПоБольничномуЛисту.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеОтпускаРаботникамОрганизаций.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПоСреднемуЗаработку.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеЗарплатыРаботникамОрганизаций.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НевыходыВОрганизациях.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаЗамещенияСотрудников.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаСовмещенияСотрудников.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВводОтработанногоВремениВоВредныхУсловиях.Attribute.Ответственный</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетОсновногоЗаработкаРаботниковОрганизации.Attribute.Ответственный</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="048b81df-d804-455d-849c-5f30df5b0c29">
+				<Properties>
+					<Name>Комментарий</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетПриУвольненииРаботникаОрганизаций.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеЕдиновременныхПособийЗаСчетФСС.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.СдельныйНаряд.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеДивидендовОрганизаций.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПраздничныхИВыходныхДнейОрганизаций.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаСверхурочныхЧасов.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияПростоевРаботниковОрганизаций.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияРазовыхНачисленийРаботниковОрганизаций.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияРазовыхУдержанийРаботниковОрганизаций.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПремииРаботниковОрганизаций.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеПоБольничномуЛисту.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеОтпускаРаботникамОрганизаций.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПоСреднемуЗаработку.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачислениеЗарплатыРаботникамОрганизаций.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НевыходыВОрганизациях.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаЗамещенияСотрудников.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаСовмещенияСотрудников.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВводОтработанногоВремениВоВредныхУсловиях.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РасчетОсновногоЗаработкаРаботниковОрганизации.Attribute.Комментарий</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Form>ФормаСписка</Form>
+		</ChildObjects>
+	</DocumentJournal>
+</MetaDataObject>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<DataProcessor uuid="c00d8436-065b-46fb-9ddd-26c0e4801b22">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.РегистрацияИзмененийДляОбмена" category="Object">
+				<xr:TypeId>20dd8dba-1d27-4088-8ba9-21fbe1d16eb6</xr:TypeId>
+				<xr:ValueId>07cef7bf-0be1-4e43-a639-7ee5969d3f45</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.РегистрацияИзмененийДляОбмена" category="Manager">
+				<xr:TypeId>e6c13c57-4331-4b3e-999f-31a9dea4b47e</xr:TypeId>
+				<xr:ValueId>24168130-3ad8-477a-8cfa-6765b6edb71c</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>РегистрацияИзмененийДляОбмена</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация изменений для обмена</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Регистрация изменений для обмена</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<DefaultForm>DataProcessor.РегистрацияИзмененийДляОбмена.Form.Форма</DefaultForm>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>Форма</Form>
+			<Form>ФормаВыбораОбновленияРегистрации</Form>
+			<Form>ФормаДанныхВыгрузки</Form>
+			<Form>ФормаРезультатаЗапроса</Form>
+			<Form>ФормаПараметров</Form>
+			<Form>ФормаВыбораОбъектовДляРегистрации</Form>
+			<Form>ИзменениеНомеровСообщений</Form>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

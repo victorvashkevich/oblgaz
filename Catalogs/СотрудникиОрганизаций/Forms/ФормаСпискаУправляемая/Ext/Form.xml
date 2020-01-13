@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОтчетСравнениеКомпетенцийСравнениеКомпетенций" id="38">
+				<Type>CommandBarButton</Type>
+				<CommandName>0</CommandName>
+				<DataPath>Items.Список.CurrentData.Ref</DataPath>
+				<ExtendedTooltip name="ФормаОтчетСравнениеКомпетенцийСравнениеКомпетенцийРасширеннаяПодсказка" id="39"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ПоПодразделению" id="18">
+			<DataPath>ПоПодразделению</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПоПодразделениюКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="ПоПодразделениюРасширеннаяПодсказка" id="40"/>
+			<Events>
+				<Event name="OnChange">ПоПодразделениюПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Table name="Список" id="1">
+			<CommandBarLocation>None</CommandBarLocation>
+			<SkipOnInput>false</SkipOnInput>
+			<DefaultItem>true</DefaultItem>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>false</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="41"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="42">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="44"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="45">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="46"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="47"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="48">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="49"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="50"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Код" id="6">
+					<DataPath>Список.Code</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КодКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="51"/>
+				</LabelField>
+				<LabelField name="Наименование" id="4">
+					<DataPath>Список.Description</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="52"/>
+				</LabelField>
+				<LabelField name="Организация" id="8">
+					<DataPath>Список.Организация</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="53"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаВКомпании" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В компании</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа в компании</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>InCell</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГруппаВКомпанииРасширеннаяПодсказка" id="54"/>
+					<ChildItems>
+						<LabelField name="ТекущееПодразделениеКомпании" id="21">
+							<DataPath>Список.ТекущееПодразделениеКомпании</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подразделение</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТекущееПодразделениеКомпанииКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ТекущееПодразделениеКомпанииРасширеннаяПодсказка" id="55"/>
+						</LabelField>
+						<LabelField name="ТекущаяДолжностьКомпании" id="23">
+							<DataPath>Список.ТекущаяДолжностьКомпании</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Должность</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТекущаяДолжностьКомпанииКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="ТекущаяДолжностьКомпанииРасширеннаяПодсказка" id="56"/>
+						</LabelField>
+						<LabelField name="ДатаПриемаНаРаботуВКомпанию" id="25">
+							<DataPath>Список.ДатаПриемаНаРаботуВКомпанию</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата приема</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДатаПриемаНаРаботуВКомпаниюКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ДатаПриемаНаРаботуВКомпаниюРасширеннаяПодсказка" id="57"/>
+						</LabelField>
+						<LabelField name="ДатаУвольненияИзКомпании" id="27">
+							<DataPath>Список.ДатаУвольненияИзКомпании</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата увольнения</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДатаУвольненияИзКомпанииКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ДатаУвольненияИзКомпанииРасширеннаяПодсказка" id="58"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаВОрганизации" id="29">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В организации</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа в организации</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>InCell</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГруппаВОрганизацииРасширеннаяПодсказка" id="59"/>
+					<ChildItems>
+						<LabelField name="ТекущееПодразделениеОрганизации" id="30">
+							<DataPath>Список.ТекущееПодразделениеОрганизации</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подразделение</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТекущееПодразделениеОрганизацииКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ТекущееПодразделениеОрганизацииРасширеннаяПодсказка" id="60"/>
+						</LabelField>
+						<LabelField name="ТекущаяДолжностьОрганизации" id="32">
+							<DataPath>Список.ТекущаяДолжностьОрганизации</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Должность</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТекущаяДолжностьОрганизацииКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ТекущаяДолжностьОрганизацииРасширеннаяПодсказка" id="61"/>
+						</LabelField>
+						<LabelField name="ДатаПриемаНаРаботу" id="36">
+							<DataPath>Список.ДатаПриемаНаРаботу</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата приема</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДатаПриемаНаРаботуКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ДатаПриемаНаРаботуРасширеннаяПодсказка" id="62"/>
+						</LabelField>
+						<LabelField name="ДатаУвольнения" id="34">
+							<DataPath>Список.ДатаУвольнения</DataPath>
+							<ContextMenu name="ДатаУвольненияКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ДатаУвольненияРасширеннаяПодсказка" id="63"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникСотрудникиОрганизаций.Ссылка,
+	СправочникСотрудникиОрганизаций.ПометкаУдаления,
+	СправочникСотрудникиОрганизаций.Предопределенный,
+	СправочникСотрудникиОрганизаций.Родитель,
+	СправочникСотрудникиОрганизаций.ЭтоГруппа,
+	СправочникСотрудникиОрганизаций.Код,
+	СправочникСотрудникиОрганизаций.Наименование,
+	СправочникСотрудникиОрганизаций.Физлицо,
+	СправочникСотрудникиОрганизаций.Актуальность,
+	СправочникСотрудникиОрганизаций.Организация,
+	СправочникСотрудникиОрганизаций.ОбособленноеПодразделение,
+	СправочникСотрудникиОрганизаций.ВидДоговора,
+	СправочникСотрудникиОрганизаций.ВидЗанятости,
+	СправочникСотрудникиОрганизаций.НомерДоговора,
+	СправочникСотрудникиОрганизаций.ДатаДоговора,
+	СправочникСотрудникиОрганизаций.ГрафикРаботы,
+	СправочникСотрудникиОрганизаций.ПодразделениеОрганизации,
+	СправочникСотрудникиОрганизаций.Должность,
+	СправочникСотрудникиОрганизаций.ЗанимаемыхСтавок,
+	СправочникСотрудникиОрганизаций.ДатаНачала,
+	СправочникСотрудникиОрганизаций.ДатаОкончания,
+	СправочникСотрудникиОрганизаций.ИспытательныйСрок,
+	СправочникСотрудникиОрганизаций.ВидРасчета,
+	СправочникСотрудникиОрганизаций.ТарифнаяСтавка,
+	СправочникСотрудникиОрганизаций.ВалютаТарифнойСтавки,
+	СправочникСотрудникиОрганизаций.ПостфиксНаименования,
+	СправочникСотрудникиОрганизаций.ТарифныйРазряд,
+	СправочникСотрудникиОрганизаций.ТекущееОбособленноеПодразделение,
+	СправочникСотрудникиОрганизаций.ТекущееПодразделениеОрганизации,
+	СправочникСотрудникиОрганизаций.ТекущаяДолжностьОрганизации,
+	СправочникСотрудникиОрганизаций.ДатаПриемаНаРаботу,
+	СправочникСотрудникиОрганизаций.ДатаУвольнения,
+	СправочникСотрудникиОрганизаций.ТекущееПодразделениеКомпании,
+	СправочникСотрудникиОрганизаций.ТекущаяДолжностьКомпании,
+	СправочникСотрудникиОрганизаций.ДатаПриемаНаРаботуВКомпанию,
+	СправочникСотрудникиОрганизаций.ДатаУвольненияИзКомпании
+ИЗ
+	Справочник.СотрудникиОрганизаций КАК СправочникСотрудникиОрганизаций</QueryText>
+				<MainTable>Catalog.СотрудникиОрганизаций</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Актуальность</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПоПодразделению" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По подразделению</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Подразделения</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>b3dd51c5-30f8-454d-aa78-8debe7b57e0f</Item>
+			</FunctionalOptions>
+		</Attribute>
+	</Attributes>
+</Form>

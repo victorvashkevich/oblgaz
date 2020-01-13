@@ -1,0 +1,1009 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИнформационнаяБаза</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ОтчетПоСобытиям</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Событие</dataPath>
+			<field>Событие</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Событие</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Кандидат</dataPath>
+			<field>Кандидат</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кандидат</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НазваниеПараметра</dataPath>
+			<field>НазваниеПараметра</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Название</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<valueType>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</valueType>
+			<availableValue>
+				<value xsi:type="xs:string">Продолжительность события</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Продолжительность события</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:string">Кандидат</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Кандидат</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:string">Описание событий</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Описание событий</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:string">Вид события</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Вид события</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:string">Тип события</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Тип события</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:string">Состояние события</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Состояние события</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:string">Содержание события</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Содержание события</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:string">Основание для события</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Основание для события</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:string">Ответственный за событие</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Ответственный за событие</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:string">Приложенные файлы</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приложенные файлы</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:string">Заявка кандидата</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Заявка кандидата</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Параметр2</dataPath>
+			<field>Параметр2</field>
+			<useRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Параметр1</dataPath>
+			<field>Параметр1</field>
+			<useRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаявкаКандидата</dataPath>
+			<field>ЗаявкаКандидата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявка кандидата</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<dataSource>ИнформационнаяБаза</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	"Продолжительность события" КАК НазваниеПараметра,
+	События.Ссылка КАК Событие,
+	ВЫБОР
+		КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+			ТОГДА События.КонтактноеЛицо
+		ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+	КОНЕЦ КАК Кандидат,
+	События.НачалоСобытия КАК Параметр1,
+	События.ОкончаниеСобытия КАК Параметр2,
+	События.ЗаявкаКандидата КАК ЗаявкаКандидата
+{ВЫБРАТЬ
+	НазваниеПараметра,
+	Событие.*,
+	Кандидат.*,
+	Параметр1,
+	Параметр2,
+	ЗаявкаКандидата.*}
+ИЗ
+	Документ.Событие КАК События
+ГДЕ
+	(&amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &gt;= &amp;НачалоПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &lt;= &amp;КонецПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И (События.Дата &lt;= &amp;КонецПериода
+					И События.Дата &gt;= &amp;НачалоПериода))
+{ГДЕ
+	События.Ссылка.* КАК Событие,
+	(ВЫБОР
+			КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+				ТОГДА События.КонтактноеЛицо
+			ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+		КОНЕЦ) КАК Кандидат,
+	("Продолжительность события") КАК НазваниеПараметра,
+	События.ЗаявкаКандидата.*}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВЫБОР
+		КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+			ТОГДА "Кандидат"
+		ИНАЧЕ "Заявка кандидата"
+	КОНЕЦ,
+	События.Ссылка,
+	ВЫБОР
+		КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+			ТОГДА События.КонтактноеЛицо
+		ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+			ТОГДА События.КонтактноеЛицо
+		ИНАЧЕ События.ЗаявкаКандидата
+	КОНЕЦ,
+	NULL,
+	События.ЗаявкаКандидата
+ИЗ
+	Документ.Событие КАК События
+ГДЕ
+	(&amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &gt;= &amp;НачалоПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &lt;= &amp;КонецПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И (События.Дата &lt;= &amp;КонецПериода
+					И События.Дата &gt;= &amp;НачалоПериода))
+{ГДЕ
+	События.Ссылка.* КАК Событие,
+	(ВЫБОР
+			КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+				ТОГДА События.КонтактноеЛицо
+			ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+		КОНЕЦ) КАК Кандидат,
+	(ВЫБОР
+			КОГДА События.ЗаявкаКандидата &lt;&gt; ЗНАЧЕНИЕ(Справочник.ЗаявкиКандидатов.ПустаяСсылка)
+				ТОГДА "Кандидат"
+			ИНАЧЕ "Заявка кандидата"
+		КОНЕЦ) КАК НазваниеПараметра,
+	События.ЗаявкаКандидата.*}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	"Описание событий",
+	События.Ссылка,
+	ВЫБОР
+		КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+			ТОГДА События.КонтактноеЛицо
+		ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+	КОНЕЦ,
+	События.ОписаниеСобытия,
+	NULL,
+	События.ЗаявкаКандидата
+ИЗ
+	Документ.Событие КАК События
+ГДЕ
+	(&amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &gt;= &amp;НачалоПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &lt;= &amp;КонецПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И (События.Дата &lt;= &amp;КонецПериода
+					И События.Дата &gt;= &amp;НачалоПериода))
+{ГДЕ
+	События.Ссылка.* КАК Событие,
+	(ВЫБОР
+			КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+				ТОГДА События.КонтактноеЛицо
+			ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+		КОНЕЦ) КАК Кандидат,
+	("Описание событий") КАК НазваниеПараметра,
+	События.ЗаявкаКандидата.*}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	"Вид события",
+	События.Ссылка,
+	ВЫБОР
+		КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+			ТОГДА События.КонтактноеЛицо
+		ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+	КОНЕЦ,
+	События.ВидСобытия,
+	NULL,
+	События.ЗаявкаКандидата
+ИЗ
+	Документ.Событие КАК События
+ГДЕ
+	(&amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &gt;= &amp;НачалоПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &lt;= &amp;КонецПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И (События.Дата &lt;= &amp;КонецПериода
+					И События.Дата &gt;= &amp;НачалоПериода))
+{ГДЕ
+	События.Ссылка.* КАК Событие,
+	(ВЫБОР
+			КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+				ТОГДА События.КонтактноеЛицо
+			ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+		КОНЕЦ) КАК Кандидат,
+	("Вид события") КАК НазваниеПараметра,
+	События.ЗаявкаКандидата.*}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	"Тип события",
+	События.Ссылка,
+	ВЫБОР
+		КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+			ТОГДА События.КонтактноеЛицо
+		ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+	КОНЕЦ,
+	События.ТипСобытия,
+	NULL,
+	События.ЗаявкаКандидата
+ИЗ
+	Документ.Событие КАК События
+ГДЕ
+	(&amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &gt;= &amp;НачалоПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &lt;= &amp;КонецПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И (События.Дата &lt;= &amp;КонецПериода
+					И События.Дата &gt;= &amp;НачалоПериода))
+{ГДЕ
+	События.Ссылка.* КАК Событие,
+	(ВЫБОР
+			КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+				ТОГДА События.КонтактноеЛицо
+			ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+		КОНЕЦ) КАК Кандидат,
+	("Тип события") КАК НазваниеПараметра,
+	События.ЗаявкаКандидата.*}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	"Состояние события",
+	События.Ссылка,
+	ВЫБОР
+		КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+			ТОГДА События.КонтактноеЛицо
+		ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+	КОНЕЦ,
+	События.СостояниеСобытия,
+	NULL,
+	События.ЗаявкаКандидата
+ИЗ
+	Документ.Событие КАК События
+ГДЕ
+	(&amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &gt;= &amp;НачалоПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &lt;= &amp;КонецПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И (События.Дата &lt;= &amp;КонецПериода
+					И События.Дата &gt;= &amp;НачалоПериода))
+{ГДЕ
+	События.Ссылка.* КАК Событие,
+	(ВЫБОР
+			КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+				ТОГДА События.КонтактноеЛицо
+			ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+		КОНЕЦ) КАК Кандидат,
+	("Состояние события") КАК НазваниеПараметра,
+	События.ЗаявкаКандидата.*}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	"Содержание события",
+	События.Ссылка,
+	ВЫБОР
+		КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+			ТОГДА События.КонтактноеЛицо
+		ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+	КОНЕЦ,
+	События.Ссылка,
+	NULL,
+	События.ЗаявкаКандидата
+ИЗ
+	Документ.Событие КАК События
+ГДЕ
+	(&amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &gt;= &amp;НачалоПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &lt;= &amp;КонецПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И (События.Дата &lt;= &amp;КонецПериода
+					И События.Дата &gt;= &amp;НачалоПериода))
+{ГДЕ
+	События.Ссылка.* КАК Событие,
+	(ВЫБОР
+			КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+				ТОГДА События.КонтактноеЛицо
+			ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+		КОНЕЦ) КАК Кандидат,
+	("Содержание события") КАК НазваниеПараметра,
+	События.ЗаявкаКандидата.*}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	"Основание для события",
+	События.Ссылка,
+	ВЫБОР
+		КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+			ТОГДА События.КонтактноеЛицо
+		ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+	КОНЕЦ,
+	События.Основание,
+	NULL,
+	События.ЗаявкаКандидата
+ИЗ
+	Документ.Событие КАК События
+ГДЕ
+	(&amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &gt;= &amp;НачалоПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &lt;= &amp;КонецПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И (События.Дата &lt;= &amp;КонецПериода
+					И События.Дата &gt;= &amp;НачалоПериода))
+{ГДЕ
+	События.Ссылка.* КАК Событие,
+	(ВЫБОР
+			КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+				ТОГДА События.КонтактноеЛицо
+			ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+		КОНЕЦ) КАК Кандидат,
+	("Основание для события") КАК НазваниеПараметра,
+	События.ЗаявкаКандидата.*}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	"Ответственный за событие",
+	События.Ссылка,
+	ВЫБОР
+		КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+			ТОГДА События.КонтактноеЛицо
+		ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+	КОНЕЦ,
+	События.Ответственный,
+	NULL,
+	События.ЗаявкаКандидата
+ИЗ
+	Документ.Событие КАК События
+ГДЕ
+	(&amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &gt;= &amp;НачалоПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &lt;= &amp;КонецПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И (События.Дата &lt;= &amp;КонецПериода
+					И События.Дата &gt;= &amp;НачалоПериода))
+{ГДЕ
+	События.Ссылка.* КАК Событие,
+	(ВЫБОР
+			КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+				ТОГДА События.КонтактноеЛицо
+			ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+		КОНЕЦ) КАК Кандидат,
+	("Ответственный за событие") КАК НазваниеПараметра,
+	События.ЗаявкаКандидата.*}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	"Приложенные файлы",
+	События.Ссылка,
+	ВЫБОР
+		КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+			ТОГДА События.КонтактноеЛицо
+		ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА События.ЕстьВложения
+			ТОГДА "Открыть список"
+		ИНАЧЕ "- - -"
+	КОНЕЦ,
+	NULL,
+	События.ЗаявкаКандидата
+ИЗ
+	Документ.Событие КАК События
+ГДЕ
+	(&amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &gt;= &amp;НачалоПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И События.Дата &lt;= &amp;КонецПериода
+			ИЛИ &amp;КонецПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И &amp;НачалоПериода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И (События.Дата &lt;= &amp;КонецПериода
+					И События.Дата &gt;= &amp;НачалоПериода))
+{ГДЕ
+	События.Ссылка.* КАК Событие,
+	(ВЫБОР
+			КОГДА События.КонтактноеЛицо &lt;&gt; ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка)
+				ТОГДА События.КонтактноеЛицо
+			ИНАЧЕ События.ЗаявкаКандидата.ФизЛицо
+		КОНЕЦ) КАК Кандидат,
+	("Приложенные файлы") КАК НазваниеПараметра,
+	События.ЗаявкаКандидата.*}
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ФизическиеЛица)
+	СПИСОК (SELECT
+			ВидыКонтактнойИнформации.Ref,
+			ВидыКонтактнойИнформации.Description,
+			ВидыКонтактнойИнформации.Тип
+		FROM
+			Catalog.ВидыКонтактнойИнформации AS ВидыКонтактнойИнформации
+		WHERE
+			ВидыКонтактнойИнформации.ВидОбъектаКонтактнойИнформации = VALUE(Перечисление.ВидыОбъектовКонтактнойИнформации.ФизическиеЛица)
+			AND (NOT ВидыКонтактнойИнформации.DeletionMark))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ Тип
+	ЗНАЧЕНИЯ РегистрСведений.КонтактнаяИнформация
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Вид
+	ЗНАЧЕНИЕ Представление }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ФизическиеЛица)
+	СПИСОК (SELECT
+			СвойстваОбъектов.Ref,
+			" Дополнительное свойство: " + СвойстваОбъектов.Description AS Наименование,
+			СвойстваОбъектов.ValueType
+		FROM
+			ChartOfCharacteristicTypes.СвойстваОбъектов AS СвойстваОбъектов
+		WHERE
+			СвойстваОбъектов.НазначениеСвойства = VALUE(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ФизическиеЛица)
+			AND (NOT СвойстваОбъектов.DeletionMark))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ФизическиеЛица)
+	СПИСОК (SELECT
+			КатегорииОбъектов.Ref,
+			" Дополнительная категория: " + КатегорииОбъектов.Description AS Наименование
+		FROM
+			Catalog.КатегорииОбъектов AS КатегорииОбъектов
+		WHERE
+			КатегорииОбъектов.НазначениеКатегории = VALUE(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ФизическиеЛица)
+			AND (NOT КатегорииОбъектов.DeletionMark))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<calculatedField>
+		<dataPath>НазваниеПоляСобытия</dataPath>
+		<expression>НазваниеПараметра + " : "</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Название поля события</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ЗначениеПоля</dataPath>
+		<expression>ВЫБОР 
+КОГДА НазваниеПараметра = "Продолжительность события" 
+ТОГДА " с " + Строка(Параметр1) + " по" + Строка(Параметр2)
+КОГДА НазваниеПараметра = "Содержание события" 
+ТОГДА Параметр1.СодержаниеСобытия
+ИНАЧЕ Параметр1
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Значение поля события</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НазваниеПоляСобытия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗначениеПоля</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Событие</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Документ.Событие.</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Кандидат</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ФизическиеЛица.</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">НазваниеПараметра</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ЗаявкаКандидата</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ЗаявкиКандидатов.</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item>
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item>
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Событие</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Кандидат</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>НазваниеПоляСобытия</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">НазваниеПоляСобытия</dcsset:left>
+							<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Приложенные файлы : </dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:BorderColor</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ЗначениеПоля</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">НазваниеПоляСобытия</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Приложенные файлы : </dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ЗначениеПоля</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">НазваниеПоляСобытия</dcsset:left>
+							<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Приложенные файлы : </dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="style:TextFont" faceName="Arial" kind="StyleItem"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Событие</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:FormBackColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>НазваниеПоляСобытия</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">НазваниеПоляСобытия</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Приложенные файлы : </dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:BorderColor</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчет по событиям</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Событие</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

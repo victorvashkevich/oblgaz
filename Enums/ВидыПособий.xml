@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Enum uuid="d2d03143-36c1-4941-aa9f-564d64937016">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ВидыПособий" category="Ref">
+				<xr:TypeId>0d75f6f6-f76b-4cab-a1c3-7e6b0c6a31ca</xr:TypeId>
+				<xr:ValueId>19e67053-97ad-4dfd-9c1c-b78046ee74b5</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ВидыПособий" category="Manager">
+				<xr:TypeId>1cf4e608-9d08-42cb-b935-9db4bd19f734</xr:TypeId>
+				<xr:ValueId>6cc08d6e-f6ca-45f7-ad7b-a096fc5b4be1</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ВидыПособий" category="List">
+				<xr:TypeId>bae4ac55-7703-40a5-8598-1602a83df4b6</xr:TypeId>
+				<xr:ValueId>a56032f7-ecb3-412f-b46d-8dff03716c3a</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВидыПособий</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды пособий</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="c7f1731c-2b70-46a3-b418-ccb4b7fd0a91">
+				<Properties>
+					<Name>ПособиеПоВременнойНетрудоспособности</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособие по временной нетрудоспособности</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="caa35df7-c421-4650-9cac-8a5b71e82eda">
+				<Properties>
+					<Name>ПособиеПоУходуЗаБольнымЧленомСемьи</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособие по уходу за больным членом семьи</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="8c9a2547-4b5d-454b-8fd4-8d1008fb5761">
+				<Properties>
+					<Name>ПособиеПоБеременостиИРодам</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособие по беремености и родам</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d7162f67-d227-4e4a-9985-a54c7912a2fa">
+				<Properties>
+					<Name>ПособиеВСвязиСРождениемРебенка</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособие в связи с рождением второго и последующих детей</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="60bbee6f-cbfb-4cbd-aeae-4567f0666537">
+				<Properties>
+					<Name>ПособиеДо12НедельногоСтрока</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособие женщинам, ставшим на учет в государственных организациях здравохранения до 12-недельного строка беременности</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="15d84afd-9b4e-49f1-94da-e08c42674007">
+				<Properties>
+					<Name>ПособиеНаПогребение</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособие на погребение и возмещение расходов на погребение</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="551e9455-3641-4421-b697-a9fc05189b9f">
+				<Properties>
+					<Name>ПособиеПоУходуЗаРебенкомДо3Лет</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособие по уходу за ребенком до 3 лет на первого ребенка</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="85aed053-dfab-4a9a-8f52-d097292c857c">
+				<Properties>
+					<Name>ПособиеПоУходуЗаРебенкомДо3ЛетСНадбавкой75</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособие по уходу за ребенком до3 лет с надбавкой 75%</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d6f9f089-bf20-4c01-9f68-0b0fdd36407e">
+				<Properties>
+					<Name>ПособиеПоУходуЗаРебенкомДо3ЛетСНадбавкой40</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособие по уходу за ребенком до3 лет с надбавкой 40%</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="cb58f073-43d7-40e4-bbdc-c10f53784968">
+				<Properties>
+					<Name>ПособиеНаДетейСтарше3лет</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособие на детей старше 3 лет в размере 50% БПМ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="8b578ddf-19f3-4aec-b374-f6348996fd09">
+				<Properties>
+					<Name>ПособиеНаДетейСтарше3летСНадбавкой40</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособие на детей старше3лет с надбавкой 40%</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="290743ae-bc7e-4b3d-8578-345bd5a9d3ac">
+				<Properties>
+					<Name>ОплатаСободныхОтРаботыДней</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата свободных от работы дней</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="f213bca2-594d-4870-9871-652731a7a557">
+				<Properties>
+					<Name>ПособиеВСвязиСРождениемПервогоРебенка</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособие в связи с рождением первого ребенка</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="4da13b83-3e72-4383-9cc1-f72fe28721e3">
+				<Properties>
+					<Name>ПособиеПоУходуЗаРебенкомДо3ЛетНаВтрогоРебенка</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособие по уходу за ребенком до 3 лет на второго и последующих детей</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="cb190b6c-3502-4527-b0ec-04703269186b">
+				<Properties>
+					<Name>ПособиеПоУходуЗаРебенкомДо3ЛетНаРебенкаИнвалида</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособие по уходу за ребенком до 3 лет на ребенка инвалида</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="68837955-198f-4f1f-a9c3-68e76075115b">
+				<Properties>
+					<Name>ПособиеНаДетейСтарше3летНаРебенкаИнвалида</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособие на детей старше 3 лет в размере 70% БПМ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="3ab0d8ed-d5e7-4dd8-9333-cd7cfb93b14c">
+				<Properties>
+					<Name>ПособиеПоУходуЗаРебенкомИнвалидомДо18Лет</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По уходу за ребенком-инвалидом в возрасте до 18 лет (ежемесячное) </v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="739264e3-b43d-40f9-bfbf-d41aa0883948">
+				<Properties>
+					<Name>ПособиеНаРебенкаВИЧ</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособие на детей в возрасте до 18 лет, инфицированных вирусом иммунодефицита человека (ежемесячное).</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Пособие на детей в возрасте до 18 лет, инфицированных вирусом иммунодефицита человека (ежемесячное).</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

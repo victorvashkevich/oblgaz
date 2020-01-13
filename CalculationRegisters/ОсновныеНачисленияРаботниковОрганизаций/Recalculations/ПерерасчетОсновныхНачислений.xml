@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Recalculation uuid="a283da72-f818-444e-8c0e-6c93ea65debf">
+		<InternalInfo>
+			<xr:GeneratedType name="RecalculationRecord.ОсновныеНачисленияРаботниковОрганизаций.ПерерасчетОсновныхНачислений" category="Record">
+				<xr:TypeId>f6768295-b8e0-4d94-a00d-cdb038b7598a</xr:TypeId>
+				<xr:ValueId>6bf5f8b0-f86e-4662-95a9-34e22cc58e1b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="RecalculationManager.ОсновныеНачисленияРаботниковОрганизаций.ПерерасчетОсновныхНачислений" category="Manager">
+				<xr:TypeId>9b41faaf-291e-4986-bc38-4dd3bbf840eb</xr:TypeId>
+				<xr:ValueId>7eb72101-2f91-4867-bd00-4db7f902041c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="RecalculationRecordSet.ОсновныеНачисленияРаботниковОрганизаций.ПерерасчетОсновныхНачислений" category="RecordSet">
+				<xr:TypeId>530e95ba-f401-4a16-b74e-b5c8e7136c5e</xr:TypeId>
+				<xr:ValueId>4ea5c58e-a37d-4fb8-a8ee-689d8ea8f9e1</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ПерерасчетОсновныхНачислений</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перерасчет основных начислений</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<DataLockControlMode>Automatic</DataLockControlMode>
+		</Properties>
+		<ChildObjects>
+			<Dimension uuid="c2e59498-a4b3-4b47-a10b-6a9b8657f217">
+				<Properties>
+					<Name>ФизЛицо</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Физическое лицо</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<RegisterDimension>CalculationRegister.ОсновныеНачисленияРаботниковОрганизаций.Dimension.ФизЛицо</RegisterDimension>
+					<LeadingRegisterData>
+						<xr:Item xsi:type="xr:MDObjectRef">CalculationRegister.ОсновныеНачисленияРаботниковОрганизаций.Dimension.ФизЛицо</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">CalculationRegister.ДополнительныеНачисленияРаботниковОрганизаций.Dimension.ФизЛицо</xr:Item>
+					</LeadingRegisterData>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="d2db5041-20b7-4fe6-bfe3-06d8c19f342b">
+				<Properties>
+					<Name>Организация</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<RegisterDimension>CalculationRegister.ОсновныеНачисленияРаботниковОрганизаций.Dimension.Организация</RegisterDimension>
+					<LeadingRegisterData>
+						<xr:Item xsi:type="xr:MDObjectRef">CalculationRegister.ОсновныеНачисленияРаботниковОрганизаций.Dimension.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">CalculationRegister.ДополнительныеНачисленияРаботниковОрганизаций.Dimension.Организация</xr:Item>
+					</LeadingRegisterData>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="e3e30740-a65f-48cc-ba8a-6c356939f2a6">
+				<Properties>
+					<Name>Сотрудник</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сотрудник</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<RegisterDimension>CalculationRegister.ОсновныеНачисленияРаботниковОрганизаций.Dimension.Сотрудник</RegisterDimension>
+					<LeadingRegisterData>
+						<xr:Item xsi:type="xr:MDObjectRef">CalculationRegister.ОсновныеНачисленияРаботниковОрганизаций.Dimension.Сотрудник</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">CalculationRegister.ДополнительныеНачисленияРаботниковОрганизаций.Dimension.Сотрудник</xr:Item>
+					</LeadingRegisterData>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</Recalculation>
+</MetaDataObject>

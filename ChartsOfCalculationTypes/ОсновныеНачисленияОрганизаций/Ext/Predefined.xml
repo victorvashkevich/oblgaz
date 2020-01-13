@@ -1,0 +1,735 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CalculationTypePredefinedItems" version="2.6">
+	<Item id="4a2ea698-c0c9-41ad-9a62-ac459880554b">
+		<Name>ПособиеНаРебенкаДо18ЛетНадб40</Name>
+		<Code>НеИсп</Code>
+		<Description>(До 2013) Пособие  с надбавкой 40% на ребенка  до 18 лет</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="11fc60c3-3563-427b-97e0-57caa7652ba4">
+		<Name>ПособиеНаРебенкаСНадбавкой40До3Лет</Name>
+		<Code>НеИсп</Code>
+		<Description>(До 2013) Пособие на ребенка  до 3 лет с надбавкой 40%</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="438255c0-624c-4a7d-978e-ce7de1d14268">
+		<Name>ПособиеМатериОдиночкедо1_5лет</Name>
+		<Code>НеИсп</Code>
+		<Description>(До 2013) Пособие на ребенка матери-одиночке до 1.5 лет</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="13369931-d77f-4c50-beb1-e63faeb12403">
+		<Name>ПособиеМатериОдиночкеДо3Лет</Name>
+		<Code>НеИсп</Code>
+		<Description>(До 2013) Пособие на ребенка матери-одиночке до 3 лет</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="3b3b96da-13a2-4c32-8acc-168e3c2653e4">
+		<Name>ПособиеНеРаботающейМатериДо3Лет</Name>
+		<Code>НеИсп</Code>
+		<Description>(До 2013) Пособие не работащей матери на ребенка  до 3 лет</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="82d0aa08-071f-45ac-b64e-a26b4f527955">
+		<Name>ПособиеНеРабМатериНадб40До3Лет</Name>
+		<Code>НеИсп</Code>
+		<Description>(До 2013) Пособие не работащей матери с надбавкой 40% на ребенка  до 3 лет</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="620bc21d-a79b-447b-af88-84e8a8517f6f">
+		<Name>ПособиеНеРабМатериОдиночкеДо1_5Лет</Name>
+		<Code>НеИсп</Code>
+		<Description>(До 2013) Пособие не работащей матери-одиночке на ребенка  до 1.5 лет</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="639b60fa-9c02-4a8d-a333-b17938ab1c69">
+		<Name>ПособиеНеРабМатериОдиночкеДо3Лет</Name>
+		<Code>НеИсп</Code>
+		<Description>(До 2013) Пособие не работащей матери-одиночке на ребенка  до 3 лет</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="8ebc72e5-b668-4617-a2b0-9a22ac09c20e">
+		<Name>ОплатаБЛПоТравмеВБыту</Name>
+		<Code>00025</Code>
+		<Description>БЛ по травме в быту (не оплачивается)</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="5987ab06-f7ea-49e7-9511-9216a5fd69f0">
+		<Name>ДниБезВредности</Name>
+		<Code>     </Code>
+		<Description>Дни без вредности</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="a4a4c1ac-9923-4deb-9d42-2a9bece70626">
+		<Name>ДниНеоплачиваемыеСогласноТабелю</Name>
+		<Code>00081</Code>
+		<Description>Дни неоплачиваемые согласно табелю</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="21b63251-0600-43ab-afb5-b190081c392a">
+		<Name>ДоплатаЗаВечерниеЧасы</Name>
+		<Code>00014</Code>
+		<Description>Доплата за вечерние часы</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+		<Displaced>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуБЛ</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеНаПроизводстве</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускПоБеременностиИРодам</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеВБыту</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоУходу</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛЛиквидаторамЧАЭС</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднему</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаВыходныхДнейПоУходуЗаДетьмиИнвалидами</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуОтпКалендарныеДни</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуОтпШестидневка</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускБезОплатыУчебный</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускПоУходуЗаРебенкомБезОплаты</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускБезОплатыПоТКРФ</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускЗаСвойСчет</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.Невыход</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.Прогул</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойПоВинеРаботодателя</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойОкладПоДням</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойОкладПоЧасам</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойТарифДневной</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойТарифЧасовой</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтсутствиеПоБолезни</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтсутствиеПоБолезниПоБеременности</CalculationType>
+		</Displaced>
+	</Item>
+	<Item id="a280992b-2653-4dca-964e-f4b9e066c72a">
+		<Name>ДоплатаЗаНочныеЧасы</Name>
+		<Code>00015</Code>
+		<Description>Доплата за ночные часы</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+		<Displaced>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуБЛ</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеНаПроизводстве</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускПоБеременностиИРодам</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеВБыту</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоУходу</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛЛиквидаторамЧАЭС</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднему</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаВыходныхДнейПоУходуЗаДетьмиИнвалидами</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуОтпКалендарныеДни</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуОтпШестидневка</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускБезОплатыУчебный</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускПоУходуЗаРебенкомБезОплаты</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускБезОплатыПоТКРФ</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускЗаСвойСчет</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.Невыход</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.Прогул</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойПоВинеРаботодателя</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойОкладПоДням</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойОкладПоЧасам</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойТарифДневной</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойТарифЧасовой</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтсутствиеПоБолезни</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтсутствиеПоБолезниПоБеременности</CalculationType>
+		</Displaced>
+	</Item>
+	<Item id="e875834e-e361-45d7-83e3-0f18341130a7">
+		<Name>ДоплатаЗаПраздничныеИВыходныеПоГрафику</Name>
+		<Code>00085</Code>
+		<Description>Доплата за работу в праздники и выходные по графику</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="204ce4eb-18d2-4fb2-a496-8392e32e4829">
+		<Name>ДоплатаЗаРаботуВПраздникиИВыходныеПоНарядам</Name>
+		<Code>00087</Code>
+		<Description>Доплата за работу в праздники и выходные по нарядам</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="f5645e3c-3b43-4ae6-8b96-e1c7698209fa">
+		<Name>ДоплатаЗаПраздничныеИВыходные</Name>
+		<Code>00013</Code>
+		<Description>Доплата за работу в праздники и выходные по приказу</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="fc470275-f895-48a4-8fdb-2e628246be8a">
+		<Name>ДоплатаЗаСверхурочные</Name>
+		<Code>00084</Code>
+		<Description>Доплата за сверхурочные</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="f96963ab-da65-4f1d-a80b-411a3739d4b5">
+		<Name>ДоплатаЗаСверхурочныеПоНарядам</Name>
+		<Code>00088</Code>
+		<Description>Доплата за сверхурочные по нарядам</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="6f04fbe8-febf-4c00-868e-c9109b046061">
+		<Name>ОтпускБезОплатыУчебный</Name>
+		<Code>00051</Code>
+		<Description>Дополнительный учебный отпуск без оплаты</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="e4e04e49-103d-49d2-997a-9c7d068cf4c7">
+		<Name>СевернаяНадбавка</Name>
+		<Code>00071</Code>
+		<Description>Не используется</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="66f08438-f006-44e8-b9ee-32a8dcf557ba">
+		<Name>РайонныйКоэффициент</Name>
+		<Code>00070</Code>
+		<Description>Не используется</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="35c7a5dd-d8e9-4aa0-8378-2a7e501d846a">
+		<Name>ОкладПоДням</Name>
+		<Code>00001</Code>
+		<Description>Оклад по дням</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+		<Displaced>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеВБыту</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускБезОплатыУчебный</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеНаПроизводстве</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуБЛ</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛЛиквидаторамЧАЭС</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоУходу</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаВыходныхДнейПоУходуЗаДетьмиИнвалидами</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуОтпКалендарныеДни</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуОтпШестидневка</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднему</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойОкладПоДням</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойОкладПоЧасам</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойТарифДневной</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойТарифЧасовой</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускБезОплатыПоТКРФ</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускЗаСвойСчет</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускПоБеременностиИРодам</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускПоУходуЗаРебенкомБезОплаты</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтсутствиеПоБолезни</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтсутствиеПоБолезниПоБеременности</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.Невыход</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.Прогул</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойПоВинеРаботодателя</CalculationType>
+		</Displaced>
+	</Item>
+	<Item id="537ff7ed-5e51-48d1-bf5e-4f680cb3e1b7">
+		<Name>ОкладПоЧасам</Name>
+		<Code>00002</Code>
+		<Description>Оклад по часам</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+		<Displaced>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеВБыту</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускБезОплатыУчебный</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеНаПроизводстве</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуБЛ</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛЛиквидаторамЧАЭС</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоУходу</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаВыходныхДнейПоУходуЗаДетьмиИнвалидами</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуОтпКалендарныеДни</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуОтпШестидневка</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднему</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойОкладПоДням</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойОкладПоЧасам</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойТарифДневной</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойТарифЧасовой</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускБезОплатыПоТКРФ</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускЗаСвойСчет</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускПоБеременностиИРодам</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускПоУходуЗаРебенкомБезОплаты</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтсутствиеПоБолезни</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтсутствиеПоБолезниПоБеременности</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.Невыход</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.Прогул</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойПоВинеРаботодателя</CalculationType>
+		</Displaced>
+	</Item>
+	<Item id="a322ff9b-9f7d-4857-871d-ba80927a631f">
+		<Name>ОплатаБЛПоТравмеНаПроизводстве</Name>
+		<Code>00022</Code>
+		<Description>Оплата БЛ по травме на производстве</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="5470f15f-ac51-4986-b9b8-110c90650815">
+		<Name>ОплатаПоСреднемуБЛ</Name>
+		<Code>00021</Code>
+		<Description>Оплата больничных листов (за 2 мес)</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="cf203df5-8db6-4e09-9459-b838f68c8826">
+		<Name>ОплатаБЛ2013</Name>
+		<Code>00023</Code>
+		<Description>Оплата больничных листов (за 6 мес)</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="bc02c62a-efc5-4603-b573-65a7d89025fd">
+		<Name>ОплатаБЛВМинРазмере</Name>
+		<Code>00024</Code>
+		<Description>Оплата больничных листов в минимальном размере</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="8cadece4-8e3a-4aab-8e59-b2b46ac0f54a">
+		<Name>ОплатаБЛЛиквидаторамЧАЭС</Name>
+		<Code>00027</Code>
+		<Description>Оплата больничных листов ликвидаторам ЧАЭС</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="23e4362b-9c9f-43e3-a250-e4d6dcd5f62e">
+		<Name>ОплатаБЛОтТарфинойСтавки</Name>
+		<Code>00028</Code>
+		<Description>Оплата больничных листов от тарфиной ставки</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="874cb78b-9210-4f1d-9526-706ae0ba9521">
+		<Name>ОпалатБЛПоУходу2013</Name>
+		<Code>00025</Code>
+		<Description>Оплата больничных листов по уходу</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="969b0397-79ec-4a0f-8474-c6def6d8c3f1">
+		<Name>ОплатаБЛПоУходу</Name>
+		<Code>00026</Code>
+		<Description>Оплата больничных листов по уходу (До 2013)</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="e5e448fa-aee4-410e-a7b7-0565b3b89a2b">
+		<Name>ОплатаВыходныхДнейПоУходуЗаДетьмиИнвалидами</Name>
+		<Code>00032</Code>
+		<Description>Оплата дополнительных выходных дней по уходу за детьми - инвалидами</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="8a721500-5ba4-4e3b-a6c3-662164180b4e">
+		<Name>ОплатаЗаРаботуВПраздникиИВыходныеПоНарядам</Name>
+		<Code>00086</Code>
+		<Description>Оплата за работу в праздники и выходные по нарядам</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="14d57070-051e-48bf-b93c-35baa5a4fb64">
+		<Name>ОплатаПоСреднемуОтпКалендарныеДни</Name>
+		<Code>00041</Code>
+		<Description>Оплата отпуска по календарным дням</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+		<Displaced>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеВБыту</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеНаПроизводстве</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуБЛ</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаВыходныхДнейПоУходуЗаДетьмиИнвалидами</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднему</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускПоБеременностиИРодам</CalculationType>
+		</Displaced>
+	</Item>
+	<Item id="157fb945-a244-42cf-a7c0-d1754a43a3ed">
+		<Name>ОплатаПоСреднемуОтпШестидневка</Name>
+		<Code>00042</Code>
+		<Description>Оплата отпуска по шестидневке</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+		<Displaced>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеВБыту</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеНаПроизводстве</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуБЛ</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаВыходныхДнейПоУходуЗаДетьмиИнвалидами</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднему</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускПоБеременностиИРодам</CalculationType>
+		</Displaced>
+	</Item>
+	<Item id="e30175d8-7445-4696-883e-b50642380aa3">
+		<Name>ТарифДневной</Name>
+		<Code>00004</Code>
+		<Description>Оплата по дневному тарифу</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+		<Displaced>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуБЛ</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеНаПроизводстве</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускПоБеременностиИРодам</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеВБыту</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоУходу</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛЛиквидаторамЧАЭС</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднему</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаВыходныхДнейПоУходуЗаДетьмиИнвалидами</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуОтпКалендарныеДни</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуОтпШестидневка</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускБезОплатыУчебный</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускПоУходуЗаРебенкомБезОплаты</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускБезОплатыПоТКРФ</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускЗаСвойСчет</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.Невыход</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.Прогул</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойПоВинеРаботодателя</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойОкладПоДням</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойОкладПоЧасам</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойТарифДневной</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойТарифЧасовой</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтсутствиеПоБолезни</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтсутствиеПоБолезниПоБеременности</CalculationType>
+		</Displaced>
+	</Item>
+	<Item id="21f47324-ca6f-4025-85e5-7b42eca8cb1e">
+		<Name>СдельнаяОплата</Name>
+		<Code>00005</Code>
+		<Description>Оплата по производственным нарядам</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+		<Displaced>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуБЛ</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеНаПроизводстве</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускПоБеременностиИРодам</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеВБыту</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоУходу</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛЛиквидаторамЧАЭС</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднему</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаВыходныхДнейПоУходуЗаДетьмиИнвалидами</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуОтпКалендарныеДни</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуОтпШестидневка</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускБезОплатыУчебный</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускПоУходуЗаРебенкомБезОплаты</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускБезОплатыПоТКРФ</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускЗаСвойСчет</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.Невыход</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.Прогул</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойПоВинеРаботодателя</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойОкладПоДням</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойОкладПоЧасам</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойТарифДневной</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойТарифЧасовой</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтсутствиеПоБолезни</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтсутствиеПоБолезниПоБеременности</CalculationType>
+		</Displaced>
+	</Item>
+	<Item id="ebdfaa42-b440-43cb-ba8a-112bdeab9ea5">
+		<Name>ОплатаПоСреднему</Name>
+		<Code>00031</Code>
+		<Description>Оплата по среднему заработку</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="ae31633c-276c-412d-baff-c6a0a0e7cbfe">
+		<Name>ТарифЧасовой</Name>
+		<Code>00003</Code>
+		<Description>Оплата по часовому тарифу</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+		<Displaced>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуБЛ</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеНаПроизводстве</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускПоБеременностиИРодам</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеВБыту</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоУходу</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛЛиквидаторамЧАЭС</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднему</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаВыходныхДнейПоУходуЗаДетьмиИнвалидами</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуОтпКалендарныеДни</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуОтпШестидневка</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускБезОплатыУчебный</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускПоУходуЗаРебенкомБезОплаты</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускБезОплатыПоТКРФ</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускЗаСвойСчет</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.Невыход</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.Прогул</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойПоВинеРаботодателя</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойОкладПоДням</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойОкладПоЧасам</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойТарифДневной</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойТарифЧасовой</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтсутствиеПоБолезни</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтсутствиеПоБолезниПоБеременности</CalculationType>
+		</Displaced>
+	</Item>
+	<Item id="583f75d0-9ba4-4c90-baa6-07362a83914e">
+		<Name>ТарифЧасовойВодители</Name>
+		<Code>00092</Code>
+		<Description>Оплата по часовому тарифу водителям</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="11cc5736-02f5-4044-ae8f-724562e7fbba">
+		<Name>ТарифЧасовойБезВыезда</Name>
+		<Code>00092</Code>
+		<Description>Оплата по часовому тарифу водителям без выезда на линию</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="0b3ee6e8-c4cc-4718-b367-042345515521">
+		<Name>ТарифЧасовойРемонт</Name>
+		<Code>00093</Code>
+		<Description>Оплата по часовому тарифу за ремонт</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="95772830-d732-4895-a04a-ca195416775b">
+		<Name>ТарифЧасовойРемонтПлановый</Name>
+		<Code>00093</Code>
+		<Description>Оплата по часовому тарифу за ремонт (плановый)</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="a4f32050-0a62-4102-9853-076ea10cef27">
+		<Name>ПочасовойПростойОкладПоЧасам</Name>
+		<Code>00066</Code>
+		<Description>Оплата почасового простоя от оклада по часам</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="44d16773-9211-4457-ac72-9dd9503c54cb">
+		<Name>ПочасовойПростойТарифЧасовой</Name>
+		<Code>00067</Code>
+		<Description>Оплата почасового простоя по часовому тарифу</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="0260eaea-8db3-4afa-9dde-b914e469d278">
+		<Name>ОплатаПраздничныхИВыходных</Name>
+		<Code>00012</Code>
+		<Description>Оплата праздничных и выходных дней</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="6fd976ab-4383-486d-914e-365e8e249948">
+		<Name>ПростойОкладПоДням</Name>
+		<Code>00062</Code>
+		<Description>Оплата простоя от оклада по дням</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="aba52302-0014-4547-bc59-ca3789fe457d">
+		<Name>ПростойОкладПоЧасам</Name>
+		<Code>00063</Code>
+		<Description>Оплата простоя от оклада по часам</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="538b8a28-bf3e-43f0-868d-75171f6493e3">
+		<Name>ПростойТарифДневной</Name>
+		<Code>00064</Code>
+		<Description>Оплата простоя по дневному тарифу</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="2c0ad928-b31a-4148-828d-e1caf8133062">
+		<Name>ПростойТарифЧасовой</Name>
+		<Code>00065</Code>
+		<Description>Оплата простоя по часовому тарифу</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="98253058-5d57-4eb2-8a93-6a879c5daa7b">
+		<Name>ОплатаСверхурочных</Name>
+		<Code>00011</Code>
+		<Description>Оплата сверхурочных часов</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="89c2a81a-ccd3-4050-b2f5-ba6cd3ded1fd">
+		<Name>ОплатаСверхурочныхПоНарядам</Name>
+		<Code>00087</Code>
+		<Description>Оплата сверхурочных часов по нарядам</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="f34641a7-2671-4a73-93d3-72712f93a31c">
+		<Name>ОтпускБезОплатыПоТКРФ</Name>
+		<Code>00053</Code>
+		<Description>Отпуск без оплаты </Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="9c42bc4c-1658-4e68-86b8-acec14ea99d4">
+		<Name>ОтпускЗаСвойСчет</Name>
+		<Code>00054</Code>
+		<Description>Отпуск за свой счет</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="078683d0-e508-46ce-a72f-26b711cedea2">
+		<Name>ОтпускПоБеременностиИРодам</Name>
+		<Code>00023</Code>
+		<Description>Отпуск по беременности и родам (до 2013)</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="ef2ec837-2cda-4882-91ba-b8995333cf94">
+		<Name>ОтпускПоБеременности</Name>
+		<Code>00025</Code>
+		<Description>Отпуск по беременности и родам (после 2013)</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="ea7858f3-ecf0-4bd0-b8f6-bf358bec49bb">
+		<Name>ОтпускПоБеременостиОтБПМ</Name>
+		<Code>00026</Code>
+		<Description>Отпуск по беременности и родам в минимальном размере</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="9e6ec242-49f2-4320-a5aa-024c5d607aa3">
+		<Name>ОтпускПоУходуЗаРебенкомБезОплаты</Name>
+		<Code>00052</Code>
+		<Description>Отпуск по уходу за ребенком без оплаты</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="7966476d-69f4-4bb6-a47a-4d30620b2a17">
+		<Name>ОтсутствиеПоБолезни</Name>
+		<Code>10023</Code>
+		<Description>Отсутствие по болезни</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="ebe07ea1-a9d0-4703-8122-72ec18674bce">
+		<Name>ОтсутствиеПоБолезниПоБеременности</Name>
+		<Code>10024</Code>
+		<Description>Отсутствие по болезни (по беременности и родам)</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="a9311674-ec75-4e6d-9777-ff9583b72b9e">
+		<Name>Невыход</Name>
+		<Code>00055</Code>
+		<Description>Отсутствие по невыясненной причине</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+		<Displaced>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеВБыту</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускБезОплатыУчебный</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаБЛПоТравмеНаПроизводстве</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуБЛ</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаВыходныхДнейПоУходуЗаДетьмиИнвалидами</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуОтпКалендарныеДни</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднемуОтпШестидневка</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОплатаПоСреднему</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойОкладПоДням</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойОкладПоЧасам</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойТарифДневной</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойТарифЧасовой</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускБезОплатыПоТКРФ</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускЗаСвойСчет</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ОтпускПоБеременностиИРодам</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.Прогул</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.ОсновныеНачисленияОрганизаций.ПростойПоВинеРаботодателя</CalculationType>
+		</Displaced>
+	</Item>
+	<Item id="c61c9c32-dad7-4187-b25e-532e9e13c2b7">
+		<Name>ПособиеНаРебенкаИнвалида</Name>
+		<Code>00082</Code>
+		<Description>Пособие  по уходу за ребенком-инвалидом до 18 лет</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="db5cc88b-4080-4061-8bba-42f22b500bb4">
+		<Name>ПособиеНаРебенкаДо3Лет</Name>
+		<Code>00072</Code>
+		<Description>Пособие на ребёнка до 3 лет</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="a8e556bc-3059-4fc0-b278-bd2eb87516c5">
+		<Name>ПособиеНаРебенкаДо3Лет50ПроцентовБПМ</Name>
+		<Code>00120</Code>
+		<Description>Пособие на ребёнка до 3 лет 50 % БПМ</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="e9c8a99d-703b-43e9-95d2-00aee1725161">
+		<Name>ПособиеНаРебенкаДо3ЛетНаВторого</Name>
+		<Code>00073</Code>
+		<Description>Пособие на ребенка до 3х лет на второго и последующих детей</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="c1b63f8f-e4e4-455f-9a44-251c1d36d441">
+		<Name>ПособиеНаРебенкаДо3ЛетНаРебенкаИнвалида</Name>
+		<Code>00074</Code>
+		<Description>Пособие на ребенка до 3х лет на ребенка-инвалида</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="877dd8dc-03b5-410c-8b1b-aa4a3cd92e23">
+		<Name>ПособиеНаРебенкаВИЧ</Name>
+		<Code>00083</Code>
+		<Description>Пособие на ребенка инфицированного ВИЧ до 18 лет</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="1671e1b6-0281-489c-b191-50e6fb241e75">
+		<Name>ПособиеНаРебенкаСтарше3Лет</Name>
+		<Code>00071</Code>
+		<Description>Пособие на ребенка старше 3х лет</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="68b07f4b-2474-4ec2-89f6-ea0475453031">
+		<Name>ПособиеНаРебенкаСтарше3ЛетНаРебенкаИнвалида</Name>
+		<Code>00071</Code>
+		<Description>Пособие на ребенка старше 3х лет на ребенка-инвалида</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="37502394-9b81-4469-8ea5-e76bf3274943">
+		<Name>ПособиеНаРебенкаИнвалидаДо3Лет100ПроцентовБПМ</Name>
+		<Code>00130</Code>
+		<Description>Пособие на ребёнка-инвалида до 3 лет 100 % БПМ</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="38cf9834-cd8e-42a6-9856-a23df1065b44">
+		<Name>ПособиеНаРебенкаИнвалидаПосле3Лет120ПроцентовБПМ</Name>
+		<Code>00131</Code>
+		<Description>Пособие на ребёнка-инвалида после 3 лет 120 % БПМ</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="a6d52141-858c-4f59-b756-28eabf9c0273">
+		<Name>ПочасовойПростойПоВинеРаботодателя</Name>
+		<Code>00061</Code>
+		<Description>Почасовой простой по вине работодателя</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="ffae4490-7cbc-4a5a-a4f0-d2596dda49bb">
+		<Name>ПремияВодителям</Name>
+		<Code>00094</Code>
+		<Description>Премия водителям</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="f17be4e9-c366-4e4b-b982-3d33383cb999">
+		<Name>ПремияВодителямСдельная</Name>
+		<Code>00094</Code>
+		<Description>Премия водителям сдельная</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="7a2cd13e-d118-42ab-8f7c-07f799a0c5b5">
+		<Name>ПремияРемонт</Name>
+		<Code>00095</Code>
+		<Description>Премия ремонт</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="488e3d4e-8c4f-47fa-b5e7-e2c036e8bbab">
+		<Name>ПремияРемонтПлановый</Name>
+		<Code>00095</Code>
+		<Description>Премия ремонт (плановый)</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="68801558-0b28-47d4-8add-b02e5d589ca5">
+		<Name>ПремияСдельная</Name>
+		<Code>00094</Code>
+		<Description>Премия сдельная</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="37408837-5dbc-4d4b-9313-f97a95539e6d">
+		<Name>Прогул</Name>
+		<Code>00056</Code>
+		<Description>Прогул, простой по вине работника</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="7721e293-9d8d-478c-ad65-ecd65f4cc83d">
+		<Name>ПростойПоВинеРаботодателя</Name>
+		<Code>00061</Code>
+		<Description>Простой по вине работодателя</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="6c35d9ce-b58c-4963-8944-87a032b7522d">
+		<Name>Вредные</Name>
+		<Code>     </Code>
+		<Description>Работа во вредных условиях труда</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="626fb784-6c3f-4f22-8bfd-39909e14cf53">
+		<Name>РабочееВремяВодителей</Name>
+		<Code>00092</Code>
+		<Description>Рабочее время водителей</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="967d0c2a-5485-4366-a9eb-5ac045f5a598">
+		<Name>РабочееВремяВодителейПоОкладу</Name>
+		<Code>00092</Code>
+		<Description>Рабочее время водителей по окладу</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="92cd63ed-1367-4a7e-931c-2a434c8023da">
+		<Name>СдельнаяТарифнаяЧасть</Name>
+		<Code>00089</Code>
+		<Description>Сдельная тарифная часть</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="11bb26c2-2d87-436b-85c9-9a4a486f6140">
+		<Name>СдельнаяТарифнаяЧастьВодители</Name>
+		<Code>00089</Code>
+		<Description>Сдельная тарифная часть водителей</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="25f7de96-ed78-41d7-b84b-cc1c5c243fa4">
+		<Name>СдельныйПриработок</Name>
+		<Code>00090</Code>
+		<Description>Сдельный приработок</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="d40dcda0-316e-4924-820d-c5e44fd33027">
+		<Name>СдельныйПриработокВодители</Name>
+		<Code>00090</Code>
+		<Description>Сдельный приработок (водители)</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+	<Item id="0a9f2e9c-f8ae-4cd4-9622-d3ce24d128a5">
+		<Name>СдельныйПриработокМесячнаяСтавкаЧасы</Name>
+		<Code>00091</Code>
+		<Description>Сдельный приработок (месячная ставка, по часам)</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+</PredefinedData>

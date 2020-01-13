@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Enum uuid="9607fb1a-75fa-4ed5-a0f3-c80cee880fd9">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ВидыПлатежейВГосБюджет" category="Ref">
+				<xr:TypeId>afff4d1a-33d0-495b-b25e-870647d0cb62</xr:TypeId>
+				<xr:ValueId>4753b7c3-18e6-4c64-b080-fe23ad9663d7</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ВидыПлатежейВГосБюджет" category="Manager">
+				<xr:TypeId>a31e9acc-684b-4b30-a17d-997d580a55dd</xr:TypeId>
+				<xr:ValueId>1e37953d-9c03-4fec-aba0-a39bf9556cd6</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ВидыПлатежейВГосБюджет" category="List">
+				<xr:TypeId>7d306ca5-f220-42b2-bcb1-aec858d4bec3</xr:TypeId>
+				<xr:ValueId>ce6c79a5-f68a-4e8c-9da5-ef328b585a8c</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВидыПлатежейВГосБюджет</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды платежей в бюджет (фонды)</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(Общ)</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="6738ee66-4971-4751-9a77-b34ccf4609b8">
+				<Properties>
+					<Name>Налог</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Налог (взносы): начислено / уплачено</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="05d822e2-57ed-418a-998a-eaf67b22068c">
+				<Properties>
+					<Name>НалогСам</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Налог (взносы): доначислено / уплачено (самостоятельно)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a48e0f1d-e047-485b-8540-00ea584b2535">
+				<Properties>
+					<Name>НалогАкт</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Налог (взносы): доначислено / уплачено (по акту проверки)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="ddf97f65-9c3e-4fad-8ecb-c9013b6b5984">
+				<Properties>
+					<Name>Штраф</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Штраф: начислено / уплачено</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="bbe803d6-5fd1-4544-a52f-fe620ff80a39">
+				<Properties>
+					<Name>РасходыПоСтрахованию</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расходы по страхованию</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="83b396ca-aa07-44b5-a8d5-b831d54ff831">
+				<Properties>
+					<Name>ПособияНаРебенка</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособия на ребенка</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a895b693-7783-4d16-acdb-bb99bc45ae90">
+				<Properties>
+					<Name>ПениСам</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пени: доначислено / уплачено (самостоятельно)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="6c85ccc4-2e36-4c28-a3a1-a5b8afbe1357">
+				<Properties>
+					<Name>ПениАкт</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пени: начислено / уплачено (по акту проверки)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a7ad1a7f-91e2-4878-a975-59c44c451dde">
+				<Properties>
+					<Name>ПолученоИзФонда</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получено от исполнительного органа ФСЗН</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="2c269264-828b-49a7-b5de-04eeb44ecc93">
+				<Properties>
+					<Name>НеПринято</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не принято к зачету</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="73d25ebe-68f6-4655-9fa0-a433cd8f7aa2">
+				<Properties>
+					<Name>НалогРФ</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Налог по товару ввезенному из ЕАЭС (в т.ч. РФ): начислено / уплачено </v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="7c2b2509-7a30-45f4-b69c-2a66e0ef027c">
+				<Properties>
+					<Name>НалогНерезидент</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Налог за нерезидента: начислено / уплачено </v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="90efbf29-8509-4673-bdc2-cc72b786b9f7">
+				<Properties>
+					<Name>Больничный</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Больничный</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="3f41aa85-957f-42fe-bda7-57f13f88d45d">
+				<Properties>
+					<Name>Пособия</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособия</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e429539f-3a76-49b3-8d7d-3105db75936c">
+				<Properties>
+					<Name>ДоначислениеДоБПМ</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доначисление до БПМ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Доначисление до величины БПМ</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="859c50ed-e562-4839-831f-2f00fcb1c251">
+				<Properties>
+					<Name>ДоплатаЗаПутевки</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доплата за путевки</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

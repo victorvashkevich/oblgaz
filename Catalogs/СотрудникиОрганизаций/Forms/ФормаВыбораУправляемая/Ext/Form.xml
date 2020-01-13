@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОтчетСравнениеКомпетенцийСравнениеКомпетенций" id="43">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<CommandName>0</CommandName>
+				<DataPath>Items.Список.CurrentData.Ref</DataPath>
+				<ExtendedTooltip name="ФормаОтчетСравнениеКомпетенцийСравнениеКомпетенцийРасширеннаяПодсказка" id="44"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<ChoiceMode>true</ChoiceMode>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="45"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="46">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="47"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="48"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="49">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="50"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="51"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="52">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="53"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="54"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Наименование" id="4">
+					<DataPath>Список.Description</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="55"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаСостояние" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="56"/>
+					<ChildItems>
+						<LabelField name="Состояние" id="31">
+							<DataPath>Список.Состояние</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отсутствие</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СостояниеКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="57"/>
+						</LabelField>
+						<ColumnGroup name="ГруппаПериод" id="37">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="ГруппаПериодРасширеннаяПодсказка" id="58"/>
+							<ChildItems>
+								<LabelField name="Период" id="33">
+									<DataPath>Список.Период</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>С</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПериодКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="59"/>
+								</LabelField>
+								<LabelField name="ПериодЗавершения" id="35">
+									<DataPath>Список.ПериодЗавершения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>По</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПериодЗавершенияКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ПериодЗавершенияРасширеннаяПодсказка" id="60"/>
+								</LabelField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаОрганизация" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа организация</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа организация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаОрганизацияРасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<LabelField name="Организация" id="24">
+							<DataPath>Список.Организация</DataPath>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="62"/>
+						</LabelField>
+						<LabelField name="ВидЗанятости" id="28">
+							<DataPath>Список.ВидЗанятости</DataPath>
+							<ContextMenu name="ВидЗанятостиКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ВидЗанятостиРасширеннаяПодсказка" id="63"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаВКомпании" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В компании</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В компании</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГруппаВКомпанииРасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<ColumnGroup name="ГруппаПодразделениеДолжностьВКомпании" id="39">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа подразделение должность в компании</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа подразделение должность в компании</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>InCell</Group>
+							<ExtendedTooltip name="ГруппаПодразделениеДолжностьВКомпанииРасширеннаяПодсказка" id="65"/>
+							<ChildItems>
+								<LabelField name="ТекущееПодразделениеКомпании" id="6">
+									<DataPath>Список.ТекущееПодразделениеКомпании</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подразделение</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТекущееПодразделениеКомпанииКонтекстноеМеню" id="7"/>
+									<ExtendedTooltip name="ТекущееПодразделениеКомпанииРасширеннаяПодсказка" id="66"/>
+								</LabelField>
+								<LabelField name="ТекущаяДолжностьКомпании" id="8">
+									<DataPath>Список.ТекущаяДолжностьКомпании</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Должность</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТекущаяДолжностьКомпанииКонтекстноеМеню" id="9"/>
+									<ExtendedTooltip name="ТекущаяДолжностьКомпанииРасширеннаяПодсказка" id="67"/>
+								</LabelField>
+							</ChildItems>
+						</ColumnGroup>
+						<ColumnGroup name="ГруппаПериодРаботыВКомпании" id="40">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период работы в компании</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период работы в компании</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>InCell</Group>
+							<ExtendedTooltip name="ГруппаПериодРаботыВКомпанииРасширеннаяПодсказка" id="68"/>
+							<ChildItems>
+								<LabelField name="ДатаПриемаНаРаботуВКомпанию" id="10">
+									<DataPath>Список.ДатаПриемаНаРаботуВКомпанию</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата приема</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДатаПриемаНаРаботуВКомпаниюКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="ДатаПриемаНаРаботуВКомпаниюРасширеннаяПодсказка" id="69"/>
+								</LabelField>
+								<LabelField name="ДатаУвольненияИзКомпании" id="12">
+									<DataPath>Список.ДатаУвольненияИзКомпании</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата увольнения</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДатаУвольненияИзКомпанииКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="ДатаУвольненияИзКомпанииРасширеннаяПодсказка" id="70"/>
+								</LabelField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаВОрганизации" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В организации</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В организации</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГруппаВОрганизацииРасширеннаяПодсказка" id="71"/>
+					<ChildItems>
+						<ColumnGroup name="ГруппаПодразделениеДолжностьВОрганизации" id="41">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа подразделение должность в организации</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа подразделение должность в организации</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>InCell</Group>
+							<ExtendedTooltip name="ГруппаПодразделениеДолжностьВОрганизацииРасширеннаяПодсказка" id="72"/>
+							<ChildItems>
+								<LabelField name="ТекущееПодразделениеОрганизации" id="16">
+									<DataPath>Список.ТекущееПодразделениеОрганизации</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подразделение</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТекущееПодразделениеОрганизацииКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ТекущееПодразделениеОрганизацииРасширеннаяПодсказка" id="73"/>
+								</LabelField>
+								<LabelField name="ТекущаяДолжностьОрганизации" id="18">
+									<DataPath>Список.ТекущаяДолжностьОрганизации</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Должность</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТекущаяДолжностьОрганизацииКонтекстноеМеню" id="19"/>
+									<ExtendedTooltip name="ТекущаяДолжностьОрганизацииРасширеннаяПодсказка" id="74"/>
+								</LabelField>
+							</ChildItems>
+						</ColumnGroup>
+						<ColumnGroup name="ГруппаПериодРаботыВОрганизации" id="42">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период работы в организации</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период работы в организации</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>InCell</Group>
+							<ExtendedTooltip name="ГруппаПериодРаботыВОрганизацииРасширеннаяПодсказка" id="75"/>
+							<ChildItems>
+								<LabelField name="ДатаПриемаНаРаботу" id="20">
+									<DataPath>Список.ДатаПриемаНаРаботу</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата приема</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДатаПриемаНаРаботуКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ДатаПриемаНаРаботуРасширеннаяПодсказка" id="76"/>
+								</LabelField>
+								<LabelField name="ДатаУвольнения" id="22">
+									<DataPath>Список.ДатаУвольнения</DataPath>
+									<ContextMenu name="ДатаУвольненияКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ДатаУвольненияРасширеннаяПодсказка" id="77"/>
+								</LabelField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникСотрудникиОрганизаций.Ссылка,
+	СправочникСотрудникиОрганизаций.ВерсияДанных,
+	СправочникСотрудникиОрганизаций.ПометкаУдаления,
+	СправочникСотрудникиОрганизаций.Предопределенный,
+	СправочникСотрудникиОрганизаций.Родитель,
+	СправочникСотрудникиОрганизаций.ЭтоГруппа,
+	СправочникСотрудникиОрганизаций.Код,
+	СправочникСотрудникиОрганизаций.Наименование,
+	СправочникСотрудникиОрганизаций.Физлицо,
+	СправочникСотрудникиОрганизаций.Актуальность,
+	СправочникСотрудникиОрганизаций.Организация,
+	СправочникСотрудникиОрганизаций.ОбособленноеПодразделение,
+	СправочникСотрудникиОрганизаций.ВидДоговора,
+	СправочникСотрудникиОрганизаций.ВидЗанятости,
+	СправочникСотрудникиОрганизаций.НомерДоговора,
+	СправочникСотрудникиОрганизаций.ДатаДоговора,
+	СправочникСотрудникиОрганизаций.ГрафикРаботы,
+	СправочникСотрудникиОрганизаций.ПодразделениеОрганизации,
+	СправочникСотрудникиОрганизаций.Должность,
+	СправочникСотрудникиОрганизаций.ЗанимаемыхСтавок,
+	СправочникСотрудникиОрганизаций.ДатаНачала,
+	СправочникСотрудникиОрганизаций.ДатаОкончания,
+	СправочникСотрудникиОрганизаций.ИспытательныйСрок,
+	СправочникСотрудникиОрганизаций.ВидРасчета,
+	СправочникСотрудникиОрганизаций.ТарифнаяСтавка,
+	СправочникСотрудникиОрганизаций.ВалютаТарифнойСтавки,
+	СправочникСотрудникиОрганизаций.ПостфиксНаименования,
+	СправочникСотрудникиОрганизаций.ТарифныйРазряд,
+	СправочникСотрудникиОрганизаций.ТекущееОбособленноеПодразделение,
+	СправочникСотрудникиОрганизаций.ТекущееПодразделениеОрганизации,
+	СправочникСотрудникиОрганизаций.ТекущаяДолжностьОрганизации,
+	СправочникСотрудникиОрганизаций.ДатаПриемаНаРаботу,
+	СправочникСотрудникиОрганизаций.ДатаУвольнения,
+	СправочникСотрудникиОрганизаций.ТекущееПодразделениеКомпании,
+	СправочникСотрудникиОрганизаций.ТекущаяДолжностьКомпании,
+	СправочникСотрудникиОрганизаций.ДатаПриемаНаРаботуВКомпанию,
+	СправочникСотрудникиОрганизаций.ДатаУвольненияИзКомпании,
+	СправочникСотрудникиОрганизаций.ЯвляетсяСтудентомРаботающимВСтудотряде,
+	СправочникСотрудникиОрганизаций.ПерсональныеНадбавки,
+	СправочникСотрудникиОрганизаций.ЕжегодныеОтпуска,
+	ВЫБОР
+		КОГДА СправочникСотрудникиОрганизаций.ДатаУвольнения = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ВЫБОР
+					КОГДА &amp;ВидОрганизационнойСтруктурыПредприятия = НЕОПРЕДЕЛЕНО
+							ИЛИ &amp;ВидОрганизационнойСтруктурыПредприятия = ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+						ТОГДА ОтсутствиеОрганизаций.Период
+					ИНАЧЕ Отсутствие.Период
+				КОНЕЦ
+		ИНАЧЕ СправочникСотрудникиОрганизаций.ДатаУвольнения
+	КОНЕЦ КАК Период,
+	ВЫБОР
+		КОГДА СправочникСотрудникиОрганизаций.ДатаУвольнения = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ВЫБОР
+					КОГДА &amp;ВидОрганизационнойСтруктурыПредприятия = НЕОПРЕДЕЛЕНО
+							ИЛИ &amp;ВидОрганизационнойСтруктурыПредприятия = ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+						ТОГДА ВЫБОР
+								КОГДА ОтсутствиеОрганизаций.ПериодЗавершения = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+									ТОГДА НАЧАЛОПЕРИОДА(ОтсутствиеОрганизаций.ПериодЗавершения, ДЕНЬ)
+								ИНАЧЕ НАЧАЛОПЕРИОДА(ДОБАВИТЬКДАТЕ(ОтсутствиеОрганизаций.ПериодЗавершения, СЕКУНДА, -1), ДЕНЬ)
+							КОНЕЦ
+					ИНАЧЕ ВЫБОР
+							КОГДА Отсутствие.ПериодЗавершения = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+								ТОГДА НАЧАЛОПЕРИОДА(Отсутствие.ПериодЗавершения, ДЕНЬ)
+							ИНАЧЕ НАЧАЛОПЕРИОДА(ДОБАВИТЬКДАТЕ(Отсутствие.ПериодЗавершения, СЕКУНДА, -1), ДЕНЬ)
+						КОНЕЦ
+				КОНЕЦ
+		ИНАЧЕ ДАТАВРЕМЯ(1, 1, 1)
+	КОНЕЦ КАК ПериодЗавершения,
+	ВЫБОР
+		КОГДА &amp;ВидОрганизационнойСтруктурыПредприятия = НЕОПРЕДЕЛЕНО
+				ИЛИ &amp;ВидОрганизационнойСтруктурыПредприятия = ЗНАЧЕНИЕ(Перечисление.ВидыОрганизационнойСтруктурыПредприятия.ПоСтруктуреЮридическихЛиц)
+			ТОГДА ВЫБОР
+					КОГДА СправочникСотрудникиОрганизаций.ДатаУвольнения = ДАТАВРЕМЯ(1, 1, 1)
+						ТОГДА ОтсутствиеОрганизаций.Состояние
+					ИНАЧЕ ЗНАЧЕНИЕ(Перечисление.СостоянияРаботникаОрганизации.НеРаботает)
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА СправочникСотрудникиОрганизаций.ДатаУвольнения = ДАТАВРЕМЯ(1, 1, 1)
+					ТОГДА Отсутствие.Состояние
+				ИНАЧЕ ЗНАЧЕНИЕ(Перечисление.СостоянияРаботникаОрганизации.НеРаботает)
+			КОНЕЦ
+	КОНЕЦ КАК Состояние
+ИЗ
+	Справочник.СотрудникиОрганизаций КАК СправочникСотрудникиОрганизаций
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостояниеРаботниковОрганизаций.СрезПоследних(ДОБАВИТЬКДАТЕ(&amp;ДатаАктуальности, МЕСЯЦ, 1), ) КАК ОтсутствиеОрганизаций
+		ПО СправочникСотрудникиОрганизаций.Ссылка = ОтсутствиеОрганизаций.Сотрудник
+			И СправочникСотрудникиОрганизаций.Организация = ОтсутствиеОрганизаций.Организация
+			И (ОтсутствиеОрганизаций.Состояние &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СостоянияРаботникаОрганизации.Работает))
+			И (ВЫБОР
+				КОГДА ОтсутствиеОрганизаций.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+					ТОГДА ОтсутствиеОрганизаций.Период &gt;= &amp;ДатаАктуальности
+							ИЛИ ОтсутствиеОрганизаций.ПериодЗавершения &gt;= &amp;ДатаАктуальности
+				ИНАЧЕ ИСТИНА
+			КОНЕЦ)}
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостояниеРаботников.СрезПоследних(ДОБАВИТЬКДАТЕ(&amp;ДатаАктуальности, МЕСЯЦ, 1), ) КАК Отсутствие
+		ПО СправочникСотрудникиОрганизаций.Физлицо = Отсутствие.ФизЛицо
+			И (Отсутствие.Состояние &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СостоянияРаботника.Работает))
+			И (ВЫБОР
+				КОГДА Отсутствие.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+					ТОГДА Отсутствие.Период &gt;= &amp;ДатаАктуальности
+							ИЛИ Отсутствие.ПериодЗавершения &gt;= &amp;ДатаАктуальности
+				ИНАЧЕ ИСТИНА
+			КОНЕЦ)}</QueryText>
+				<MainTable>Catalog.СотрудникиОрганизаций</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

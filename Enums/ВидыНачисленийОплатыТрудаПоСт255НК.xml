@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Enum uuid="69ddc6c6-57b0-4b04-8ea8-3ed46dc2270e">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ВидыНачисленийОплатыТрудаПоСт255НК" category="Ref">
+				<xr:TypeId>29ddb21c-083e-4d51-b2e5-e9d4e90833e3</xr:TypeId>
+				<xr:ValueId>1a2d61d5-1b97-4fa8-8531-23e7518d5491</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ВидыНачисленийОплатыТрудаПоСт255НК" category="Manager">
+				<xr:TypeId>48f886f2-8973-486c-89f1-ddc04ced1c7e</xr:TypeId>
+				<xr:ValueId>3c374883-b7a7-442a-abed-2cf7a11bae43</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ВидыНачисленийОплатыТрудаПоСт255НК" category="List">
+				<xr:TypeId>ef0edfb2-a63c-478b-9054-b89b11ea64f9</xr:TypeId>
+				<xr:ValueId>fad434d0-fe9b-4fc8-803d-4afe4d1b271f</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВидыНачисленийОплатыТрудаПоСт255НК</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды выплат, включаемых в себистоимость продукции</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(Регл)</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="c9155d1d-5aa4-4fed-b0f1-ad943f0dee88">
+				<Properties>
+					<Name>ПовременноПремиальная</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Повременно-премиальная оплата труда</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a9a415e7-9b67-460e-851e-05a67f0917fc">
+				<Properties>
+					<Name>СдельноПремиальная</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сдельно-премиальная оплата труда</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="8502f34b-5b85-46db-b5d1-cf998943b4cf">
+				<Properties>
+					<Name>ПремииОсновные</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Премии, включаемые в основную зарплату</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b07b70ed-77d5-4010-94d8-66a58bcccd39">
+				<Properties>
+					<Name>ДоплатаЗаСлужебныеОбязанности</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доплаты за выполнение служебных обязанностей</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="0e4b18c0-4647-401b-abd2-032310882660">
+				<Properties>
+					<Name>НадбавкиЗаСлужебныеОбязанности</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Надбавки за выполнение служебных обязанностей</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="f960f050-0d11-4b4e-8427-cb7fd2fab228">
+				<Properties>
+					<Name>ДоплатаЗаСверхурочные</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доплата за сверхурочное время</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="be7a8c29-63ca-49eb-aa5c-b50abe643c5f">
+				<Properties>
+					<Name>ДоплатаЗаВечерниеНочные</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доплата за вечерние и ночные часы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="91978d87-7dfb-46d0-aea8-4163265484dc">
+				<Properties>
+					<Name>НадбавкиЗаВыслугу</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Надбавка за непрерывный стаж работы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="9054a219-fe50-46ae-97d9-2b6335692ab4">
+				<Properties>
+					<Name>ГодоваяПремия</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Годовая премия по результатам работы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="fb2a8aa6-4b85-4eb5-b8d5-1315dd5555bf">
+				<Properties>
+					<Name>ОплатыПоСреднему</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выплаты по среднему заработку</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="ad178db4-5733-4bae-8591-20a69cea1266">
+				<Properties>
+					<Name>Прогресс</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прогресс</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="9672fe12-5f49-41e0-9250-6dd61906abc8">
+				<Properties>
+					<Name>ОплатаПростоев</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата простоев</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="292f4f72-d3a5-42bc-8b95-2b66af559d2a">
+				<Properties>
+					<Name>пп12_1ст255</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>пп.12.1, ст.255 НК РФ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="3720df5e-0b22-4b95-909f-4ff361b0e202">
+				<Properties>
+					<Name>ОплатаЛьготныхЧасов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата льготных часов подросткам, кормящим матерям</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="7e93109c-8686-45b5-a695-e3bdb1716302">
+				<Properties>
+					<Name>Договора</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договора на выполнение работ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="64495a06-7471-4bed-a6b8-49c86bf008d4">
+				<Properties>
+					<Name>ОплатаОтпускаТек</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата отпуска текущего месяца</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="0e0c145f-c70b-4f27-87cb-ae07b86deb12">
+				<Properties>
+					<Name>ОплатаОтпускаБуд</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата отпуска будущего периода</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="2f8f984e-850a-4dbc-9d0b-2ee2fe3eed02">
+				<Properties>
+					<Name>УчебныйОтпуск</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Учебный отпуск</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="8c888b70-91f3-47b4-b1b7-1e29d6a0b6a1">
+				<Properties>
+					<Name>КомепсацияОтпуска</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Компенсация неиспользованного отпуска</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c050ec75-094d-4b8b-b408-debe1e0c5045">
+				<Properties>
+					<Name>КомпенсацияОтпускаПриУвольнении</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Компенсация отпуска при увольнении</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="fe09fac1-122f-4923-bafb-89ea27adba05">
+				<Properties>
+					<Name>ПособияПоВременнойНетрудоспособности</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособия по временной нетрудоспособности</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d4b04e5c-96fa-4cc8-b1b4-e3f1e129627d">
+				<Properties>
+					<Name>ПособияРазовыеФСЗН</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пособия (выплаты) из ФСЗН</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c388c6c7-633b-421f-9dad-1f8e6ead2210">
+				<Properties>
+					<Name>ВыплатыИзПрибыли</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выплаты из прибыли</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="2c752908-33e4-44c0-96cd-7cae840384fb">
+				<Properties>
+					<Name>ПрочиеВыплаты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие - не включ. в себест, не включ в стат ФЗП</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b0965ebb-28fe-4528-8661-a11e670bef4d">
+				<Properties>
+					<Name>пп24ст255</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>пп.24, ст.255 НК РФ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="4ceb2490-f5ce-4b15-a6f7-54f25d0288d2">
+				<Properties>
+					<Name>пп25ст255</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>пп.25, ст.255 НК РФ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="de6d078c-f445-4d13-aa13-c6652e111208">
+				<Properties>
+					<Name>выплатыЗаПроизводственныеРезультаты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выплаты за производственные результаты</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="868eb6c7-6fef-44c5-a9ce-363ae4738bc4">
+				<Properties>
+					<Name>СтоимостьПродукцииПоНатОплате</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стоимость продукции по натуральной оплате</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="038c5d2d-4561-4923-8f27-ccafae7b8e52">
+				<Properties>
+					<Name>ОплатаУчащимсяПТУиВУЗ</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата работ учащимся ПТУ и ВУЗ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a9bc7bdc-802d-48ec-9a70-58f098d53ed6">
+				<Properties>
+					<Name>РазоваяМатПомощь</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разовая мат помощь, включ в стат ФЗП</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="bd6a36ff-da2c-448a-9e62-643f33ecdd18">
+				<Properties>
+					<Name>ВыплатыПоПроизводствТравмам</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выплаты по производств травмам</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a96988ec-a65e-432b-b8b1-f23b952c15ee">
+				<Properties>
+					<Name>ПрочиеВыплатыФЗП</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие - не включ в себест, включ в стат ФЗП</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="6e365f11-2d6e-4f6e-b2dd-4b2f02182630">
+				<Properties>
+					<Name>ПрочиеВыплатыСебестФЗП</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие - включ в себест и стат ФЗП</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b892849a-7f0e-407c-b946-4c774cab073f">
+				<Properties>
+					<Name>ПрочиеВыплатыСебест</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие - включ в себест, не включ в стат ФЗП</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

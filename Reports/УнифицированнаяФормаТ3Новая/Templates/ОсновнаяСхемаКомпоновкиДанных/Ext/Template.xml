@@ -1,0 +1,721 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИнформационнаяБаза</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ШтатноеСНадбавками</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Должность</dataPath>
+			<field>Должность</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должность</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоСтавок</dataPath>
+			<field>КоличествоСтавок</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество ставок</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеОрганизации</dataPath>
+			<field>ПодразделениеОрганизации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение организации</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФИОГлавбуха</dataPath>
+			<field>ФИОГлавбуха</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИОГлавбуха</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФИОКадровика</dataPath>
+			<field>ФИОКадровика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИОКадровика</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФИОРуководителя</dataPath>
+			<field>ФИОРуководителя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИОРуководителя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДолжностьРуководителя</dataPath>
+			<field>ДолжностьРуководителя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должность руководителя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормаДнейЗаПериод</dataPath>
+			<field>НормаДнейЗаПериод</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Норма дней за период</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормаЧасовЗаПериод</dataPath>
+			<field>НормаЧасовЗаПериод</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Норма часов за период</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КадровикДолжность</dataPath>
+			<field>КадровикДолжность</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кадровик должность</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИмяГлавбуха</dataPath>
+			<field>ИмяГлавбуха</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя главбуха</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИмяКадровика</dataPath>
+			<field>ИмяКадровика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя кадровика</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИмяРуководителя</dataPath>
+			<field>ИмяРуководителя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя руководителя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтчествоГлавбуха</dataPath>
+			<field>ОтчествоГлавбуха</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчество главбуха</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтчествоКадровика</dataPath>
+			<field>ОтчествоКадровика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчество кадровика</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтчествоРуководителя</dataPath>
+			<field>ОтчествоРуководителя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчество руководителя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФамилияГлавбуха</dataPath>
+			<field>ФамилияГлавбуха</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фамилия главбуха</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФамилияКадровика</dataPath>
+			<field>ФамилияКадровика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фамилия кадровика</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФамилияРуководителя</dataPath>
+			<field>ФамилияРуководителя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фамилия руководителя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидТарифнойСтавки</dataPath>
+			<field>ВидТарифнойСтавки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид тарифной ставки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Коэффициент</dataPath>
+			<field>Коэффициент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коэффициент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазмерКоэффициента</dataPath>
+			<field>РазмерКоэффициента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Размер коэффициента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТарифнаяСтавка</dataPath>
+			<field>ТарифнаяСтавка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тарифная ставка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Повышение</dataPath>
+			<field>Повышение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазмерПовышения</dataPath>
+			<field>РазмерПовышения</field>
+		</field>
+		<dataSource>ИнформационнаяБаза</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДанныеСНадбавками.ПодразделениеОрганизации КАК ПодразделениеОрганизации,
+	ДанныеСНадбавками.Должность КАК Должность,
+	ДанныеСНадбавками.КоличествоСтавок КАК КоличествоСтавок,
+	ДанныеСНадбавками.Организация КАК Организация,
+	ЕСТЬNULL(ВЫБОР
+			КОГДА ФИОРуководителя.Имя = ""
+				ТОГДА ""
+			ИНАЧЕ ПОДСТРОКА(ФИОРуководителя.Имя, 1, 1) + ". "
+		КОНЕЦ + ВЫБОР
+			КОГДА ФИОРуководителя.Отчество = ""
+				ТОГДА ""
+			ИНАЧЕ ПОДСТРОКА(ФИОРуководителя.Отчество, 1, 1) + ". "
+		КОНЕЦ + ФИОРуководителя.Фамилия, Руководитель.ФизическоеЛицо.Наименование) КАК ФИОРуководителя,
+	ЕСТЬNULL(ФИОРуководителя.Фамилия, "") КАК ФамилияРуководителя,
+	ЕСТЬNULL(ФИОРуководителя.Имя, "") КАК ИмяРуководителя,
+	ЕСТЬNULL(ФИОРуководителя.Отчество, "") КАК ОтчествоРуководителя,
+	ЕСТЬNULL(ВЫБОР
+			КОГДА ФИОКАдровика.Имя = ""
+				ТОГДА ""
+			ИНАЧЕ ПОДСТРОКА(ФИОКАдровика.Имя, 1, 1) + ". "
+		КОНЕЦ + ВЫБОР
+			КОГДА ФИОКАдровика.Отчество = ""
+				ТОГДА ""
+			ИНАЧЕ ПОДСТРОКА(ФИОКАдровика.Отчество, 1, 1) + ". "
+		КОНЕЦ + ФИОКАдровика.Фамилия, ФИОКАдровика.ФизЛицо.Наименование) КАК ФИОКадровика,
+	ЕСТЬNULL(ФИОКАдровика.Фамилия, "") КАК ФамилияКадровика,
+	ЕСТЬNULL(ФИОКАдровика.Имя, "") КАК ИмяКадровика,
+	ЕСТЬNULL(ФИОКАдровика.Отчество, "") КАК ОтчествоКадровика,
+	ЕСТЬNULL(ВЫБОР
+			КОГДА ФИОГлавбуха.Имя = ""
+				ТОГДА ""
+			ИНАЧЕ ПОДСТРОКА(ФИОГлавбуха.Имя, 1, 1) + ". "
+		КОНЕЦ + ВЫБОР
+			КОГДА ФИОГлавбуха.Отчество = ""
+				ТОГДА ""
+			ИНАЧЕ ПОДСТРОКА(ФИОГлавбуха.Отчество, 1, 1) + ". "
+		КОНЕЦ + ФИОГлавбуха.Фамилия, ГлавБух.ФизическоеЛицо.Наименование) КАК ФИОГлавбуха,
+	ЕСТЬNULL(ФИОГлавбуха.Фамилия, "") КАК ФамилияГлавбуха,
+	ЕСТЬNULL(ФИОГлавбуха.Имя, "") КАК ИмяГлавбуха,
+	ЕСТЬNULL(ФИОГлавбуха.Отчество, "") КАК ОтчествоГлавбуха,
+	Руководитель.Должность КАК ДолжностьРуководителя,
+	ДанныеСНадбавками.НормаДнейЗаПериод КАК НормаДнейЗаПериод,
+	ДанныеСНадбавками.НормаЧасовЗаПериод КАК НормаЧасовЗаПериод,
+	//vvv
+	ДанныеСНадбавками.Коэффициент КАК Коэффициент,
+	ДанныеСНадбавками.РазмерКоэффициента КАК РазмерКоэффициента,
+	ДанныеСНадбавками.Повышение КАК Повышение,
+	ДанныеСНадбавками.РазмерПовышения КАК РазмерПовышения,
+	ДанныеСНадбавками.ТарифнаяСтавка КАК ТарифнаяСтавка,
+	//
+	Кадровик.Должность КАК КадровикДолжность,
+	ДанныеСНадбавками.ВидТарифнойСтавки КАК ВидТарифнойСтавки,
+	ДанныеСНадбавками.Организация.КодОКОПФ,
+	ДанныеСНадбавками.ПодразделениеОрганизации.КодПоОКАТО
+{ВЫБРАТЬ
+	ПодразделениеОрганизации.*,
+	Должность.*,
+	КоличествоСтавок,
+	Организация.*,
+	ФИОРуководителя,
+	ФИОКадровика,
+	ФИОГлавбуха,
+	ДолжностьРуководителя,
+	НормаДнейЗаПериод,
+	НормаЧасовЗаПериод,
+	Коэффициент.*,
+	РазмерКоэффициента,
+	Повышение.*,
+	РазмерПовышения,
+	ТарифнаяСтавка,
+	КадровикДолжность.*,
+	ФамилияРуководителя,
+	ИмяРуководителя,
+	ОтчествоРуководителя,
+	ФамилияКадровика,
+	ИмяКадровика,
+	ОтчествоКадровика,
+	ФамилияГлавбуха,
+	ИмяГлавбуха,
+	ОтчествоГлавбуха,
+	ВидТарифнойСтавки.*}
+ИЗ
+	(ВЫБРАТЬ
+		Расписание.ПодразделениеОрганизации КАК ПодразделениеОрганизации,
+		Расписание.Должность КАК Должность,
+		Расписание.КоличествоСтавок КАК КоличествоСтавок,
+		Расписание.ПодразделениеОрганизации.Владелец КАК Организация,
+		ЕСТЬNULL(Календарь.НормаДнейЗаПериод, 0) КАК НормаДнейЗаПериод,
+		ЕСТЬNULL(Календарь.НормаЧасовЗаПериод, 0) КАК НормаЧасовЗаПериод,
+		//коэффициенты
+		КоэфПовышенияТОПоШтатному.Коэффициент КАК Коэффициент,
+		Расписание.ТарифнаяСтавка КАК ТарифнаяСтавка,
+		КоэфПовышенияТОПоШтатному.РазмерКоэффициента КАК РазмерКоэффициента,
+		//повышения
+		ПовышенияПоИнструкцииПоШтатному.Повышение КАК Повышение,
+		ПовышенияПоИнструкцииПоШтатному.РазмерПовышения КАК РазмерПовышения,
+		//	
+		Расписание.ВидТарифнойСтавки КАК ВидТарифнойСтавки
+	ИЗ
+		РегистрСведений.ШтатноеРасписаниеОрганизаций.СрезПоследних(&amp;Период, ) КАК Расписание
+			//коэффициенты
+			ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+				КоэфПовышенияТОПоШтатному.ПодразделениеОрганизации КАК ПодразделениеОрганизации,
+				КоэфПовышенияТОПоШтатному.Должность КАК Должность,
+				КоэфПовышенияТОПоШтатному.Коэффициент КАК Коэффициент,
+				КоэфПовышенияТОПоШтатному.Размер КАК РазмерКоэффициента,
+				КоэфПовышенияТОПоШтатному.ПодразделениеОрганизации.Владелец КАК Организация
+			ИЗ
+				РегистрСведений.КоэфПовышенияТОПоШтатному.СрезПоследних(&amp;Период, ) КАК КоэфПовышенияТОПоШтатному ) КАК КоэфПовышенияТОПоШтатному
+				ПО (КоэфПовышенияТОПоШтатному.ПодразделениеОрганизации = Расписание.ПодразделениеОрганизации)
+				И (КоэфПовышенияТОПоШтатному.Должность = Расписание.Должность)
+				И Расписание.ПодразделениеОрганизации.Владелец = КоэфПовышенияТОПоШтатному.Организация
+			//конец коэффициентов
+			//повышения
+			ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+				ПовышенияПоИнструкцииПоШтатному.ПодразделениеОрганизации КАК ПодразделениеОрганизации,
+				ПовышенияПоИнструкцииПоШтатному.Должность КАК Должность,
+				ПовышенияПоИнструкцииПоШтатному.Коэффициент КАК Повышение,
+				ПовышенияПоИнструкцииПоШтатному.Размер КАК РазмерПовышения,
+				ПовышенияПоИнструкцииПоШтатному.ПодразделениеОрганизации.Владелец КАК Организация
+			ИЗ
+				РегистрСведений.ПовышенияПоИнструкцииПоШтатному.СрезПоследних(&amp;Период, ) КАК ПовышенияПоИнструкцииПоШтатному ) КАК ПовышенияПоИнструкцииПоШтатному
+				ПО (ПовышенияПоИнструкцииПоШтатному.ПодразделениеОрганизации = Расписание.ПодразделениеОрганизации)
+				И (ПовышенияПоИнструкцииПоШтатному.Должность = Расписание.Должность)
+				И Расписание.ПодразделениеОрганизации.Владелец = ПовышенияПоИнструкцииПоШтатному.Организация
+			//конец повышений
+			ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+				Календарь.ГрафикРаботы КАК ГрафикРаботы,
+				СУММА(Календарь.ОсновноеЗначение) КАК НормаДнейЗаПериод,
+				СУММА(Календарь.ДополнительноеЗначение) КАК НормаЧасовЗаПериод
+			ИЗ
+				РегистрСведений.ГрафикиРаботыПоВидамВремени КАК Календарь
+			ГДЕ
+				Календарь.Дата &lt; &amp;ПериодКонец
+				И Календарь.Дата &gt;= &amp;ПериодНачало
+				И Календарь.ВидУчетаВремени = &amp;ПоДням
+			
+			СГРУППИРОВАТЬ ПО
+				Календарь.ГрафикРаботы) КАК Календарь
+			ПО Расписание.ГрафикРаботы = Календарь.ГрафикРаботы
+	ГДЕ
+		Расписание.КоличествоСтавок &gt; 0
+		И Расписание.ПодразделениеОрганизации.КодПоОКАТО ЕСТЬ НЕ NULL ) КАК ДанныеСНадбавками
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОтветственныеЛицаОрганизаций.СрезПоследних(&amp;Период, ) КАК Руководитель
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ФИОФизЛиц.СрезПоследних(&amp;Период, ) КАК ФИОРуководителя
+			ПО Руководитель.ФизическоеЛицо = ФИОРуководителя.ФизЛицо
+		ПО (Руководитель.СтруктурнаяЕдиница = ДанныеСНадбавками.ПодразделениеОрганизации.Владелец)
+			И (Руководитель.ОтветственноеЛицо = ЗНАЧЕНИЕ(Перечисление.ОтветственныеЛицаОрганизаций.Руководитель))
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОтветственныеЛицаОрганизаций.СрезПоследних(&amp;Период, ) КАК ГлавБух
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ФИОФизЛиц.СрезПоследних(&amp;Период, ) КАК ФИОГлавбуха
+			ПО ГлавБух.ФизическоеЛицо = ФИОГлавбуха.ФизЛицо
+		ПО (ГлавБух.СтруктурнаяЕдиница = ДанныеСНадбавками.ПодразделениеОрганизации.Владелец)
+			И (ГлавБух.ОтветственноеЛицо = ЗНАЧЕНИЕ(Перечисление.ОтветственныеЛицаОрганизаций.ГлавныйБухгалтер))
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОтветственныеЛицаОрганизаций.СрезПоследних(&amp;Период, ) КАК Кадровик
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ФИОФизЛиц.СрезПоследних(&amp;Период, ) КАК ФИОКАдровика
+			ПО Кадровик.ФизическоеЛицо = ФИОКАдровика.ФизЛицо
+		ПО (Кадровик.СтруктурнаяЕдиница = ДанныеСНадбавками.ПодразделениеОрганизации.Владелец)
+			И (Кадровик.ОтветственноеЛицо = ЗНАЧЕНИЕ(Перечисление.ОтветственныеЛицаОрганизаций.РуководительКадровойСлужбы))
+{ГДЕ
+	ДанныеСНадбавками.ПодразделениеОрганизации.*,
+	ДанныеСНадбавками.Должность.*,
+	ДанныеСНадбавками.КоличествоСтавок,
+	ДанныеСНадбавками.Коэффициент.*,
+	ДанныеСНадбавками.РазмерКоэффициента,
+	ДанныеСНадбавками.Повышение.*,
+	ДанныеСНадбавками.РазмерПовышения,
+	ДанныеСНадбавками.Организация.*,
+	ДанныеСНадбавками.ВидТарифнойСтавки.*}</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<totalField>
+		<dataPath>КоличествоСтавок</dataPath>
+		<expression>Максимум(КоличествоСтавок)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФИОГлавбуха</dataPath>
+		<expression>Максимум(ФИОГлавбуха)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФИОКадровика</dataPath>
+		<expression>Максимум(ФИОКадровика)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФИОРуководителя</dataPath>
+		<expression>Максимум(ФИОРуководителя)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДолжностьРуководителя</dataPath>
+		<expression>Максимум(ДолжностьРуководителя)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НормаДнейЗаПериод</dataPath>
+		<expression>Сумма(НормаДнейЗаПериод)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НормаЧасовЗаПериод</dataPath>
+		<expression>Сумма(НормаЧасовЗаПериод)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КадровикДолжность</dataPath>
+		<expression>Максимум(КадровикДолжность)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФамилияГлавбуха</dataPath>
+		<expression>Максимум(ФамилияГлавбуха)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФамилияКадровика</dataPath>
+		<expression>Максимум(ФамилияКадровика)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФамилияРуководителя</dataPath>
+		<expression>Максимум(ФамилияРуководителя)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОтчествоРуководителя</dataPath>
+		<expression>Максимум(ОтчествоРуководителя)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОтчествоКадровика</dataPath>
+		<expression>Максимум(ОтчествоКадровика)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОтчествоГлавбуха</dataPath>
+		<expression>Максимум(ОтчествоГлавбуха)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ИмяРуководителя</dataPath>
+		<expression>Максимум(ИмяРуководителя)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ИмяКадровика</dataPath>
+		<expression>Максимум(ИмяКадровика)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ИмяГлавбуха</dataPath>
+		<expression>Максимум(ИмяГлавбуха)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВидТарифнойСтавки</dataPath>
+		<expression>Максимум(ВидТарифнойСтавки)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ТарифнаяСтавка</dataPath>
+		<expression>Максимум(ТарифнаяСтавка)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазмерКоэффициента</dataPath>
+		<expression>Максимум(РазмерКоэффициента)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазмерПовышения</dataPath>
+		<expression>Максимум(РазмерПовышения)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПериодКонец</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период конец</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПериодНачало</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период начало</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПоДням</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По дням</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ВидыУчетаВремени</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыУчетаВремени.ПоДням</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоСтавок</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТарифнаяСтавка</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Штатное расписание</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПодразделениеОрганизации</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Порядок</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Должность</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ВидНадбавки</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Коэффициент</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

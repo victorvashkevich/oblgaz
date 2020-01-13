@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="37"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапкаЛево" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шапка лево</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шапка лево</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаЛевоРасширеннаяПодсказка" id="38"/>
+					<ChildItems>
+						<InputField name="Организация" id="5">
+							<DataPath>Объект.Организация</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="39"/>
+						</InputField>
+						<InputField name="ВидДопуска" id="7">
+							<DataPath>Объект.ВидДопуска</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ВидДопускаКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ВидДопускаРасширеннаяПодсказка" id="40"/>
+							<Events>
+								<Event name="OnChange">ВидДопускаПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШапкаПраво" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шапка право</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шапка право</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаПравоРасширеннаяПодсказка" id="41"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНомерДата" id="22">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер и дата</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер и дата</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНомерДатаРасширеннаяПодсказка" id="42"/>
+							<ChildItems>
+								<InputField name="Номер" id="1">
+									<DataPath>Объект.Number</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="43"/>
+								</InputField>
+								<InputField name="Дата" id="3">
+									<DataPath>Объект.Date</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>от</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>14</Width>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="44"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Ответственный" id="25">
+							<DataPath>Объект.Ответственный</DataPath>
+							<ContextMenu name="ОтветственныйКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="45"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Работники" id="9">
+			<Representation>List</Representation>
+			<Footer>true</Footer>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Работники</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РаботникиКонтекстноеМеню" id="10"/>
+			<AutoCommandBar name="РаботникиКоманднаяПанель" id="11">
+				<ChildItems>
+					<Button name="РаботникиПодборСотрудников" id="33">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПодборСотрудников</CommandName>
+						<ExtendedTooltip name="РаботникиПодборСотрудниковРасширеннаяПодсказка" id="46"/>
+					</Button>
+					<Button name="РаботникиЗаполнитьПоВидуДопуска" id="36">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаполнитьПоВидуДопуска</CommandName>
+						<ExtendedTooltip name="РаботникиЗаполнитьПоВидуДопускаРасширеннаяПодсказка" id="47"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="РаботникиРасширеннаяПодсказка" id="48"/>
+			<SearchStringAddition name="РаботникиСтрокаПоиска" id="49">
+				<AdditionSource>
+					<Item>Работники</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РаботникиСтрокаПоискаКонтекстноеМеню" id="50"/>
+				<ExtendedTooltip name="РаботникиСтрокаПоискаРасширеннаяПодсказка" id="51"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РаботникиСостояниеПросмотра" id="52">
+				<AdditionSource>
+					<Item>Работники</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РаботникиСостояниеПросмотраКонтекстноеМеню" id="53"/>
+				<ExtendedTooltip name="РаботникиСостояниеПросмотраРасширеннаяПодсказка" id="54"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РаботникиУправлениеПоиском" id="55">
+				<AdditionSource>
+					<Item>Работники</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РаботникиУправлениеПоискомКонтекстноеМеню" id="56"/>
+				<ExtendedTooltip name="РаботникиУправлениеПоискомРасширеннаяПодсказка" id="57"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="ChoiceProcessing">РаботникиОбработкаВыбора</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="РаботникиНомерСтроки" id="12">
+					<DataPath>Объект.Работники.LineNumber</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>№</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ShowInFooter>false</ShowInFooter>
+					<ContextMenu name="РаботникиНомерСтрокиКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="РаботникиНомерСтрокиРасширеннаяПодсказка" id="58"/>
+				</LabelField>
+				<InputField name="РаботникиСотрудник" id="14">
+					<DataPath>Объект.Работники.Сотрудник</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ShowInFooter>false</ShowInFooter>
+					<ContextMenu name="РаботникиСотрудникКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="РаботникиСотрудникРасширеннаяПодсказка" id="59"/>
+				</InputField>
+				<InputField name="РаботникиДатаПолучения" id="34">
+					<DataPath>Объект.Работники.ДатаПолучения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ShowInFooter>false</ShowInFooter>
+					<ContextMenu name="РаботникиДатаПолученияКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="РаботникиДатаПолученияРасширеннаяПодсказка" id="60"/>
+					<Events>
+						<Event name="OnChange">РаботникиДатаПолученияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="РаботникиСрокДействия" id="18">
+					<DataPath>Объект.Работники.СрокДействия</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+					<ContextMenu name="РаботникиСрокДействияКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="РаботникиСрокДействияРасширеннаяПодсказка" id="61"/>
+				</InputField>
+				<InputField name="РаботникиСтоимостьДопуска" id="20">
+					<DataPath>Объект.Работники.СуммаРасходов</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Работники.TotalСуммаРасходов</FooterDataPath>
+					<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+					<ContextMenu name="РаботникиСтоимостьДопускаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="РаботникиСтоимостьДопускаРасширеннаяПодсказка" id="62"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Комментарий" id="23">
+			<DataPath>Объект.Комментарий</DataPath>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="63"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ДопускКРаботам</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ПериодичностьДопуска" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Периодичность допуска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.Периодичность</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодичностьДень" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Периодичность допуска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.Периодичность</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодичностьГод" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Периодичность допуска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.Периодичность</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СрокДопуска" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок допуска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПодборСотрудников" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборСотрудников</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьПоВидуДопуска" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по виду допуска</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по виду допуска</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоВидуДопуска</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

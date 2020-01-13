@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Enum uuid="6f37adba-89bb-4b00-b480-c97d57022175">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ВидыОбъектовЗагружаемыхИзОпроса" category="Ref">
+				<xr:TypeId>5427adaf-b5a4-4578-8b56-d9dc4d4042fb</xr:TypeId>
+				<xr:ValueId>6d5748ad-a1ba-4a10-93c1-ec58e5d99f3e</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ВидыОбъектовЗагружаемыхИзОпроса" category="Manager">
+				<xr:TypeId>4a032eb3-03dd-4b3e-8f05-4aef4c700898</xr:TypeId>
+				<xr:ValueId>59dd3548-01a2-4cff-8405-0fa23f1f63ca</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ВидыОбъектовЗагружаемыхИзОпроса" category="List">
+				<xr:TypeId>e4804844-12de-469a-aaf0-a562c5a14512</xr:TypeId>
+				<xr:ValueId>38bf78e3-ff1a-4e7a-820c-e9dd0ee27fd6</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВидыОбъектовЗагружаемыхИзОпроса</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды объектов загружаемых из опроса</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(Упр)</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="07fc86e5-8727-4516-a7d8-4e8e558a0ae0">
+				<Properties>
+					<Name>ФизическиеЛица</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочник "Физические лица"</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Справочник "Физические лица", контактные лица контрагентов, менеджеры</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

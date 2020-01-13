@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Enum uuid="6fb022be-d872-49e5-9ac5-96603a8b22f1">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ВидыДействияСНачислением" category="Ref">
+				<xr:TypeId>1b3045d2-b9c2-4527-9a71-81ddc448d8e9</xr:TypeId>
+				<xr:ValueId>1b2e4b87-c494-4a93-b729-b711b69b705b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ВидыДействияСНачислением" category="Manager">
+				<xr:TypeId>bae06793-7bda-4989-aee4-9d56f17fac9a</xr:TypeId>
+				<xr:ValueId>903a078f-2799-4752-b80c-bc1ddda47d0b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ВидыДействияСНачислением" category="List">
+				<xr:TypeId>e16ef424-da27-4850-ae01-4594e32bb9ad</xr:TypeId>
+				<xr:ValueId>5589c99c-9bc3-41b6-9cca-0ef898be7db4</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВидыДействияСНачислением</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды действия с начислением</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(Общ)</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="5ebde252-4015-4b00-9691-33a44325c0ee">
+				<Properties>
+					<Name>Начать</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начать</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c7ea3cb5-d622-4f7b-b8f2-e428b79b9ad2">
+				<Properties>
+					<Name>Изменить</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменить</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="9afde4e2-7b70-46cd-bfd7-0b8c7b552561">
+				<Properties>
+					<Name>НеИзменять</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не изменять</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="9bffacd3-8ac8-42c3-8e10-5a9a0cca0106">
+				<Properties>
+					<Name>Прекратить</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прекратить</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

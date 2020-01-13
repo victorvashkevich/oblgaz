@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PlanOfCharacteristicKindPredefinedItems" version="2.6">
+	<Item id="62492090-48f6-46b9-b454-65cbe7db12e0">
+		<Name>Авансы</Name>
+		<Code>00009</Code>
+		<Description>Авансы</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.РасходныйКассовыйОрдер</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ПлатежноеПоручениеИсходящее</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="593be425-e36d-45ba-a11d-65f0030ff981">
+		<Name>Договоры</Name>
+		<Code>00006</Code>
+		<Description>Договоры</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="43b6f28b-1668-4ef3-85ca-5bf2d8a12e44">
+		<Name>Контрагенты</Name>
+		<Code>00005</Code>
+		<Description>Контрагенты</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Контрагенты</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="703bcc9b-4600-4528-85a3-c1e086590c8f">
+		<Name>Номенклатура</Name>
+		<Code>00003</Code>
+		<Description>Номенклатура</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Субконто</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="014c3fc0-1c07-49af-b1c4-205265124af1">
+		<Name>Отгрузки</Name>
+		<Code>00002</Code>
+		<Description>Отгрузки</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Субконто</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="b6678e42-80ee-40de-b96b-1509fc8bef2f">
+		<Name>Партии</Name>
+		<Code>00001</Code>
+		<Description>Партии</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Субконто</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="21ba6edf-0e82-44be-baf2-f53e1a95bcc1">
+		<Name>ПартииПоставки</Name>
+		<Code>00008</Code>
+		<Description>Партии поставки</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Субконто</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="c6052c3e-4dad-4076-b3a8-f0b467f1ba97">
+		<Name>РаботникиОрганизаций</Name>
+		<Code>00007</Code>
+		<Description>Работники организаций</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ФизическиеЛица</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="35e5f17c-346f-461d-9476-bc78e0b27c1c">
+		<Name>РБП</Name>
+		<Code>00004</Code>
+		<Description>РБП</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.РасходыБудущихПериодов</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

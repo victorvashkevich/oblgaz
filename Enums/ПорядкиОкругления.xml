@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Enum uuid="d1a06830-7c95-492d-b29f-986afa2307b7">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ПорядкиОкругления" category="Ref">
+				<xr:TypeId>5d45355a-d48a-48d6-80b6-b7ba4b19ce40</xr:TypeId>
+				<xr:ValueId>edfc4247-2fa7-4e51-b27c-bae517624fb5</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ПорядкиОкругления" category="Manager">
+				<xr:TypeId>eeec5c0a-0e38-4ea6-b658-b4a054a21950</xr:TypeId>
+				<xr:ValueId>de3c6063-8b76-4d45-81a4-ee28aa86d9ae</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ПорядкиОкругления" category="List">
+				<xr:TypeId>4d7e4a50-54e0-4a60-a1b1-abdc2c41e20e</xr:TypeId>
+				<xr:ValueId>6296f977-0735-4bd2-babf-407149f42495</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ПорядкиОкругления</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядки округления</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(Общ)</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="28acf715-31ad-44b0-be62-2d56d7097cf6">
+				<Properties>
+					<Name>Окр1</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>1</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="59f4b88b-91f8-4bc2-a96b-3ef77c3fa974">
+				<Properties>
+					<Name>Окр5</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>5</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="085bee8b-ef51-4dce-9937-b744cbafe172">
+				<Properties>
+					<Name>Окр10</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>10</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d28a8ce2-313b-4766-816b-4c603a440436">
+				<Properties>
+					<Name>Окр50</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>50</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="9bb1b3c0-e0a3-42a9-82c3-499e1e215a59">
+				<Properties>
+					<Name>Окр100</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>100</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d398afa8-e313-4418-ae08-3a0750408e66">
+				<Properties>
+					<Name>БезОкругления</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Без округления</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="2a96423b-4ade-42ee-a18a-dfad8ec77089">
+				<Properties>
+					<Name>ПоПостановлению</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По постановлению №39</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

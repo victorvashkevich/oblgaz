@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<FilterCriterion uuid="f96d8446-7277-4655-ab88-4702ad68e0bc">
+		<InternalInfo>
+			<xr:GeneratedType name="FilterCriterionManager.ДокументыПоСотрудникуОрганизации" category="Manager">
+				<xr:TypeId>62b7f067-4e51-4834-b4ae-86ff3bf4271f</xr:TypeId>
+				<xr:ValueId>d181f052-eb71-41a1-817f-a3e860fe4a3d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="FilterCriterionList.ДокументыПоСотрудникуОрганизации" category="List">
+				<xr:TypeId>cd5437a7-a8ad-4a08-a706-ebc8e328622e</xr:TypeId>
+				<xr:ValueId>5c0d83d5-8459-4a75-b0c6-98ca8e51aff4</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ДокументыПоСотрудникуОрганизации</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы по сотруднику организации</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СотрудникиОрганизаций</v8:Type>
+			</Type>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратНаРаботуОрганизаций.TabularSection.РаботникиОрганизации.Attribute.Сотрудник</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КадровоеПеремещениеОрганизаций.TabularSection.РаботникиОрганизации.Attribute.Сотрудник</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КадровоеПеремещениеОрганизаций.TabularSection.ОсновныеНачисления.Attribute.Сотрудник</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КомандировкиОрганизаций.TabularSection.РаботникиОрганизации.Attribute.Сотрудник</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтсутствиеНаРаботеОрганизаций.TabularSection.РаботникиОрганизации.Attribute.Сотрудник</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтпускаОрганизаций.TabularSection.РаботникиОрганизации.Attribute.Сотрудник</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриемНаРаботуВОрганизацию.TabularSection.РаботникиОрганизации.Attribute.Сотрудник</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриемНаРаботуВОрганизацию.TabularSection.ОсновныеНачисления.Attribute.Сотрудник</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УвольнениеИзОрганизаций.TabularSection.РаботникиОрганизации.Attribute.Сотрудник</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ТрудовойДоговор.Attribute.Сотрудник</xr:Item>
+			</Content>
+			<DefaultForm/>
+			<AuxiliaryForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects/>
+	</FilterCriterion>
+</MetaDataObject>

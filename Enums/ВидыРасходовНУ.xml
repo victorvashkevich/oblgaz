@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Enum uuid="9a51dcbd-f8bc-4d0f-91c8-6b9c9c728a9c">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ВидыРасходовНУ" category="Ref">
+				<xr:TypeId>8d19b5cf-8685-4dbd-92d5-8821d8edea82</xr:TypeId>
+				<xr:ValueId>32f2dc97-3de2-45b6-8977-19bf5afa012a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ВидыРасходовНУ" category="Manager">
+				<xr:TypeId>48d38423-cba2-49f4-9f9e-587388105cf1</xr:TypeId>
+				<xr:ValueId>eb166b05-2ffe-4530-8c19-21cda3c96c3b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ВидыРасходовНУ" category="List">
+				<xr:TypeId>c5ecac63-651b-4d5c-9fb8-e571ee585f67</xr:TypeId>
+				<xr:ValueId>11dd6f67-2334-472d-a4e9-cdf940018353</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВидыРасходовНУ</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды расходов (НУ)</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(Регл)</Comment>
+			<UseStandardCommands>true</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="1ce462a1-56c4-4b7f-adbf-d6affb1dc0ea">
+				<Properties>
+					<Name>МатериальныеРасходы</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Материальные расходы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c2d3cfbd-742d-42d2-a51a-b2fdc5acbe25">
+				<Properties>
+					<Name>ОплатаТруда</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата труда</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="81ea23a5-3def-4378-8c73-f35c6fbfbec1">
+				<Properties>
+					<Name>ПредставительскиеРасходы</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представительские расходы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="24f72594-093d-4080-80bd-3ba3355ab6f4">
+				<Properties>
+					<Name>РасходыНаРекламуНормируемые</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расходы на рекламу (нормируемые)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="ba465bac-5543-4f1c-8ea3-dc513c9b7636">
+				<Properties>
+					<Name>РемонтОсновныхСредств</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ремонт основных средств</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="8a530e19-76db-457e-aafe-68e3ba6b68e5">
+				<Properties>
+					<Name>ОбязательноеИДобровольноеСтрахованиеИмущества</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обязательное и добровольное страхование имущества</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b0b45e3c-c78d-400d-b5f2-9bbe07b04d61">
+				<Properties>
+					<Name>ДобровольноеСтрахованиеПоДоговорамДолгосрочногоСтрахованияЖизниРаботников</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добровольное страхование по договорам долгоср. страхования жизни работников, пенсионного страхования и (или) негосударственного пенсионного обеспечения работников</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="6910dc92-33bd-4e98-b39c-0944fa302578">
+				<Properties>
+					<Name>ДобровольноеЛичноеСтрахование</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добровольное личное страхование, предусматривающее оплату страховщиками медицинских расходов</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="16f664a9-e89c-45c5-a6ad-a0f787d80e94">
+				<Properties>
+					<Name>ДобровольноеЛичноеСтрахованиеНаСлучайСмертиИлиУтратыРаботоспособности</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добровольное личное страхование на случай наступления смерти или утраты трудоспособности</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c3dfd367-9c4e-4560-a278-d52d87a04c5d">
+				<Properties>
+					<Name>НалогиИСборы</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Налоги и сборы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="5b05f70d-ffbb-4e42-a240-4867559798d5">
+				<Properties>
+					<Name>НИОКР</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НИОКР</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="16f29346-5cde-4257-8f3c-3c6f535769a5">
+				<Properties>
+					<Name>ОсвоениеПриродныхРесурсов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Освоение природных ресурсов</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="67e023e9-e726-4246-9a97-93ea0db0729c">
+				<Properties>
+					<Name>ПрочиеРасходы</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие расходы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="2ca4c6c7-408a-47df-9c4b-545e6a7e1d28">
+				<Properties>
+					<Name>НеУчитываемыеВЦеляхНалогообложения</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не учитываемые в целях налогообложения</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="9ae93b0e-affc-434b-b660-3a01f949f27f">
+				<Properties>
+					<Name>ОтчисленияВФСЗН</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчисления в ФСЗН</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e2dbbbe4-bf1c-4c7e-8345-7c1cdb1d651f">
+				<Properties>
+					<Name>ИнформационныеУслуги</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информационные услуги (нормируемые)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="4922869c-5f1d-4dc8-9378-bc0d92f8e5d2">
+				<Properties>
+					<Name>КонсультационныеУслуги</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Консультационные услуги (нормируемые)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="0e79fb5e-f06b-4392-a112-4eeba2b89c17">
+				<Properties>
+					<Name>ОбязательнаяАудиторскаяПроверка</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обязательная аудиторская проверка (нормируемые)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="7e88f5da-ab82-43d3-b006-560c46882bb6">
+				<Properties>
+					<Name>ПодготовкаКадровВСиВУЗ</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подготовка кадров в средних и высших учебных заведениях (нормируемая)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e316ef4d-9ea2-4f78-ab1c-d55c4dd097c2">
+				<Properties>
+					<Name>Амортизация</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Амортизация</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="478ec44e-2f05-496b-bf3b-a5b2c006de06">
+				<Properties>
+					<Name>ТранспортныеРасходы</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Транспортные расходы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c07ab176-1cb9-491e-8da2-7d1e35d86dae">
+				<Properties>
+					<Name>КомандировочныеРасходы</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командировочные расходы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="05f25dc4-645a-44cf-87c2-283cc3f3affb">
+				<Properties>
+					<Name>АрендаФедеральногоИМуниципальногоИмущества</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аренда федерального и муниципального имущества</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a21ab0ff-bd27-47b1-957c-2ab261dfb760">
+				<Properties>
+					<Name>ПроцентыПоКредитам</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проценты по кредитам</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="427325ff-481a-4ec3-bc4e-5e11e13ecebb">
+				<Properties>
+					<Name>ОтчисленияОбязательноеСтрахование</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обязательное страхование от несч.случаев на производстве и проф.заболеваний</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

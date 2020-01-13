@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<ChartOfAccounts uuid="cfa4a407-6a70-407f-8810-09b9c6d76315">
+		<InternalInfo>
+			<xr:GeneratedType name="ChartOfAccountsObject.НалоговыйУСН" category="Object">
+				<xr:TypeId>84a05af4-8977-49f7-b32e-6acd2c44cc95</xr:TypeId>
+				<xr:ValueId>ba5f8cad-14fa-4a2a-85fb-3ab4841be2b6</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ChartOfAccountsRef.НалоговыйУСН" category="Ref">
+				<xr:TypeId>fbe23fd4-2063-4ed4-bac3-410c4694e9e8</xr:TypeId>
+				<xr:ValueId>57d95265-b53b-4a23-a674-59cb3f5d302f</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ChartOfAccountsSelection.НалоговыйУСН" category="Selection">
+				<xr:TypeId>b5591c3a-7104-4577-b72b-6049fab4abe5</xr:TypeId>
+				<xr:ValueId>ac11f956-40ca-4125-bf07-df1c0012b2f5</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ChartOfAccountsList.НалоговыйУСН" category="List">
+				<xr:TypeId>b38e4fed-19a6-4e64-960a-fbc49776d22c</xr:TypeId>
+				<xr:ValueId>af83404c-1ff8-40f8-8fca-3c859b06b036</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ChartOfAccountsManager.НалоговыйУСН" category="Manager">
+				<xr:TypeId>4f843e98-1466-423b-bebe-9d925b520a8d</xr:TypeId>
+				<xr:ValueId>1e277ea3-5b90-4f03-b117-9e6b3d8c9841</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ChartOfAccountsExtDimensionTypes.НалоговыйУСН" category="ExtDimensionTypes">
+				<xr:TypeId>fa39315e-9ba0-493a-a032-e931593f434a</xr:TypeId>
+				<xr:ValueId>00647b0d-c543-42dc-b9d9-db906165a79d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ChartOfAccountsExtDimensionTypesRow.НалоговыйУСН" category="ExtDimensionTypesRow">
+				<xr:TypeId>41e3bda3-92d0-4b4a-9c22-f6612e28b510</xr:TypeId>
+				<xr:ValueId>a32c3821-85b5-4f75-b352-b1de12b62f45</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>НалоговыйУСН</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План счетов налогового учета (по упрощенной системе налогообложения)</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<BasedOn/>
+			<ExtDimensionTypes>ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН</ExtDimensionTypes>
+			<MaxExtDimensionCount>3</MaxExtDimensionCount>
+			<CodeMask>@@@.@@.@</CodeMask>
+			<CodeLength>8</CodeLength>
+			<DescriptionLength>120</DescriptionLength>
+			<CodeSeries>WholeChartOfAccounts</CodeSeries>
+			<CheckUnique>true</CheckUnique>
+			<DefaultPresentation>AsCode</DefaultPresentation>
+			<Characteristics/>
+			<PredefinedDataUpdate>Auto</PredefinedDataUpdate>
+			<EditType>InDialog</EditType>
+			<QuickChoice>false</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<InputByString>
+				<xr:Field>ChartOfAccounts.НалоговыйУСН.StandardAttribute.Description</xr:Field>
+				<xr:Field>ChartOfAccounts.НалоговыйУСН.StandardAttribute.Code</xr:Field>
+			</InputByString>
+			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
+			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
+			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
+			<CreateOnInput>DontUse</CreateOnInput>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+			<DefaultObjectForm>ChartOfAccounts.НалоговыйУСН.Form.ФормаСчета</DefaultObjectForm>
+			<DefaultListForm>ChartOfAccounts.НалоговыйУСН.Form.ФормаСписка</DefaultListForm>
+			<DefaultChoiceForm>ChartOfAccounts.НалоговыйУСН.Form.ФормаВыбора</DefaultChoiceForm>
+			<AuxiliaryObjectForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<AutoOrderByCode>true</AutoOrderByCode>
+			<OrderLength>8</OrderLength>
+			<DataLockFields/>
+			<DataLockControlMode>Automatic</DataLockControlMode>
+			<FullTextSearch>Use</FullTextSearch>
+			<DataHistory>DontUse</DataHistory>
+			<ObjectPresentation/>
+			<ExtendedObjectPresentation/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="11019d9e-2cc3-456a-996e-d68b2c2854ea">
+				<Properties>
+					<Name>ЗапретитьИспользоватьВПроводках</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запретить использовать в проводках</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Form>ФормаСписка</Form>
+			<Form>ФормаВыбора</Form>
+			<Form>ФормаСчета</Form>
+		</ChildObjects>
+	</ChartOfAccounts>
+</MetaDataObject>

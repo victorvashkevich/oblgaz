@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<FilterCriterion uuid="3887adf3-35e1-4492-b5ba-ceff6a8adce8">
+		<InternalInfo>
+			<xr:GeneratedType name="FilterCriterionManager.ЭлектронныеПисьмаПоАдресуЭлектроннойПочты" category="Manager">
+				<xr:TypeId>eb3d34dd-e3a5-46a8-bfc6-3abc986b2b0f</xr:TypeId>
+				<xr:ValueId>747e279e-69f9-4810-87c7-e78d35f5394a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="FilterCriterionList.ЭлектронныеПисьмаПоАдресуЭлектроннойПочты" category="List">
+				<xr:TypeId>3d9ce27a-e427-4f3f-a423-fb15b6654371</xr:TypeId>
+				<xr:ValueId>8c9037a5-eb17-49a7-9c3d-ac7ed1087ad3</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ЭлектронныеПисьмаПоАдресуЭлектроннойПочты</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронные письма по адресу электронной почты</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЭлектронноеПисьмо.Attribute.ОтправительАдресЭлектроннойПочты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЭлектронноеПисьмо.TabularSection.КомуТЧ.Attribute.АдресЭлектроннойПочты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЭлектронноеПисьмо.TabularSection.КопииТЧ.Attribute.АдресЭлектроннойПочты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЭлектронноеПисьмо.TabularSection.СкрытыеКопииТЧ.Attribute.АдресЭлектроннойПочты</xr:Item>
+			</Content>
+			<DefaultForm/>
+			<AuxiliaryForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects/>
+	</FilterCriterion>
+</MetaDataObject>

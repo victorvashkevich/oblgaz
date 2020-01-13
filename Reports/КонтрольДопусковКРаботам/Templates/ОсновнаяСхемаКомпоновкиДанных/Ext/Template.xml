@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ДанныеДопуска</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидДопуска</dataPath>
+			<field>ВидДопуска</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Должность</dataPath>
+			<field>Должность</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеОрганизации</dataPath>
+			<field>ПодразделениеОрганизации</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокДействия</dataPath>
+			<field>СрокДействия</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ=dd.MM.yyyy</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПолученияДопуска</dataPath>
+			<field>ДатаПолученияДопуска</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ=dd.MM.yyyy</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	КонтролируемыеДолжности.Должность,
+	КонтролируемыеДолжности.Ссылка КАК ВидДопуска
+ПОМЕСТИТЬ СписокДолжностей
+ИЗ
+	Справочник.ВидыДопусковКРаботам.КонтролируемыеДолжности КАК КонтролируемыеДолжности
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	РаботникиОрганизацийСрезПоследних.Сотрудник,
+	СписокДолжностей.ВидДопуска,
+	ВЫБОР
+		КОГДА СрокиДействияДопусковКРаботе.СрокДействия = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ВЫБОР
+					КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.День)
+						ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, ДЕНЬ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+					КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Неделя)
+						ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, НЕДЕЛЯ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+					КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Месяц)
+						ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, МЕСЯЦ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+					КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Квартал)
+						ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, КВАРТАЛ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+					КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Год)
+						ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, ГОД, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+					КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Декада)
+						ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, ДЕКАДА, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+					КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Полугодие)
+						ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, ПОЛУГОДИЕ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+					ИНАЧЕ ДАТАВРЕМЯ(1, 1, 1)
+				КОНЕЦ
+		ИНАЧЕ СрокиДействияДопусковКРаботе.СрокДействия
+	КОНЕЦ КАК СрокДействия,
+	ВЫБОР
+		КОГДА РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;= &amp;Срок
+				И РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА РаботникиОрганизацийСрезПоследних.ОбособленноеПодразделениеЗавершения
+		ИНАЧЕ РаботникиОрганизацийСрезПоследних.ОбособленноеПодразделение
+	КОНЕЦ КАК Организация,
+	ВЫБОР
+		КОГДА РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;= &amp;Срок
+				И РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА РаботникиОрганизацийСрезПоследних.ПодразделениеОрганизацииЗавершения
+		ИНАЧЕ РаботникиОрганизацийСрезПоследних.ПодразделениеОрганизации
+	КОНЕЦ КАК ПодразделениеОрганизации,
+	ВЫБОР
+		КОГДА РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;= &amp;Срок
+				И РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА РаботникиОрганизацийСрезПоследних.ДолжностьЗавершения
+		ИНАЧЕ РаботникиОрганизацийСрезПоследних.Должность
+	КОНЕЦ КАК Должность,
+	СрокиДействияДопусковКРаботе.Период КАК ДатаПолученияДопуска
+ИЗ
+	СписокДолжностей КАК СписокДолжностей
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций.СрезПоследних(&amp;Срок {(&amp;Срок)}, ) КАК РаботникиОрганизацийСрезПоследних
+		ПО (СписокДолжностей.Должность = ВЫБОР
+				КОГДА РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;= &amp;Срок
+						И РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+					ТОГДА РаботникиОрганизацийСрезПоследних.ДолжностьЗавершения
+				ИНАЧЕ РаботникиОрганизацийСрезПоследних.Должность
+			КОНЕЦ)
+			И (ВЫБОР
+				КОГДА РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;= &amp;Срок
+						И РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+					ТОГДА РаботникиОрганизацийСрезПоследних.ПричинаИзмененияСостоянияЗавершения
+				ИНАЧЕ РаботникиОрганизацийСрезПоследних.ПричинаИзмененияСостояния
+			КОНЕЦ &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ПричиныИзмененияСостояния.Увольнение))
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДопускиКРаботам.СрезПоследних(&amp;Срок {(&amp;Срок)}, ) КАК СрокиДействияДопусковКРаботе
+		ПО (СрокиДействияДопусковКРаботе.Сотрудник = РаботникиОрганизацийСрезПоследних.Сотрудник)
+			И СписокДолжностей.ВидДопуска = СрокиДействияДопусковКРаботе.ВидДопуска
+ГДЕ
+	РаботникиОрганизацийСрезПоследних.Сотрудник ЕСТЬ НЕ NULL 
+{ГДЕ
+	(ВЫБОР
+				КОГДА СрокиДействияДопусковКРаботе.СрокДействия = ДАТАВРЕМЯ(1, 1, 1)
+					ТОГДА ВЫБОР
+							КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.День)
+								ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, ДЕНЬ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+							КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Неделя)
+								ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, НЕДЕЛЯ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+							КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Месяц)
+								ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, МЕСЯЦ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+							КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Квартал)
+								ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, КВАРТАЛ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+							КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Год)
+								ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, ГОД, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+							КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Декада)
+								ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, ДЕКАДА, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+							КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Полугодие)
+								ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, ПОЛУГОДИЕ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+							ИНАЧЕ ДАТАВРЕМЯ(1, 1, 1)
+						КОНЕЦ
+				ИНАЧЕ СрокиДействияДопусковКРаботе.СрокДействия
+			КОНЕЦ &lt;= &amp;СрокДействияКонец
+			ИЛИ СрокиДействияДопусковКРаботе.Сотрудник ЕСТЬ NULL )}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	РаботникиОрганизацийСрезПоследних.Сотрудник,
+	СрокиДействияДопусковКРаботе.ВидДопуска,
+	ВЫБОР
+		КОГДА СрокиДействияДопусковКРаботе.СрокДействия = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ВЫБОР
+					КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.День)
+						ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, ДЕНЬ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+					КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Неделя)
+						ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, НЕДЕЛЯ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+					КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Месяц)
+						ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, МЕСЯЦ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+					КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Квартал)
+						ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, КВАРТАЛ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+					КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Год)
+						ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, ГОД, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+					КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Декада)
+						ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, ДЕКАДА, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+					КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Полугодие)
+						ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, ПОЛУГОДИЕ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+					ИНАЧЕ ДАТАВРЕМЯ(1, 1, 1)
+				КОНЕЦ
+		ИНАЧЕ СрокиДействияДопусковКРаботе.СрокДействия
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;= &amp;Срок
+				И РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА РаботникиОрганизацийСрезПоследних.ОбособленноеПодразделениеЗавершения
+		ИНАЧЕ РаботникиОрганизацийСрезПоследних.ОбособленноеПодразделение
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;= &amp;Срок
+				И РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА РаботникиОрганизацийСрезПоследних.ПодразделениеОрганизацииЗавершения
+		ИНАЧЕ РаботникиОрганизацийСрезПоследних.ПодразделениеОрганизации
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;= &amp;Срок
+				И РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА РаботникиОрганизацийСрезПоследних.ДолжностьЗавершения
+		ИНАЧЕ РаботникиОрганизацийСрезПоследних.Должность
+	КОНЕЦ,
+	СрокиДействияДопусковКРаботе.Период
+ИЗ
+	РегистрСведений.ДопускиКРаботам.СрезПоследних(&amp;Срок {(&amp;Срок)}, ) КАК СрокиДействияДопусковКРаботе
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.РаботникиОрганизаций.СрезПоследних(&amp;Срок {(&amp;Срок)}, ) КАК РаботникиОрганизацийСрезПоследних
+		ПО СрокиДействияДопусковКРаботе.Сотрудник = РаботникиОрганизацийСрезПоследних.Сотрудник
+			И (ВЫБОР
+				КОГДА РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;= &amp;Срок
+						И РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+					ТОГДА РаботникиОрганизацийСрезПоследних.ПричинаИзмененияСостоянияЗавершения
+				ИНАЧЕ РаботникиОрганизацийСрезПоследних.ПричинаИзмененияСостояния
+			КОНЕЦ &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ПричиныИзмененияСостояния.Увольнение))
+ГДЕ
+	(НЕ ВЫБОР
+				КОГДА РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;= &amp;Срок
+						И РаботникиОрганизацийСрезПоследних.ПериодЗавершения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+					ТОГДА РаботникиОрганизацийСрезПоследних.ДолжностьЗавершения
+				ИНАЧЕ РаботникиОрганизацийСрезПоследних.Должность
+			КОНЕЦ В
+				(ВЫБРАТЬ
+					СписокДолжностей.Должность
+				ИЗ
+					СписокДолжностей))
+{ГДЕ
+	(ВЫБОР
+				КОГДА СрокиДействияДопусковКРаботе.СрокДействия = ДАТАВРЕМЯ(1, 1, 1)
+					ТОГДА ВЫБОР
+							КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.День)
+								ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, ДЕНЬ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+							КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Неделя)
+								ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, НЕДЕЛЯ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+							КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Месяц)
+								ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, МЕСЯЦ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+							КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Квартал)
+								ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, КВАРТАЛ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+							КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Год)
+								ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, ГОД, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+							КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Декада)
+								ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, ДЕКАДА, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+							КОГДА СрокиДействияДопусковКРаботе.ВидДопуска.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Полугодие)
+								ТОГДА ДОБАВИТЬКДАТЕ(СрокиДействияДопусковКРаботе.Период, ПОЛУГОДИЕ, СрокиДействияДопусковКРаботе.ВидДопуска.СрокДействия)
+							ИНАЧЕ ДАТАВРЕМЯ(1, 1, 1)
+						КОНЕЦ
+				ИНАЧЕ СрокиДействияДопусковКРаботе.СрокДействия
+			КОНЕЦ &lt;= &amp;СрокДействияКонец
+			ИЛИ СрокиДействияДопусковКРаботе.Сотрудник ЕСТЬ NULL )}</query>
+	</dataSet>
+	<parameter>
+		<name>СрокДействияКонец</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Срок действия конец</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Срок</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>СписокПродляемыхДокументовВСледМесяце</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Допуски для продления</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сотрудник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидДопуска</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаПолученияДопуска</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СрокДействия</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>f00763cc-d890-460c-9ee7-05a13e0d5c89</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ПодразделениеОрганизации</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ПодразделенияОрганизаций.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>46675f51-48b9-4712-96b2-39d5afd42934</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Сотрудник</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.СотрудникиОрганизаций.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>02552382-fa26-48f3-a729-4bb790ffdcb6</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">NextMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>4135f611-e495-4145-9034-e5e097a4d22c</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Срок</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДатаПолученияДопуска</dcsset:left>
+							<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выделить не получивших допуск красным</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Античный</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Допуски для продления</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПодразделениеОрганизации</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>КонтрнольДопусковКРаботам</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Контроль допусков к работам</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сотрудник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидДопуска</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаПолученияДопуска</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СрокДействия</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>f00763cc-d890-460c-9ee7-05a13e0d5c89</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ПодразделениеОрганизации</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ПодразделенияОрганизаций.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>46675f51-48b9-4712-96b2-39d5afd42934</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Сотрудник</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.СотрудникиОрганизаций.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>02552382-fa26-48f3-a729-4bb790ffdcb6</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">NextMonth</v8:variant>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Срок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>a915f1d6-284c-4488-88b9-c0b2eccabfb8</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>OrGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">СрокДействия</dcsset:left>
+								<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:Field">ПараметрыДанных.Срок</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">СрокДействия</dcsset:left>
+								<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Античный</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контроль допусков к работам</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПодразделениеОрганизации</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ВидДопуска</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

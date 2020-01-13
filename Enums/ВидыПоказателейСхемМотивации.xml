@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Enum uuid="36002761-9d0c-47e0-9c3f-85c44e912670">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ВидыПоказателейСхемМотивации" category="Ref">
+				<xr:TypeId>4c1405e9-c371-4b85-8ea7-f66578b70364</xr:TypeId>
+				<xr:ValueId>43445345-7616-4bdf-8ed0-0eadfc639476</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ВидыПоказателейСхемМотивации" category="Manager">
+				<xr:TypeId>676bd4fc-a16c-4ce9-9648-d37ebddc9be0</xr:TypeId>
+				<xr:ValueId>98717f38-a141-4c6f-a5d8-c8cea88ccdb5</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ВидыПоказателейСхемМотивации" category="List">
+				<xr:TypeId>1eae0ed5-4e36-41ca-9ca9-597c3c66bf5c</xr:TypeId>
+				<xr:ValueId>539ac790-ad6d-40a7-be6b-7cf33bb7354a</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВидыПоказателейСхемМотивации</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды показателей схем мотивации</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(Общ)</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="179c9f76-dfad-4fef-9ff5-3819c2f41ff9">
+				<Properties>
+					<Name>Общий</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Для всей компании (организации)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Вводится для всей компании (организации)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="25522891-e890-4c3c-8519-f3b16cb01bab">
+				<Properties>
+					<Name>ПоПодразделению</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Для подразделения</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Вводится в целом по подразделению</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="64430665-cc69-435d-b21c-78922e06fb81">
+				<Properties>
+					<Name>Индивидуальный</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Для сотрудника</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Вводится отдельно по сотрудникам</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="38fada04-f1c6-4a16-9d30-588ff0979f37">
+				<Properties>
+					<Name>ДляВсехОрганизаций</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Для всех организаций</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

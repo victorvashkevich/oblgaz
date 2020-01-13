@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ChartOfAccountsPredefinedItems" version="2.6">
+	<Item id="1d3607c1-56d2-4716-88df-ffc97fd5a571">
+		<Name>Материалы</Name>
+		<Code>10</Code>
+		<Description>Материалы</Description>
+		<AccountType>Active</AccountType>
+		<OffBalance>true</OffBalance>
+		<Order> 10</Order>
+		<AccountingFlags/>
+		<ExtDimensionTypes>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Партии">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+		</ExtDimensionTypes>
+		<ChildItems>
+			<Item id="d87eccce-0525-4401-9857-cccab8d4dfbd">
+				<Name>СырьеИМатериалы</Name>
+				<Code>10.01</Code>
+				<Description>Сырье и материалы</Description>
+				<AccountType>Active</AccountType>
+				<OffBalance>true</OffBalance>
+				<Order> 10.01</Order>
+				<AccountingFlags/>
+				<ExtDimensionTypes>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Номенклатура">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Партии">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+				</ExtDimensionTypes>
+			</Item>
+			<Item id="e6eee70b-5754-4428-a990-3b6483fdae83">
+				<Name>ТранспортноЗаготовительныеРасходы</Name>
+				<Code>10.02</Code>
+				<Description>Транспортно-заготовительные расходы</Description>
+				<AccountType>Active</AccountType>
+				<OffBalance>true</OffBalance>
+				<Order> 10.02</Order>
+				<AccountingFlags/>
+				<ExtDimensionTypes>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.ПартииПоставки">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Партии">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+				</ExtDimensionTypes>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="bf6ca609-4d55-44cf-b210-27575df873e5">
+		<Name>ТоварыНаСкладах</Name>
+		<Code>41</Code>
+		<Description>Товары на складах</Description>
+		<AccountType>Active</AccountType>
+		<OffBalance>true</OffBalance>
+		<Order> 41</Order>
+		<AccountingFlags/>
+		<ExtDimensionTypes>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Номенклатура">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Партии">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+		</ExtDimensionTypes>
+	</Item>
+	<Item id="5b63c212-dafa-4b93-a087-3804d1094d88">
+		<Name>ГотоваяПродукция</Name>
+		<Code>43</Code>
+		<Description>Готовая продукция</Description>
+		<AccountType>Active</AccountType>
+		<OffBalance>true</OffBalance>
+		<Order> 43</Order>
+		<AccountingFlags/>
+		<ExtDimensionTypes>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Номенклатура">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Партии">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+		</ExtDimensionTypes>
+	</Item>
+	<Item id="c1bbc30a-af76-4d00-869b-81e2244f5922">
+		<Name>ТоварыОтгруженные</Name>
+		<Code>45</Code>
+		<Description>Товары отгруженные</Description>
+		<AccountType>Active</AccountType>
+		<OffBalance>true</OffBalance>
+		<Order> 45</Order>
+		<AccountingFlags/>
+		<ExtDimensionTypes>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Номенклатура">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Партии">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Отгрузки">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+		</ExtDimensionTypes>
+	</Item>
+	<Item id="adfc74b3-df86-4200-aa6c-2cd27790c1a4">
+		<Name>РасчетыСПоставщикамиИПодрядчиками</Name>
+		<Code>60</Code>
+		<Description>Расчеты с поставщиками и подрядчиками</Description>
+		<AccountType>ActivePassive</AccountType>
+		<OffBalance>true</OffBalance>
+		<Order> 60</Order>
+		<AccountingFlags/>
+		<ExtDimensionTypes>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Контрагенты">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Договоры">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+		</ExtDimensionTypes>
+		<ChildItems>
+			<Item id="92d0baf9-f289-49b4-b6f1-fea155b96c3e">
+				<Name>РасчетыСПоставщиками</Name>
+				<Code>60.01</Code>
+				<Description>Расчеты с поставщиками</Description>
+				<AccountType>Passive</AccountType>
+				<OffBalance>true</OffBalance>
+				<Order> 60.01</Order>
+				<AccountingFlags/>
+				<ExtDimensionTypes>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Контрагенты">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Договоры">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Партии">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+				</ExtDimensionTypes>
+			</Item>
+			<Item id="d09dcbf7-bf87-4d51-ab65-f8ded6e7dc93">
+				<Name>РасчетыПоАвансамВыданным</Name>
+				<Code>60.02</Code>
+				<Description>Расчеты по авансам выданным</Description>
+				<AccountType>Active</AccountType>
+				<OffBalance>true</OffBalance>
+				<Order> 60.02</Order>
+				<AccountingFlags/>
+				<ExtDimensionTypes>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Контрагенты">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Договоры">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Авансы">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+				</ExtDimensionTypes>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="f3ffa13b-97a7-4cdd-9dcf-ff39d4f67644">
+		<Name>РасчетыСПокупателямиИЗаказчиками</Name>
+		<Code>62</Code>
+		<Description>Расчеты с покупателями и заказчиками</Description>
+		<AccountType>ActivePassive</AccountType>
+		<OffBalance>true</OffBalance>
+		<Order> 62</Order>
+		<AccountingFlags/>
+		<ExtDimensionTypes>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Контрагенты">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Договоры">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+		</ExtDimensionTypes>
+		<ChildItems>
+			<Item id="0d6ab1cf-d000-41fe-a25b-bc59d57e5ae1">
+				<Name>РасчетыСПокупателями</Name>
+				<Code>62.01</Code>
+				<Description>Расчеты с покупателями</Description>
+				<AccountType>Active</AccountType>
+				<OffBalance>true</OffBalance>
+				<Order> 62.01</Order>
+				<AccountingFlags/>
+				<ExtDimensionTypes>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Контрагенты">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Договоры">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Отгрузки">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+				</ExtDimensionTypes>
+			</Item>
+			<Item id="a6ec4571-9ef8-49b9-adcd-689fcdd6a862">
+				<Name>РасчетыПоАвансамПолученным</Name>
+				<Code>62.02</Code>
+				<Description>Расчеты по авансам полученным</Description>
+				<AccountType>Passive</AccountType>
+				<OffBalance>true</OffBalance>
+				<Order> 62.02</Order>
+				<AccountingFlags/>
+				<ExtDimensionTypes>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Контрагенты">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Договоры">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Авансы">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+				</ExtDimensionTypes>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="ffa47941-e90b-4ad9-bfa4-9d56011c98d8">
+		<Name>РасчетыПоНалогам</Name>
+		<Code>68</Code>
+		<Description>Расчеты по налогам</Description>
+		<AccountType>ActivePassive</AccountType>
+		<OffBalance>true</OffBalance>
+		<Order> 68</Order>
+		<AccountingFlags/>
+		<ExtDimensionTypes/>
+		<ChildItems>
+			<Item id="e0c23840-d87f-44cf-b9e0-ccc0cc09f3f3">
+				<Name>НДФЛ</Name>
+				<Code>68.01</Code>
+				<Description>Налог на доходы физических лиц</Description>
+				<AccountType>ActivePassive</AccountType>
+				<OffBalance>true</OffBalance>
+				<Order> 68.01</Order>
+				<AccountingFlags/>
+				<ExtDimensionTypes/>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="da09cb1a-9aeb-4442-b7a0-d0887c9f1f51">
+		<Name>РасчетыСБюджетом</Name>
+		<Code>69</Code>
+		<Description>Расчеты с бюджетом</Description>
+		<AccountType>ActivePassive</AccountType>
+		<OffBalance>true</OffBalance>
+		<Order> 69</Order>
+		<AccountingFlags/>
+		<ExtDimensionTypes/>
+		<ChildItems>
+			<Item id="968cac42-7072-4cc4-a4c7-5ace8874ff3c">
+				<Name>ПФР</Name>
+				<Code>69.02</Code>
+				<Description>Расчеты по пенсионному обеспечению (страховые взносы на обязательное пенсионное страхование)</Description>
+				<AccountType>ActivePassive</AccountType>
+				<OffBalance>true</OffBalance>
+				<Order> 69.02</Order>
+				<AccountingFlags/>
+				<ExtDimensionTypes/>
+				<ChildItems>
+					<Item id="c80f5fba-a220-4f4d-b0fb-4f7c575385c7">
+						<Name>ПФР_страх</Name>
+						<Code>69.02.1</Code>
+						<Description>Страховая часть трудовой пенсии</Description>
+						<AccountType>ActivePassive</AccountType>
+						<OffBalance>true</OffBalance>
+						<Order> 69.02.1</Order>
+						<AccountingFlags/>
+						<ExtDimensionTypes/>
+					</Item>
+					<Item id="0a4640ff-a163-4238-b4d3-a5f8fad50159">
+						<Name>ПФР_нак</Name>
+						<Code>69.02.2</Code>
+						<Description>Накопительная часть трудовой пенсии</Description>
+						<AccountType>ActivePassive</AccountType>
+						<OffBalance>true</OffBalance>
+						<Order> 69.02.2</Order>
+						<AccountingFlags/>
+						<ExtDimensionTypes/>
+					</Item>
+				</ChildItems>
+			</Item>
+			<Item id="4dcdfd2c-d109-402b-a4c0-b857cd1a6473">
+				<Name>ФСС_НСиПЗ</Name>
+				<Code>69.11</Code>
+				<Description>Расчеты по обязательному социальному страхованию от несчастных случаев на производстве и профессиональных заболеваний</Description>
+				<AccountType>ActivePassive</AccountType>
+				<OffBalance>true</OffBalance>
+				<Order> 69.11</Order>
+				<AccountingFlags/>
+				<ExtDimensionTypes/>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="64a4871e-27a6-4bc8-94db-3b98e1e7bf23">
+		<Name>РасчетыСПерсоналомПоОплатеТруда</Name>
+		<Code>70</Code>
+		<Description>Расчеты с персоналом по оплате труда</Description>
+		<AccountType>ActivePassive</AccountType>
+		<OffBalance>true</OffBalance>
+		<Order> 70</Order>
+		<AccountingFlags/>
+		<ExtDimensionTypes>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.РаботникиОрганизаций">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+		</ExtDimensionTypes>
+	</Item>
+	<Item id="8ee0d52b-26ee-47dd-b42b-e6738b27923b">
+		<Name>РасчетыСПодотчетнымиЛицами</Name>
+		<Code>71</Code>
+		<Description>Расчеты с подотчетными лицами</Description>
+		<AccountType>ActivePassive</AccountType>
+		<OffBalance>true</OffBalance>
+		<Order> 71</Order>
+		<AccountingFlags/>
+		<ExtDimensionTypes>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.РаботникиОрганизаций">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Партии">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+		</ExtDimensionTypes>
+	</Item>
+	<Item id="b822eda1-2498-4af0-8dad-ea461dcccc0a">
+		<Name>РасходыБудущихПериодов</Name>
+		<Code>97</Code>
+		<Description>Расходы будущих периодов</Description>
+		<AccountType>Active</AccountType>
+		<OffBalance>true</OffBalance>
+		<Order> 97</Order>
+		<AccountingFlags/>
+		<ExtDimensionTypes>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.РБП">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Партии">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+		</ExtDimensionTypes>
+	</Item>
+	<Item id="c55b6aed-3f81-4eee-aecd-23ba069fc753">
+		<Name>ТоварыПринятыеНаКомиссию</Name>
+		<Code>004</Code>
+		<Description>Товары, принятые на комиссию</Description>
+		<AccountType>ActivePassive</AccountType>
+		<OffBalance>true</OffBalance>
+		<Order>004</Order>
+		<AccountingFlags/>
+		<ExtDimensionTypes>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Номенклатура">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Партии">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+		</ExtDimensionTypes>
+		<ChildItems>
+			<Item id="2574ac12-b758-4e6a-a02d-1366b938ef4c">
+				<Name>ТоварыПринятыеНаКомиссиюНаСкладе</Name>
+				<Code>004.01</Code>
+				<Description>Товары на складе</Description>
+				<AccountType>ActivePassive</AccountType>
+				<OffBalance>true</OffBalance>
+				<Order>004.01</Order>
+				<AccountingFlags/>
+				<ExtDimensionTypes>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Номенклатура">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Партии">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+				</ExtDimensionTypes>
+			</Item>
+			<Item id="7400d102-b33a-41aa-b666-e076803208f0">
+				<Name>ТоварыПринятыеНаКомиссиюПереданные</Name>
+				<Code>004.02</Code>
+				<Description>Товары, переданные на комиссию</Description>
+				<AccountType>ActivePassive</AccountType>
+				<OffBalance>true</OffBalance>
+				<Order>004.02</Order>
+				<AccountingFlags/>
+				<ExtDimensionTypes>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Номенклатура">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Партии">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Отгрузки">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+				</ExtDimensionTypes>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="99564745-ee77-4752-8ada-28afdbafd975">
+		<Name>ДеятельностьЕНВД</Name>
+		<Code>Н08</Code>
+		<Description>Деятельность ЕНВД</Description>
+		<AccountType>ActivePassive</AccountType>
+		<OffBalance>true</OffBalance>
+		<Order>Н08</Order>
+		<AccountingFlags/>
+		<ExtDimensionTypes/>
+		<ChildItems>
+			<Item id="8fef534c-8cfb-42fc-bfa7-ee1fcb824f53">
+				<Name>ДоходыПоДеятельностиЕНВД</Name>
+				<Code>Н08.01</Code>
+				<Description>Доходы по деятельности ЕНВД</Description>
+				<AccountType>Passive</AccountType>
+				<OffBalance>true</OffBalance>
+				<Order>Н08.01</Order>
+				<AccountingFlags/>
+				<ExtDimensionTypes/>
+			</Item>
+			<Item id="97274e7d-0bef-4d11-a4d5-eb688380c3f8">
+				<Name>РасходыПодлежащиеРаспределению</Name>
+				<Code>Н08.02</Code>
+				<Description>Расходы подлежащие распределению</Description>
+				<AccountType>Active</AccountType>
+				<OffBalance>true</OffBalance>
+				<Order>Н08.02</Order>
+				<AccountingFlags/>
+				<ExtDimensionTypes/>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="e062d13b-461c-478c-8225-45c1c05060cd">
+		<Name>ТоварыПроданные</Name>
+		<Code>НПС</Code>
+		<Description>Товары проданные</Description>
+		<AccountType>Active</AccountType>
+		<OffBalance>true</OffBalance>
+		<Order>НПС</Order>
+		<AccountingFlags/>
+		<ExtDimensionTypes>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Партии">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконтоНалоговыеУСН.Отгрузки">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+		</ExtDimensionTypes>
+	</Item>
+</PredefinedData>
